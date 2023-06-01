@@ -8,7 +8,7 @@ const TechJourney = () => {
             <div className='w-1/3 flex flex-col items-center'>
                 <div className='w-full'>
                     <Image
-                        className='text-xs w-[60%] mx-auto text-center border rounded-md p-1'
+                        className='text-xs w-[70%] md:w-[60%] mx-auto text-center border rounded-md p-1'
                         src={'/blackboard.png'}
                         height={300}
                         width={400}
@@ -22,15 +22,15 @@ const TechJourney = () => {
 
             <div className='w-1/3 flex flex-col items-center relative -top-[3rem]'>
                 <div className='w-full'>
+                    <p className='text-xs w-[80%] text-center absolute  '>If you suspect you have it is important to, such as a dermatologist, for an accurate diagnosis and appropriate treatment.</p>
                     <Image
-                        className='text-xs w-[60%] mx-auto text-center border rounded-md p-1'
+                        className='text-xs w-[70%] md:w-[60%] mx-auto text-center border rounded-md p-1'
                         src={'/blackboard.png'}
                         height={300}
                         width={400}
                         alt='board'
                     />
                 </div>
-                {/* <p className='text-xs w-[80%] text-center border rounded-md p-1'>If you suspect you have it is important to, such as a dermatologist, for an accurate diagnosis and appropriate treatment.</p> */}
                 <div className='w-2 h-20 bg-gray-800'></div>
                 <p className='w-full border py-3 text-center'>PYTHON</p>
             </div>
@@ -38,7 +38,7 @@ const TechJourney = () => {
             <div className='w-1/3 flex flex-col items-center relative -top-[6rem]'>
                 <div className='w-full'>
                     <Image
-                        className='text-xs w-[60%] mx-auto text-center border rounded-md p-1'
+                        className='text-xs w-[70%] md:w-[60%] mx-auto text-center border rounded-md p-1'
                         src={'/blackboard.png'}
                         height={300}
                         width={400}

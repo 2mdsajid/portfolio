@@ -4,7 +4,7 @@ import LandingPage from './components/(section1)/LandingPage'
 import SectionTitle from './components/SectionTitle'
 import EventTimeline from './components/(section3)/EventTimeline'
 import { events } from '@/lib/utils/Constants'
-import ProjectsCards from './components/(section6)/ProjectsCards'
+import ProjectsCards from './components/(section7)/ProjectsCards'
 import TechJourney from './components/(section5)/TechJourney'
 
 // style={{ backgroundImage: "url('/bg/bg-4.png')", backgroundSize: "cover" }}
