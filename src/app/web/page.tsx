@@ -4,8 +4,11 @@ import LandingPage from './components/(section1)/LandingPage'
 import SectionTitle from './components/SectionTitle'
 import EventTimeline from './components/(section3)/EventTimeline'
 import { events } from '@/lib/utils/Constants'
-import ProjectsCards from './components/(section7)/ProjectsCards'
-import TechJourney from './components/(section5)/TechJourney'
+import ProjectsCards from './components/(section6)/ProjectsCards'
+import TechJourney from './components/(section4)/TechJourney'
+import TechStacks from './components/(section5)/TechStacks'
+import CodingTimeline from './components/(section4)/CodingTimeline'
+import { dummyData } from '@/lib/utils/Types'
 
 // style={{ backgroundImage: "url('/bg/bg-4.png')", backgroundSize: "cover" }}
 
@@ -42,14 +45,16 @@ const page = () => {
                 <SectionTitle title='BUT CODING?' />
                 {/* remaining contents */}
                 <div className='w-full h-full'> 
-                    <TechJourney />
+                    <CodingTimeline dummyData={dummyData}/>
                 </div>
             </section>
 
             <section className='min-h-screen w-full'>
                 <SectionTitle title='SO WHERE AM I NOW?' />
                 {/* remaining contents */}
-                <div className='w-full h-full'></div>
+                <div className='w-full h-full'>
+                    <TechStacks />
+                </div>
             </section>
 
             <section className='min-h-screen w-full'>
