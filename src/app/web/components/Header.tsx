@@ -7,6 +7,7 @@ import SideBarC from './SideBarC';
 import { FiMail } from 'react-icons/fi';
 
 import { FiUsers, FiBook, FiBriefcase } from 'react-icons/fi';
+import TerminalButton from './TerminalButton';
 
 
 const Header = () => {
@@ -24,7 +25,9 @@ const Header = () => {
           <Link href='blogs.sajidaalam.com.np' className='text-white'>Blogs</Link>
           <Link href='/services' className='text-white'>Services</Link>
         </div>
-        <div className='hidden sm:block'>
+
+          <div><TerminalButton /></div>
+        <div className='hidden sm:block '>
           <Link href='/contact'>
             <button className='flex items-center justify-center w-full py-2 px-4 text-lg bg-gradient-to-r from-bgcolor1 to-bgcolor2 hover:bg-bgcolor3 hover:border-white border hover:text-white border-white transition-colors duration-300'>
               <FiMail className='mr-2' />

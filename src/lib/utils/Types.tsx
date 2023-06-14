@@ -24,6 +24,17 @@ export type TypeProject = {
     date:string;
   }
 
+  export type FriendCard =
+  {
+    image:string;
+    name:string;
+    dobmon:string;
+    dobyr:string;
+    firstimpressions:string;
+    bestmemory:string;
+    gallery?:string[];
+  }
+
   export const dummyData = [
     {
       image: "nodejs",

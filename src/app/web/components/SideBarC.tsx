@@ -5,8 +5,8 @@ import Link from 'next/link';
 import React, { useState } from 'react'
 
 import { FiUsers, FiBook, FiBriefcase, FiMail } from 'react-icons/fi';
-import { FiMenu, FiX } from 'react-icons/fi';
 import { AiOutlineMenu } from 'react-icons/ai';
+import { FiMenu, FiX } from 'react-icons/fi';
 import { CgMenuMotion } from 'react-icons/cg';
 
 
