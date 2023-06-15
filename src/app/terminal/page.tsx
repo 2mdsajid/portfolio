@@ -3,7 +3,7 @@
 
 import React, { useState } from 'react';
 import { IoTerminalOutline } from 'react-icons/io5';
-import Terminal from '../web/components/Terminal';
+import Terminal from '../web/components/terminal/Terminal';
 
 const Page = () => {
   const [showTerminal, setShowTerminal] = useState(false);

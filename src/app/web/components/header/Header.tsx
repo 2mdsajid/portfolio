@@ -7,7 +7,7 @@ import SideBarC from './SideBarC';
 import { FiMail } from 'react-icons/fi';
 
 import { FiUsers, FiBook, FiBriefcase } from 'react-icons/fi';
-import TerminalButton from './TerminalButton';
+import TerminalButton from '../terminal/TerminalButton';
 
 
 const Header = () => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from './components/Header'
+import Header from './components/header/Header'
 import LandingPage from './components/(section1)/LandingPage'
 import SectionTitle from './components/SectionTitle'
 import EventTimeline from './components/(section3)/EventTimeline'
@@ -21,8 +21,6 @@ const page = () => {
             <section className='min-h-screen w-full'  >
                 <LandingPage />
             </section>
-
-
 
             <section className='min-h-screen w-full'>
                 <SectionTitle title='WHO AM I?' />
