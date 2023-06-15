@@ -12,3 +12,10 @@ export const ParsedHtml = (str: string) => {
 
     return parsedHtml;
 };
+
+// iso string format
+export const IsoFOrmat = (date: string) => {
+    const datee = new Date(date);
+    return datee.toISOString();
+}
+

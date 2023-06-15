@@ -24,16 +24,135 @@ export type TypeProject = {
     date:string;
   }
 
-  export type FriendCard =
-  {
-    image:string;
-    name:string;
-    dobmon:string;
-    dobyr:string;
-    firstimpressions:string;
-    bestmemory:string;
-    gallery?:string[];
-  }
+  export type TypeFriendCard = {
+    name: string;
+    institution?: string;
+    firstimpressions?: string;
+    bestmemory?: string;
+    id?: string;
+    image?: string;
+    dob: string;
+    gallery?: string[];
+  };
+  
+
+  export const dummyFriendData: TypeFriendCard[] = [
+    {
+      id:'1',
+      image: "https://randomuser.me/api/portraits/men/1.jpg",
+      name: "John Doe",
+      institution:'some institution institution institution institution institution' ,
+      dob: "1990-01-01T00:00:00.000Z",
+      firstimpressions: "We met at a party and instantly clicked.",
+      bestmemory: "Our trip to the beach last summer was amazing!",
+      gallery: [
+        "https://source.unsplash.com/random/1",
+        "https://source.unsplash.com/random/2",
+        "https://source.unsplash.com/random/3",
+      ],
+    },
+    {
+      id:'2',
+      image: "https://randomuser.me/api/portraits/women/2.jpg",
+      name: "Jane Smith",
+      institution:'some institution',
+      dob: "1990-01-01T00:00:00.000Z",
+      firstimpressions: "We became friends through a mutual hobby.",
+      bestmemory: "Attending a concert together was so much fun!",
+      gallery: [
+        "https://source.unsplash.com/random/4",
+        "https://source.unsplash.com/random/5",
+        "https://source.unsplash.com/random/6",
+      ],
+    },
+    {
+      id:'3',
+      image: "https://randomuser.me/api/portraits/women/2.jpg",
+      name: "Jane Smith",
+      institution:'some institution,',
+      dob: "1990-01-01T00:00:00.000Z",
+      firstimpressions: "We became friends through a mutual hobby.",
+      bestmemory: "Attending a concert together was so much fun!",
+      gallery: [
+        "https://source.unsplash.com/random/4",
+        "https://source.unsplash.com/random/5",
+        "https://source.unsplash.com/random/6",
+      ],
+    },
+    {
+      "id": "4",
+      "image": "https://randomuser.me/api/portraits/men/1.jpg",
+      "name": "John Doe",
+      "institution": "Some Institution",
+      "dob": "1990-01-01T00:00:00.000Z",
+      "firstimpressions": "We met at a conference and instantly connected.",
+      "bestmemory": "Exploring a new city together was an unforgettable experience.",
+      "gallery": [
+        "https://source.unsplash.com/random/1",
+        "https://source.unsplash.com/random/2",
+        "https://source.unsplash.com/random/3"
+      ]
+    },
+    {
+      "id": "5",
+      "image": "https://randomuser.me/api/portraits/women/1.jpg",
+      "name": "Emily Johnson",
+      "institution": "Another Institution",
+      "dob": "1992-05-15T00:00:00.000Z",
+      "firstimpressions": "We were roommates in college and became close friends.",
+      "bestmemory": "Traveling to a tropical paradise together was a dream come true.",
+      "gallery": [
+        "https://source.unsplash.com/random/4",
+        "https://source.unsplash.com/random/5",
+        "https://source.unsplash.com/random/6"
+      ]
+    },
+    {
+      "id": "6",
+      "image": "https://randomuser.me/api/portraits/women/2.jpg",
+      "name": "Jane Smith",
+      "institution": "Some Institution",
+      "dob": "1990-01-01T00:00:00.000Z",
+      "firstimpressions": "We became friends through a mutual hobby.",
+      "bestmemory": "Attending a concert together was so much fun!",
+      "gallery": [
+        "https://source.unsplash.com/random/7",
+        "https://source.unsplash.com/random/8",
+        "https://source.unsplash.com/random/9"
+      ]
+    },
+    {
+      "id": "7",
+      "image": "https://randomuser.me/api/portraits/men/2.jpg",
+      "name": "Michael Brown",
+      "institution": "Yet Another Institution",
+      "dob": "1988-09-21T00:00:00.000Z",
+      "firstimpressions": "We met at a workshop and bonded over shared interests.",
+      "bestmemory": "Taking a road trip together created lasting memories.",
+      "gallery": [
+        "https://source.unsplash.com/random/10",
+        "https://source.unsplash.com/random/11",
+        "https://source.unsplash.com/random/12"
+      ]
+    },
+    {
+      "id": "8",
+      "image": "https://randomuser.me/api/portraits/women/3.jpg",
+      "name": "Sarah Davis",
+      "institution": "One More Institution",
+      "dob": "1994-12-10T00:00:00.000Z",
+      "firstimpressions": "We met through a common friend and instantly clicked.",
+      "bestmemory": "Celebrating a milestone together was a memorable experience.",
+      "gallery": [
+        "https://source.unsplash.com/random/13",
+        "https://source.unsplash.com/random/14",
+        "https://source.unsplash.com/random/15"
+      ]
+    }
+    // Add more dummy data objects as needed
+  ];
+  
+  
 
   export const dummyData = [
     {
