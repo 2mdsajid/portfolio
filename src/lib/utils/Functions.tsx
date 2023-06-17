@@ -19,3 +19,14 @@ export const IsoFOrmat = (date: string) => {
     return datee.toISOString();
 }
 
+import fs from 'fs';
+import path from 'path';
+import { saveAs } from 'file-saver';
+
+
+// function to write content to file
+export const writeFile = (content:string, filename:string)=> {
+    const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+    saveAs(blob, filename);
+  }
+  
