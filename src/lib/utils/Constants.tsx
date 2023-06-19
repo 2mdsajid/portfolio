@@ -1,3 +1,5 @@
+import { FaBlog, FaBriefcase, FaGlobe, FaUser } from "react-icons/fa";
+
 export const events = [
   {
     yr: 2006,
@@ -284,3 +286,26 @@ export const botdata = [
       r: 'Pokhara'
   }
 ]
+
+export const serviceData = [
+  {
+    icon: <FaBlog size={24} />,
+    title: 'Blog site',
+    description: 'Create your first blog website according to your needs.',
+  },
+  {
+    icon: <FaGlobe size={24} />,
+    title: 'Personal Website',
+    description: 'Get a custom website designed and developed based on your specific needs.',
+  },
+  {
+    icon: <FaBriefcase size={24} />,
+    title: ' business website',
+    description: 'Build a professional business website tailored to your requirements.',
+  },
+  {
+    icon: <FaUser size={24} />,
+    title: 'Website On Demand',
+    description: 'Create any type of website as needed.',
+  },
+];

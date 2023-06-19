@@ -1,8 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
-import TypewriterC from './TypewriterC'
+import TypewriterC from '../TypewriterC'
 import Link from 'next/link'
 import { FiGift } from 'react-icons/fi'
+import SocialMediaLinks from '../SocialMedia'
 
 //                 <div className='text-2xl text-color3 font-bold'><TypewriterC texts={['doctor','programmer','physicist']}/></div>
 
@@ -20,7 +21,6 @@ const LandingPage = () => {
                     <div className='text-2xl md:text-3xl lg:text-4xl text-color2 font-bold mt-10'>
                         <TypewriterC texts={['CODING.', 'ADVENTURE.', 'GAMING.']} />
                     </div>
-
                 </div>
             </div>
 
@@ -41,6 +41,10 @@ const LandingPage = () => {
             {/* intro image */}
             <div className=' absolute bottom-0 z-10'>
                 <Image className='' alt='landing-page-image' src='/icons/i1.png' height={400} width={400} />
+            </div>
+
+            <div className='fixed bottom-0 left-0 lg:left-10'>
+                <SocialMediaLinks />
             </div>
 
         </div>

@@ -8,11 +8,10 @@ import { FiUsers, FiBook, FiBriefcase, FiMail } from 'react-icons/fi';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { CgMenuMotion } from 'react-icons/cg';
+import TerminalButton from '../terminal/TerminalButton';
 
 
 const SideBarC = () => {
-
-
 
     const [isNavOpen, setIsNavOpen] = useState(false);
     const [isNavSelected, setIsNavSelected] = useState<string | undefined>('')
@@ -29,13 +28,17 @@ const SideBarC = () => {
 
     return (
         <div className='block sm:hidden'>
+            <div className='flex space-x-2'>
+
+            <TerminalButton />
             <div onClick={openNav}>
                 {isNavOpen ? (
-                    <AiOutlineMenu className="text-white text-2xl transition-transform duration-300 transform -rotate-45" />
-                ) : (
-                    <AiOutlineMenu className="text-white text-2xl transition-transform duration-300 transform " />
-                )}
+                    <AiOutlineMenu className="text-white text-4xl transition-transform duration-300 transform -rotate-45" />
+                    ) : (
+                        <AiOutlineMenu className="text-white text-4xl transition-transform duration-300 transform " />
+                        )}
             </div>
+                        </div>
             <div className=' border-red-600 lg:hidden '>
                 <SwipeableDrawer
                     anchor="left"
@@ -57,11 +60,14 @@ const SideBarC = () => {
                                 <FiBriefcase className='mr-2' />
                                 Services
                             </Link>
+                            <Link href='/contact' className='flex items-center text-white'>
+                                <FiMail className='mr-2' />
+                                Contact
+                            </Link>
                         </div>
                         <div>
                             <Link href='/contact'>
                                 <button className='flex items-center justify-center w-full py-2 text-black bg-white hover:bg-gray-800 hover:border-white border hover:text-white border-white transition-colors duration-300'>
-                                    <FiMail className='mr-2' />
                                     Contact
                                 </button>
                             </Link>

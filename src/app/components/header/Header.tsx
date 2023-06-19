@@ -21,21 +21,15 @@ const Header = () => {
 
         {/* hidden in small devices */}
         <div className='space-x-4 hidden sm:block'>
-          <Link href='friends.sajidaalam.com.np' className='text-white'>Friends</Link>
-          <Link href='blogs.sajidaalam.com.np' className='text-white'>Blogs</Link>
+          <Link href='/friends' className='text-white'>Friends</Link>
+          <Link href='/blogs' className='text-white'>Blogs</Link>
           <Link href='/services' className='text-white'>Services</Link>
+          <Link href='/contact' className='text-white'>Contact</Link>
         </div>
 
-          <div><TerminalButton /></div>
+
         <div className='hidden sm:block '>
-          <Link href='/contact'>
-            <button className='flex items-center justify-center w-full py-2 px-4 text-lg bg-gradient-to-r from-bgcolor1 to-bgcolor2 hover:bg-bgcolor3 hover:border-white border hover:text-white border-white transition-colors duration-300'>
-              <FiMail className='mr-2' />
-              Contact
-            </button>
-          </Link>
-
-
+          <TerminalButton />
         </div>
 
 

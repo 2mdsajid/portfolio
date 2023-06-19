@@ -28,26 +28,24 @@ interface CustomToken {
 
 const page = () => {
 
-    const [index, setIndex] = useState<Index<FriendData>>();
     const [searchedProfiles, setSearchedProfiles] = useState<TypeFriendCard[]>([])
-
+    
     // search bar
     const [showInput, setShowInput] = useState(true);
     const toggleInput = () => setShowInput(!showInput);
 
     const [inputValue, setInputValue] = useState('');
-
+    
     const handleClearInput = () => {
         setInputValue('');
     };
-
+    
     // search function
-
+    
+    const [index, setIndex] = useState<Index<FriendData>>();
     const searchFun: ChangeEventHandler<HTMLInputElement> = async (event) => {
         const searchkey = event.currentTarget.value;
         setInputValue(event.target.value);
-
-
         // Filter the people array based on the search value
         const namesearched = dummyFriendData.filter((friend) =>
             friend.name.toLowerCase().startsWith(searchkey)
