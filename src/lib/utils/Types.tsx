@@ -1,3 +1,60 @@
+import { ReactElement } from "react";
+
+export type TypeSingleBlog = {
+  _id: string;
+  title: string;
+  noteid: string;
+  category: string;
+  subcategory?: string;
+  author?: string;
+  intro: string;
+  introimage:string;
+  content: string;
+  review?: boolean;
+  published?: boolean;
+  keywords?: string[];
+  readtime?: string;
+  upvote?: string[];
+  downvote?: string[];
+  comments?: {
+      name?: string;
+      email?: string;
+      comment?: string;
+  }[];
+  isupdated?:{
+      state:boolean;
+      date:Date;
+  }
+  date?: Date;
+  views?: number;
+  rating?: number;
+}
+
+
+export type  TypeParamProps = {
+  params: {
+    url: string
+  };
+  searchParams: {
+    query: string
+  }
+}
+
+export type TypeBlogCard = {
+  id: string;
+  title:string;
+  intro:string;
+  date:string;
+  url:string;
+} 
+
+export type TypeServiceCard = {
+  icon: ReactElement;
+  title: string;
+  description: string;
+  modelcontent:string;
+}
+
 export type Event = {
     yr: number;
     mon: string;

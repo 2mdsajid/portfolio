@@ -8,9 +8,6 @@ import { BiExpand } from 'react-icons/bi';
 import ProjectModel from './ProjectModel';
 
 const ProjectCard = ({ project }: { project: TypeProject }) => {
-
-
-
     return (
         <div className="bg-gray-800 shadow-md rounded-lg p-2 w-[90%] border sm:w-[60%] md:w-[45%] lg:w-[35%] xl:w-[25%] m-2">
             <div className="relative">

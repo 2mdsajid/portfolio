@@ -52,7 +52,7 @@ const SideBarC = () => {
                                 <FiUsers className='mr-2' />
                                 Friends
                             </Link>
-                            <Link href='blogs.sajidaalam.com.np' className='flex items-center text-white'>
+                            <Link href='/blogs' className='flex items-center text-white'>
                                 <FiBook className='mr-2' />
                                 Blogs
                             </Link>

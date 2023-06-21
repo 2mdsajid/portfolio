@@ -291,21 +291,118 @@ export const serviceData = [
   {
     icon: <FaBlog size={24} />,
     title: 'Blog site',
+    modelcontent: `
+      <div className="">
+        <h2 className="text-xl font-bold mb-2">Blog site</h2>
+        <h2 className="text-gray-600">Create your first blog website according to your needs.</h2>
+        <p className="text-gray-600">
+          Easily operable and manageable with free maintenance. Made with the latest technology. Features include:
+          <br>
+          - Customizable blog templates
+          <br>
+          - User-friendly content management system
+          <br>
+          - SEO optimization
+          <br>
+          - Responsive design
+        </p>
+      </div>
+    `,
     description: 'Create your first blog website according to your needs.',
   },
   {
     icon: <FaGlobe size={24} />,
     title: 'Personal Website',
+    modelcontent: `
+      <div className="">
+        <h2 className="text-xl font-bold mb-2">Personal Website</h2>
+        <p className="text-gray-600">
+          Get a custom website designed and developed based on your specific needs. Features include:
+          <br>
+          - Personalized design and layout
+          <br>
+          - Interactive portfolio showcase
+          <br>
+          - Integration with social media profiles
+          <br>
+          - Contact form for easy communication
+        </p>
+      </div>
+    `,
     description: 'Get a custom website designed and developed based on your specific needs.',
   },
   {
     icon: <FaBriefcase size={24} />,
-    title: ' business website',
+    title: 'Business Website',
+    modelcontent: `
+      <div className="">
+        <h2 className="text-xl font-bold mb-2">Business Website</h2>
+        <p className="text-gray-600">
+          Build a professional business website tailored to your requirements. Features include:
+          <br>
+          - Corporate design and branding
+          <br>
+          - Clear call-to-action sections
+          <br>
+          - Integration with e-commerce platforms
+          <br>
+          - Mobile-responsive layout
+        </p>
+      </div>
+    `,
     description: 'Build a professional business website tailored to your requirements.',
   },
   {
     icon: <FaUser size={24} />,
     title: 'Website On Demand',
+    modelcontent: `
+      <div className="">
+        <h2 className="text-xl font-bold mb-2">Website On Demand</h2>
+        <p className="text-gray-600 text-left">
+          Create any type of website as needed. Features include:
+          <br>
+          - Custom design and functionality
+          <br>
+          - Integration with third-party services
+          <br>
+          - Scalable architecture
+          <br>
+          - Easy content management system
+        </p>
+      </div>
+    `,
     description: 'Create any type of website as needed.',
   },
 ];
+
+
+export const blogsdata = [
+  {
+      _id: "1",
+      noteid: "10 Tips for Better Time Management",
+      title: "10 Tips for Better Time Management",
+      url: "10-tips-for-better-time-management",
+      intro: "In today's fast-paced world, time management has become an essential skill to have...",
+      readtime: "5 min read",
+      date: "2022-05-01"
+  },
+  {
+      _id: "2",
+      noteid: "How to Start a Successful Blog",
+      title: "How to Start a Successful Blog",
+      url: "how-to-start-a-successful-blog",
+      intro: "Blogging has become a popular way to share information, express creativity, and make money...",
+      readtime: "8 min read",
+      date: "2022-04-25"
+  },
+  {
+      _id: "3",
+      noteid: "The Benefits of Regular Exercise",
+      title: "The Benefits of Regular Exercise",
+      url: "the-benefits-of-regular-exercise",
+      intro: "Exercise is an important part of a healthy lifestyle. Not only does it help you maintain a healthy weight...",
+      readtime: "6 min read",
+      date: "2022-04-19"
+  }
+];
+
