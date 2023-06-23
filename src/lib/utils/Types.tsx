@@ -1,35 +1,54 @@
 import { ReactElement } from "react";
 
+// export type TypeSingleBlog = {
+//   _id: string;
+//   title: string;
+//   url: string;
+//   category: string;
+//   subcategory?: string;
+//   author?: string;
+//   intro: string;
+//   introimage:string;
+//   content: string;
+//   review?: boolean;
+//   published?: boolean;
+//   keywords?: string[];
+//   readtime?: string;
+//   upvote?: string[];
+//   downvote?: string[];
+//   comments?: {
+//       name?: string;
+//       email?: string;
+//       comment?: string;
+//   }[];
+//   isupdated?:{
+//       state:boolean;
+//       date:Date;
+//   }
+//   date?: Date;
+//   views?: number;
+//   rating?: number;
+// }
+
+
 export type TypeSingleBlog = {
   _id: string;
   title: string;
-  noteid: string;
+  url: string;
   category: string;
   subcategory?: string;
-  author?: string;
+  author: string;
   intro: string;
-  introimage:string;
+  introimage: string;
   content: string;
   review?: boolean;
-  published?: boolean;
   keywords?: string[];
-  readtime?: string;
-  upvote?: string[];
-  downvote?: string[];
-  comments?: {
-      name?: string;
-      email?: string;
-      comment?: string;
-  }[];
-  isupdated?:{
-      state:boolean;
-      date:Date;
-  }
-  date?: Date;
-  views?: number;
-  rating?: number;
-}
-
+  published?: boolean;
+  readtime: string;
+  date: string;
+  views: number;
+  rating: number;
+};
 
 export type  TypeParamProps = {
   params: {

@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import AnimatedButton from './AnimatedMoreButton';
 
-const EventTimeline = ({ events }: { events: Event[] }) => {
+const EventTimeline = ({ events, isHomePage }: { events: Event[], isHomePage: boolean }) => {
     return (
         <div className="w-full sm:w-[75%] md:w-[65%] lg:[55%] xl:w-[50%] mx-auto font-xs px-2">
             {/* birth  */}
@@ -70,22 +70,29 @@ const EventTimeline = ({ events }: { events: Event[] }) => {
                 </div>
             ))}
 
-
-            {/* bottom dash */}
-            <div className="w-full flex flex-col items-center justify-center space-y-3">
-                <div className='w-1.5 bg-white h-2'></div>
-                <div className='w-1.5 bg-white h-2'></div>
-                <div className='w-1.5 bg-white h-2'></div>
-                <div className='w-1.5 bg-white h-2'></div>
-                <div className='w-1.5 bg-white h-2'></div>
-                {/* <div className='w-1.5 bg-white h-2'></div>
+            {isHomePage && <>            {/* bottom dash */}
+                <div className="w-full flex flex-col items-center justify-center space-y-3">
+                    <div className='w-1.5 bg-white h-2'></div>
+                    <div className='w-1.5 bg-white h-2'></div>
+                    <div className='w-1.5 bg-white h-2'></div>
+                    <div className='w-1.5 bg-white h-2'></div>
+                    <div className='w-1.5 bg-white h-2'></div>
+                    {/* <div className='w-1.5 bg-white h-2'></div>
                 <div className='w-1.5 bg-white h-2'></div> */}
-            </div>
+                </div>
 
-            {/* button for more */}
-            <div className='w-full flex justify-center mt-5'>
-                <AnimatedButton />
-            </div>
+                {/* button for more */}
+                <div className='w-full flex justify-center mt-5'>
+                    <AnimatedButton />
+                </div>
+            </>}
+
+            { !isHomePage &&
+                <div className='w-full flex items-center justify-center my-10  '>
+                    <p>more to go .... </p>
+                </div>
+            }
+
         </div>
     );
 };

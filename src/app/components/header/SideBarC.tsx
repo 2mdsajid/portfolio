@@ -48,7 +48,7 @@ const SideBarC = () => {
                     className='lg:hidden'>
                     <div className='w-[75vw] sm:w-[65vw] md:w-[50vw] flex flex-col space-y-5 px-5 pt-20 text-xl bg-gradient-to-b from-color6 via-color3 to-color4 h-full'>
                         <div className='flex flex-col space-y-2'>
-                            <Link href='friends.sajidaalam.com.np' className='flex items-center text-white'>
+                            <Link href='/friends' className='flex items-center text-white'>
                                 <FiUsers className='mr-2' />
                                 Friends
                             </Link>

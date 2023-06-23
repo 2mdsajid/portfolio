@@ -4,7 +4,7 @@ import ProjectCard from './ProjectCard'
 
 const ProjectsCards = () => {
   return (
-    <div className='w-full flex flex-wrap justify-center mt-5'>
+    <div className='w-full flex flex-wrap justify-center my-10'>
         {dummyProjects.map((project,index)=>{
             return <ProjectCard key={index} project={project} />
         })}

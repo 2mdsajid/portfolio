@@ -18,7 +18,7 @@ const ProjectModel = ({ project }: { project: TypeProject }) => {
 
   return (
     <>
-      <button onClick={toggleModel} className="text-gray-600 hover:text-gray-500">
+      <button onClick={toggleModel} className="text-gray-600 hover:text-gray-500 flex items-center">
         <BiExpand />
       </button>
 
@@ -49,7 +49,6 @@ const ProjectModel = ({ project }: { project: TypeProject }) => {
             </div>
 
         </div>
-
         </div >
       )}
     </>

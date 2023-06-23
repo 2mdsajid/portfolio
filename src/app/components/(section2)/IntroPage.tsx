@@ -1,4 +1,4 @@
-import TypewriterC from '@/app/components/TypewriterC'
+import TypewriterC from '@/app/components/reused/TypewriterC'
 import Image from 'next/image'
 import Link from 'next/link'
 import router from 'next/navigation'

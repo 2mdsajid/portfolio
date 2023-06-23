@@ -1,4 +1,5 @@
 import { FaBlog, FaBriefcase, FaGlobe, FaUser } from "react-icons/fa";
+import { TypeSingleBlog } from "./Types";
 
 export const events = [
   {
@@ -374,6 +375,64 @@ export const serviceData = [
     description: 'Create any type of website as needed.',
   },
 ];
+
+export const blogs :TypeSingleBlog[] = [
+  {
+    "_id": "1",
+    "title": "Artificial Intelligence: Transforming the Future",
+    "url": "ai-blog-1",
+    "category": "Technology",
+    "subcategory": "AI",
+    "author": "Sarah Johnson",
+    "intro": "Artificial Intelligence (AI) is revolutionizing various industries and transforming the future. In this blog, we explore the potential of AI and its impact on society.",
+    "introimage": "ai-image.jpg",
+    "content": "AI has made significant advancements in areas such as healthcare, finance, and transportation. It has the potential to revolutionize how we live, work, and interact with technology. From self-driving cars to personalized healthcare, AI is enhancing efficiency and making complex tasks more accessible.\n\nHowever, AI also poses challenges, including ethical considerations, job displacement, and privacy concerns. It is crucial to strike a balance between technological advancements and ethical guidelines to ensure AI benefits humanity.\n\nAs AI continues to evolve, it opens up endless possibilities and exciting opportunities for innovation. Embracing AI responsibly can lead to a future where intelligent machines work hand in hand with humans to create a better world.",
+    "review": true,
+    "keywords":['some'],
+    "published": true,
+    "readtime": "6 minutes",
+    "date": "2023-06-21",
+    "views": 500,
+    "rating": 4.8
+  },
+  {
+    "_id": "2",
+    "title": "The Future of Medicine: Exploring Breakthroughs in Healthcare",
+    "url": "medicine-blog-1",
+    "category": "Health",
+    "subcategory": "Medicine",
+    "author": "Dr. Emily Carter",
+    "intro": "Advancements in medicine have transformed healthcare. In this blog, we delve into the future of medicine, including genomics, precision medicine, and AI-driven diagnostics.",
+    "introimage": "medicine-image.jpg",
+    "content": "Medicine is on the brink of a revolution. Genomics and personalized medicine allow for tailored treatments based on an individual's genetic makeup. AI-driven diagnostics aid in early detection and improve patient outcomes.\n\nFurthermore, telemedicine and remote patient monitoring enable access to quality healthcare, regardless of geographical location. From wearable devices to virtual consultations, technology is bridging the gap between doctors and patients.\n\nHowever, as medicine progresses, ethical considerations, data privacy, and equitable access to healthcare must be addressed. It's crucial to harness these breakthroughs responsibly to ensure improved healthcare outcomes for all.\n\nThe future of medicine holds immense potential for enhancing diagnostics, treatments, and overall patient care. As we embrace these advancements, we move closer to a future where precision medicine and technology converge to revolutionize healthcare.",
+    "review": true,
+    "keywords":['some2'],
+    "published": true,
+    "readtime": "7 minutes",
+    "date": "2023-06-21",
+    "views": 750,
+    "rating": 4.6
+  },
+  {
+    "_id": "3",
+    "title": "Exploring the Wonders of Space: Unveiling the Cosmos",
+    "url": "space-blog-1",
+    "category": "Science",
+    "subcategory": "Space",
+    "author": "Dr. Michael Adams",
+    "intro": "The cosmos has always fascinated humanity. In this blog, we embark on a journey to explore the wonders of space, including celestial bodies, space exploration, and the search for extraterrestrial life.",
+    "introimage": "space-image.jpg",
+    "content": "Space, with its vast expanse and celestial bodies, holds countless mysteries waiting to be unravelled. Space exploration has allowed us to witness breathtaking phenomena and expand our understanding of the universe.\n\nFrom studying distant galaxies to sending missions to other planets, space exploration pushes the boundaries of human knowledge and ignites our curiosity. Additionally, the search for extraterrestrial life captivates the imagination and raises questions about our place in the cosmos.\n\nAs we continue to delve deeper into space, we must also address challenges such as space debris and sustainable space exploration. Preserving the pristine nature of space is crucial for future generations.\n\nThe wonders of space inspire awe and stimulate scientific advancements. By exploring the cosmos, we gain valuable insights into our own existence and the vastness of the universe.",
+    "review": true,
+    "keywords":['some3'],
+    "published": true,
+    "readtime": "8 minutes",
+    "date": "2023-06-21",
+    "views": 1000,
+    "rating": 4.9
+  }
+]
+
 
 
 export const blogsdata = [

@@ -1,9 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
-import TypewriterC from '../TypewriterC'
+import TypewriterC from '../reused/TypewriterC'
 import Link from 'next/link'
 import { FiGift } from 'react-icons/fi'
-import SocialMediaLinks from '../SocialMedia'
+import SocialMediaLinks from '../reused/SocialMedia'
 
 //                 <div className='text-2xl text-color3 font-bold'><TypewriterC texts={['doctor','programmer','physicist']}/></div>
 
