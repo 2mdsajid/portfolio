@@ -21,7 +21,7 @@ const IntroPage = () => {
                         </div>
                     </div>
                     {/* about me */}
-                    <p className='lg:text-lg mb-4'>Greetings, fellow! I'm a 21-year-old MBBS student hailing from the amazing land of Nepal. When I'm not saving lives or buried in books, you'll find me coding like a wizard, conquering virtual realms through gaming, or exploring the great outdoors while trekking. Learning new things and making fantastic friends is my jam! Let's embark on this epic journey together!</p>
+                    <p className='lg:text-lg mb-4'>Greetings, fellow! I&apos;m a 21-year-old MBBS student hailing from the amazing land of Nepal. When I&apos;m not saving lives or buried in books, you&apos;ll find me coding like a wizard, conquering virtual realms through gaming, or exploring the great outdoors while trekking. Learning new things is my jam!</p>
                     <Link href="/aboutme" className=" bg-color2 hover:bg-color4 hover:border text-white font-bold py-2 px-4 rounded">
                         Know Me More
                     </Link>

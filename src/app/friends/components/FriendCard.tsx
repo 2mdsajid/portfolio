@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image';
 import { TypeFriendCard } from '@/lib/utils/Types';
 import React, { useState } from 'react';
 import FriendCardDialog from './FriendCardDialog';
@@ -20,7 +21,7 @@ const FriendCard = ({ data }:{data:TypeFriendCard}) => {
 
   return (
     <div>
-      <img src={data.image} alt={data.name} className="w-24 h-24 rounded-full" onClick={handleCardClick} />
+      <Image width={100} height={100} src={data.image} alt={data.name} className="w-24 h-24 rounded-full" onClick={handleCardClick} />
       <h2 className="text-lg font-semibold">{data.name}</h2>
 
       {isDialogOpen && (

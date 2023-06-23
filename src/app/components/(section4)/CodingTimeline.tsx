@@ -8,7 +8,7 @@ const CodingTimeline = ({ dummyData }: { dummyData: TypeStacks[] }) => {
     <div className='w-full h-full mt-20 px-4 md:px-10 lg:px-44 xl:px-52'>
       <div className='w-full h-full'>
         {dummyData.map((data, index,array) => {
-          return <TechJourney keyprop={index} stack={data} array={array}/>
+          return <TechJourney key={index} keyprop={index} stack={data} array={array}/>
         })}
       </div>
 

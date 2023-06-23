@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import GeneratorForm from './components/GeneratorForm'
 import SiteGeneratorModel from './components/SiteGeneratorModel'
 
-const page = () => {
+const Page = () => {
   const [isOpen, setIsOpen] = useState(true);
   const handleToggleModel = () => {
     setIsOpen(!isOpen);
@@ -17,4 +17,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

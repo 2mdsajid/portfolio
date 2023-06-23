@@ -26,7 +26,7 @@ interface CustomToken {
 }
 
 
-const page = () => {
+const Page = () => {
 
     const [searchedProfiles, setSearchedProfiles] = useState<TypeFriendCard[]>([])
     
@@ -132,4 +132,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

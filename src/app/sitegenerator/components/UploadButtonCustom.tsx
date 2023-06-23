@@ -29,6 +29,7 @@ const UploadComponent = ({ onUploadComplete, onUploadError }: UploadComponentPro
     try {
       const res = await DANGEROUS__uploadFiles(images, 'imageUploader');
       onUploadComplete && onUploadComplete(res);
+      console.log("🚀 ~ file: UploadButtonCustom.tsx:37 ~ handleUpload ~ res:", res)
       setImages([])
       setClick(false)
     } catch (error: any) {
