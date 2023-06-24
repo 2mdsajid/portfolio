@@ -5,7 +5,7 @@ import GeneratorForm from './components/GeneratorForm'
 import SiteGeneratorModel from './components/SiteGeneratorModel'
 
 const Page = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const handleToggleModel = () => {
     setIsOpen(!isOpen);
   };

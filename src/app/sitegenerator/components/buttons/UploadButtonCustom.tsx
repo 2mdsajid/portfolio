@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 import { DANGEROUS__uploadFiles } from 'uploadthing/client';
-// import { extractVideoId } from '../constants';
-// import { FiCheck, FiCopy } from 'react-icons/fi';
-
 
 type UploadComponentProps = {
   onUploadComplete?: (response: any) => void;

@@ -13,10 +13,6 @@ type SiteGeneratorModelProps = {
 const SiteGeneratorModel: React.FC<SiteGeneratorModelProps> = ({ isOpen, handleToggleModel }) => {
   // Rest of the component code
 
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
-
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     handleToggleModel()

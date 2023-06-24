@@ -1,6 +1,10 @@
 import { FaBlog, FaBriefcase, FaGlobe, FaUser } from "react-icons/fa";
 import { TypeSingleBlog } from "./Types";
 
+
+export const BACKEND = 'http://localhost:4004'
+export const FRONTEND= 'http://localhost:3000'
+
 export const events = [
   {
     yr: 2006,
@@ -247,44 +251,44 @@ export const terminaldata = [
 
 export const botdata = [
   {
-      t: 'hi',
-      r: 'Hi how are you doing?'
+    t: 'hi',
+    r: 'Hi how are you doing?'
   },
   {
-      t: 'hey',
-      r: 'hello, im sajid'
+    t: 'hey',
+    r: 'hello, im sajid'
   },
   {
-      t: 'bot',
-      r: 'Im still a prototype'
+    t: 'bot',
+    r: 'Im still a prototype'
   },
   {
-      t: 'who',
-      r: 'im terminal'
+    t: 'who',
+    r: 'im terminal'
   },
   {
-      t: 'intro',
-      r: 'Im terminal created by sajid'
+    t: 'intro',
+    r: 'Im terminal created by sajid'
   },
   {
-      t: 'nice',
-      r: 'pleasure'
+    t: 'nice',
+    r: 'pleasure'
   },
   {
-      t: '',
-      r: 'Nothing found'
+    t: '',
+    r: 'Nothing found'
   },
   {
-      t: 'study',
-      r: 'Mbbs first year in MCOMS, Pokhara'
+    t: 'study',
+    r: 'Mbbs first year in MCOMS, Pokhara'
   },
   {
-      t: 'doing',
-      r: 'Mbbs first year in MCOMS, Pokhara'
+    t: 'doing',
+    r: 'Mbbs first year in MCOMS, Pokhara'
   },
   {
-      t: 'where',
-      r: 'Pokhara'
+    t: 'where',
+    r: 'Pokhara'
   }
 ]
 
@@ -376,7 +380,7 @@ export const serviceData = [
   },
 ];
 
-export const blogs :TypeSingleBlog[] = [
+export const blogs: TypeSingleBlog[] = [
   {
     "_id": "1",
     "title": "Artificial Intelligence: Transforming the Future",
@@ -388,7 +392,7 @@ export const blogs :TypeSingleBlog[] = [
     "introimage": "ai-image.jpg",
     "content": "AI has made significant advancements in areas such as healthcare, finance, and transportation. It has the potential to revolutionize how we live, work, and interact with technology. From self-driving cars to personalized healthcare, AI is enhancing efficiency and making complex tasks more accessible.\n\nHowever, AI also poses challenges, including ethical considerations, job displacement, and privacy concerns. It is crucial to strike a balance between technological advancements and ethical guidelines to ensure AI benefits humanity.\n\nAs AI continues to evolve, it opens up endless possibilities and exciting opportunities for innovation. Embracing AI responsibly can lead to a future where intelligent machines work hand in hand with humans to create a better world.",
     "review": true,
-    "keywords":['some'],
+    "keywords": ['some'],
     "published": true,
     "readtime": "6 minutes",
     "date": "2023-06-21",
@@ -406,7 +410,7 @@ export const blogs :TypeSingleBlog[] = [
     "introimage": "medicine-image.jpg",
     "content": "Medicine is on the brink of a revolution. Genomics and personalized medicine allow for tailored treatments based on an individual's genetic makeup. AI-driven diagnostics aid in early detection and improve patient outcomes.\n\nFurthermore, telemedicine and remote patient monitoring enable access to quality healthcare, regardless of geographical location. From wearable devices to virtual consultations, technology is bridging the gap between doctors and patients.\n\nHowever, as medicine progresses, ethical considerations, data privacy, and equitable access to healthcare must be addressed. It's crucial to harness these breakthroughs responsibly to ensure improved healthcare outcomes for all.\n\nThe future of medicine holds immense potential for enhancing diagnostics, treatments, and overall patient care. As we embrace these advancements, we move closer to a future where precision medicine and technology converge to revolutionize healthcare.",
     "review": true,
-    "keywords":['some2'],
+    "keywords": ['some2'],
     "published": true,
     "readtime": "7 minutes",
     "date": "2023-06-21",
@@ -424,7 +428,7 @@ export const blogs :TypeSingleBlog[] = [
     "introimage": "space-image.jpg",
     "content": "Space, with its vast expanse and celestial bodies, holds countless mysteries waiting to be unravelled. Space exploration has allowed us to witness breathtaking phenomena and expand our understanding of the universe.\n\nFrom studying distant galaxies to sending missions to other planets, space exploration pushes the boundaries of human knowledge and ignites our curiosity. Additionally, the search for extraterrestrial life captivates the imagination and raises questions about our place in the cosmos.\n\nAs we continue to delve deeper into space, we must also address challenges such as space debris and sustainable space exploration. Preserving the pristine nature of space is crucial for future generations.\n\nThe wonders of space inspire awe and stimulate scientific advancements. By exploring the cosmos, we gain valuable insights into our own existence and the vastness of the universe.",
     "review": true,
-    "keywords":['some3'],
+    "keywords": ['some3'],
     "published": true,
     "readtime": "8 minutes",
     "date": "2023-06-21",
@@ -433,35 +437,93 @@ export const blogs :TypeSingleBlog[] = [
   }
 ]
 
-
-
 export const blogsdata = [
   {
-      _id: "1",
-      noteid: "10 Tips for Better Time Management",
-      title: "10 Tips for Better Time Management",
-      url: "10-tips-for-better-time-management",
-      intro: "In today's fast-paced world, time management has become an essential skill to have...",
-      readtime: "5 min read",
-      date: "2022-05-01"
+    _id: "1",
+    noteid: "10 Tips for Better Time Management",
+    title: "10 Tips for Better Time Management",
+    url: "10-tips-for-better-time-management",
+    intro: "In today's fast-paced world, time management has become an essential skill to have...",
+    readtime: "5 min read",
+    date: "2022-05-01"
   },
   {
-      _id: "2",
-      noteid: "How to Start a Successful Blog",
-      title: "How to Start a Successful Blog",
-      url: "how-to-start-a-successful-blog",
-      intro: "Blogging has become a popular way to share information, express creativity, and make money...",
-      readtime: "8 min read",
-      date: "2022-04-25"
+    _id: "2",
+    noteid: "How to Start a Successful Blog",
+    title: "How to Start a Successful Blog",
+    url: "how-to-start-a-successful-blog",
+    intro: "Blogging has become a popular way to share information, express creativity, and make money...",
+    readtime: "8 min read",
+    date: "2022-04-25"
   },
   {
-      _id: "3",
-      noteid: "The Benefits of Regular Exercise",
-      title: "The Benefits of Regular Exercise",
-      url: "the-benefits-of-regular-exercise",
-      intro: "Exercise is an important part of a healthy lifestyle. Not only does it help you maintain a healthy weight...",
-      readtime: "6 min read",
-      date: "2022-04-19"
+    _id: "3",
+    noteid: "The Benefits of Regular Exercise",
+    title: "The Benefits of Regular Exercise",
+    url: "the-benefits-of-regular-exercise",
+    intro: "Exercise is an important part of a healthy lifestyle. Not only does it help you maintain a healthy weight...",
+    readtime: "6 min read",
+    date: "2022-04-19"
   }
 ];
 
+
+export const dummyResData = {
+  "uniqueid": "sajidaalam4921d73b341545acb3fe562f4c094281",
+  "metadescription": "Lorem ipsum dolor sit amet",
+  "username": "sajid aalam",
+  "professions": [
+    "Developer",
+    "Designer"
+  ],
+  "cover": "https://example.com/cover-image.jpg",
+  "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  "address": "123 Main Street, City",
+  "resumefile": "https://example.com/resume.pdf",
+  "works": [
+    {
+      "jobinstitution": "ABC Company",
+      "jobrole": "Software Developer",
+      "jobyear": "2022-2023",
+      "jobdescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "jobimage": "https://example.com/job-image1.jpg",
+      "_id": "6496842a29d07029d1cf86f3"
+    },
+    {
+      "jobinstitution": "XYZ Corporation",
+      "jobrole": "Graphic Designer",
+      "jobyear": "2020-2022",
+      "jobdescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "jobimage": "https://example.com/job-image2.jpg",
+      "_id": "6496842a29d07029d1cf86f4"
+    }
+  ],
+  "schools": [
+    {
+      "schoolinstitution": "ABC High School",
+      "schoollevel": "High School",
+      "classof": "2018",
+      "schooldescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "schoolimage": "https://example.com/school-image1.jpg",
+      "_id": "6496842a29d07029d1cf86f5"
+    },
+    {
+      "schoolinstitution": "XYZ University",
+      "schoollevel": "Bachelor's Degree",
+      "classof": "2022",
+      "schooldescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "schoolimage": "https://example.com/school-image2.jpg",
+      "_id": "6496842a29d07029d1cf86f6"
+    }
+  ],
+  "email": "example@example.com",
+  "socialmedialinks": {
+    "facebook": "https://facebook.com/example",
+    "instagram": "https://instagram.com/example",
+    "twitter": "https://twitter.com/example",
+    "youtube": "https://youtube.com/example",
+    "telegram": "https://t.me/example"
+  },
+  "_id": "6496842a29d07029d1cf86f2",
+  "__v": 0
+}

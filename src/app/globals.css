@@ -29,9 +29,16 @@ body {
 
 
 /* CSS */
+
+.scrollbar-hidden::-webkit-scrollbar {
+  width: 0;
+  background-color: #f5f5f5;
+}
+
 /* Customize the scrollbar track */
 ::-webkit-scrollbar {
   width: 0px;
+  height: 0px;
   background-color: #f5f5f5;
 }
 
@@ -50,7 +57,6 @@ body {
 ::-webkit-scrollbar-corner {
   background-color: #f5f5f5;
 }
-
 
 .text-gradient {
   background: linear-gradient(to right, #ff00cc, #00fff7);
