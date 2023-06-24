@@ -7,10 +7,10 @@ import WhatsAppLink from './components/WhatsAppLink'
 
 const page = () => {
     return (
-        <div className='min-h-screen w-screen  bg-primarybg text-white pt-20'>
+        <div className='h-screen w-screen  bg-primarybg text-white pt-20'>
             {/* <Header /> */}
-            <div className='w-full h-full flex flex-col md:flex-row items-center md:justify-around  px-4 md:px-10 lg:px-40 xl:px-44 py-5'>
-                <div className='w-[90%] sm:w-[70%] md:w-[45%] flex flex-col items-start justify-center'>
+            <div className='w-full h-max flex flex-col md:flex-row items-center  md:items-start md:justify-around  px-4 md:px-10 lg:px-40 xl:px-44 py-5'>
+                <div className='w-[90%] sm:w-[70%] md:w-[45%] flex flex-col  items-start h-max pb-5 justify-between'>
                     <div className=''>
                         <h1 className='text-5xl font-semibold'>Hey There<br />Lets get Connected !</h1>
                         <div className='my-5'>
