@@ -1,20 +1,25 @@
 'use client'
 
 
-
 import { botdata, terminaldata } from '@/lib/utils/Constants';
 import { ParsedHtml } from '@/lib/utils/Functions';
 
-import React, { FormEvent, FormEventHandler, RefObject, SyntheticEvent, useEffect, useRef, useState } from 'react'
+import React, { FC, FormEvent, FormEventHandler, RefObject, SyntheticEvent, useEffect, useRef, useState } from 'react'
 import { DisplayShell } from './displayShell';
+
 export type reqresDataType = {
     request: string,
     response: string
 }
 
+interface TerminalProps {
+    closeTerminal?: () => void;
+  }
 
 
-const Terminal = ({closeTerminal}:{closeTerminal:()=>void}) => {
+
+  const Terminal: FC<TerminalProps> = ({ closeTerminal = () => {} }) => {
+
     const inputRef: RefObject<HTMLInputElement> = useRef(null);
     const containerRef = useRef<HTMLDivElement>(null);
     

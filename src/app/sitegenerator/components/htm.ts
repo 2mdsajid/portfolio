@@ -94,7 +94,7 @@ class="flex items-center justify-between border-b border-blue-100 py-2 px-2 sm:p
 
 export const getLandingPage = (username: string,cover?:string) =>{
   return `    <section id="home" class="sm:pt-20 w-screen h-max flex flex-col justify-between border-black">
-  <div class='flex flex-col md:flex-row border-black justify-between items-center px-4 sm:px-6 lg:px-40'>
+  <div class=' flex flex-col md:flex-row border-black justify-between items-center px-4 sm:px-6 lg:px-40'>
     <div class="w-full md:w-1/2 flex items-center justify-center">
       <div class="text-3xl lg:text-[2.5rem] py-0 lg:py-0 font-bold leading-10 lg:leading-normal">
         Hey friend,<br>
@@ -383,8 +383,31 @@ export const getJsVar = (professions:string[]) =>{
 
 
   return `  <script>
-  function navbarToggle() { var e = document.querySelector('.header-contents'), t = document.querySelector('.header-nav-toggle'); e.classList.toggle('nav-show'), e.classList.toggle('list-show'), e.classList.toggle('nav-hide'), e.classList.toggle('list-hide'), t.classList.toggle('rotateDiv') } document.querySelector('.header-nav-toggle').addEventListener('click', function () { navbarToggle() }); var headerLinks = document.querySelectorAll('.header-contents li a'); headerLinks.forEach(function (e) { e.addEventListener('click', function () { navbarToggle() }) });
-  const nameMoving = [${professionarray}];
+  function navbarToggle() {
+    var headerContents = document.querySelector('.header-contents');
+    var headerNavToggle = document.querySelector('.header-nav-toggle');
+  
+    headerContents.classList.toggle('nav-show');
+    headerContents.classList.toggle('list-show');
+    headerContents.classList.toggle('nav-hide');
+    headerContents.classList.toggle('list-hide');
+    headerNavToggle.classList.toggle('rotateDiv');
+  }
+  
+  document.querySelector('.header-nav-toggle').addEventListener('click', function () {
+    navbarToggle();
+  });
+  
+  var headerLinks = document.querySelectorAll('.header-contents li a');
+  headerLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+      navbarToggle();
+    });
+  });
+
+
+  
+   const nameMoving = [${professionarray}];
   let vari_i = 0;
   let vari_j = 0;
   let text = '';

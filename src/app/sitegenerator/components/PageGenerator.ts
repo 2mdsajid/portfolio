@@ -57,8 +57,8 @@ export const generateFinalPageHtml = (
   ${contact}
   ${footer}
   </div>
-  
-  ${jsvar}</body></html>
+  ${jsvar}
+  </body></html>
   `
   return htmlpage
 }

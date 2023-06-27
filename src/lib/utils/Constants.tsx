@@ -476,7 +476,7 @@ export const dummyResData = {
     "Developer",
     "Designer"
   ],
-  "cover": "https://example.com/cover-image.jpg",
+  "cover": "https://utfs.io/f/1b7e54cc-7949-4548-8e52-e728eee6f52a_galimg_9.jpg",
   "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   "address": "123 Main Street, City",
   "resumefile": "https://example.com/resume.pdf",

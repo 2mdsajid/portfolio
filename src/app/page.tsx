@@ -12,6 +12,7 @@ import { dummyData } from '@/lib/utils/Types'
 import IntroPage from './components/(section2)/IntroPage'
 import TechStacks2 from './components/(section5)/TechStacks2'
 import Footer from './components/footer/Footer'
+import WebCli from './components/(section7)/WebCli'
 
 // style={{ backgroundImage: "url('/bg/bg-4.png')", backgroundSize: "cover" }}
 
@@ -53,7 +54,7 @@ const page = () => {
                 <SectionTitle title='SO WHAT I DID SO FAR?' />
                 {/* remaining contents */}
                 <div className='w-full h-full'>
-                    <TechStacks />
+                    {/* <TechStacks /> */}
                     <TechStacks2 />
                 </div>
             </section>
@@ -63,6 +64,14 @@ const page = () => {
                 {/* remaining contents */}
                 <div className='w-full h-full my-10'>
                     <ProjectsCards />
+                </div>
+            </section>
+
+            <section className='h-max w-full mb-10'>
+                <SectionTitle title='LAST BUT NOT THE LEAST' />
+                {/* remaining contents */}
+                <div className='w-full h-full my-10'>
+                    <WebCli />
                 </div>
             </section>
 

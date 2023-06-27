@@ -9,17 +9,22 @@ const TechStacks2 = () => {
             </div>
             <div className="flex space-x-2 space-y-2 justify-center items-center w-full">
                 <StyledIcon icon='react' />
-                <StyledIcon icon='js2' />
+                <StyledIcon icon='javascript' />
             </div>
             <div className="flex space-x-2 space-y-2 justify-center items-center w-full">
                 <StyledIcon icon='html' />
                 <StyledIcon icon='css' />
-                <StyledIcon icon='ts' />
+                <StyledIcon icon='typescript' />
             </div>
             <div className="flex space-x-2 space-y-2 justify-center items-center w-full">
                 <StyledIcon icon='nodejs' />
-                <StyledIcon icon='python' />
-                <StyledIcon icon='tailwindcss' />
+                {/* <StyledIcon icon='python' /> */}
+                <StyledIcon icon='tailwind' />
+
+                
+
+            </div>
+            <div className="flex space-x-2 space-y-2 justify-center items-center w-full">
                 <StyledIcon icon='mongodb' />
             </div>
         </div>
