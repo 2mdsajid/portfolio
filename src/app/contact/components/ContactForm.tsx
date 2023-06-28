@@ -12,7 +12,7 @@ const ContactForm = () => {
     // for alert and progress
     const [alertseverity, setalertSeverity] = useState<AlertColor>('success');
     const [alertmessage, setalertMessage] = useState<string>('successfully generated');
-    const [showalert, setshowAlert] = useState<boolean>(true)
+    const [showalert, setshowAlert] = useState<boolean>(false)
     const [showprogress, setshowProgress] = useState<boolean>(false)
 
 

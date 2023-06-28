@@ -43,7 +43,7 @@ const BodyContent = ({ data }: { data: TypeHtmlResData }) => {
     } else {
         education = ``
     }
-    const contact = getContact('someone@example.com', socialmedialinks)
+    const contact = getContact('someone@example.com', socialmedialinks,uniqueid)
     const footer = getFooter(username, address)
 
     return (

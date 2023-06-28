@@ -4,6 +4,7 @@ import TypewriterC from '../reused/TypewriterC'
 import Link from 'next/link'
 import { FiGift } from 'react-icons/fi'
 import SocialMediaLinks from '../reused/SocialMedia'
+import ChatBot from '../chatbot/ChatBot'
 
 //                 <div className='text-2xl text-color3 font-bold'><TypewriterC texts={['doctor','programmer','physicist']}/></div>
 
@@ -45,6 +46,10 @@ const LandingPage = () => {
 
             <div className='fixed bottom-0 left-0 lg:left-10'>
                 <SocialMediaLinks />
+            </div>
+
+            <div className=''>
+                <ChatBot />
             </div>
 
         </div>

@@ -8,6 +8,7 @@ import { FiMail } from 'react-icons/fi';
 
 import { FiUsers, FiBook, FiBriefcase } from 'react-icons/fi';
 import TerminalButton from '../terminal/TerminalButton';
+import ChatBot from '../chatbot/ChatBot';
 
 
 const Header = () => {
@@ -32,9 +33,10 @@ const Header = () => {
           <TerminalButton />
         </div>
 
-
         {/* visible in small devices ---client component */}
         <SideBarC />
+
+
 
       </div>
     </div>

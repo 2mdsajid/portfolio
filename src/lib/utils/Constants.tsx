@@ -1,5 +1,5 @@
 import { FaBlog, FaBriefcase, FaGlobe, FaUser } from "react-icons/fa";
-import { TypeSingleBlog } from "./Types";
+import { TypeBotReqRes, TypeSingleBlog } from "./Types";
 
 
 export const BACKEND = 'http://localhost:4004'
@@ -284,7 +284,7 @@ export const botdata = [
   },
   {
     t: 'doing',
-    r: 'Mbbs first year in MCOMS, Pokhara'
+    r: 'Mbbs first year in MCOMS, Pokhara, Mbbs first year in MCOMS, Pokhara, Mbbs first year in MCOMS, Pokhara'
   },
   {
     t: 'where',
@@ -527,3 +527,28 @@ export const dummyResData = {
   "_id": "6496842a29d07029d1cf86f2",
   "__v": 0
 }
+
+
+export const dummyBotData: TypeBotReqRes[] = [
+  {
+    value: 'Hello, how can I assist you today?',
+    sender: 'bot',
+  },
+  {
+    value: 'I have a question regarding your products.',
+    sender: 'user',
+  },
+  {
+    value: 'Sure, Im here to help. What is your question?',
+    sender: 'bot',
+  },
+  {
+    value: 'Can you provide more information about the warranty?',
+    sender: 'user',
+  },
+  {
+    value: 'Certainly! Our products come with a 1-year warranty.',
+    sender: 'bot',
+  },
+];
+

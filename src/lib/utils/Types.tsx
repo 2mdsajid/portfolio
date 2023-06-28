@@ -179,6 +179,11 @@ export type TypeHtmlResData = {
   __v: number;
 };
 
+export type TypeBotReqRes = {
+  value: string;
+  sender: 'bot' | 'user';
+}
+
 
 export const dummyPageData: TypeHtmlPageData = {
   metadescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
