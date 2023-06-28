@@ -16,6 +16,7 @@ export const generateFinalPageHtml = (
   
   <head>
   ${metadata}
+  <script src="https://releases.jquery.com/git/jquery-git.js"></script>
     <script src="https://kit.fontawesome.com/5d28e6dccc.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/react-icons@4.9.0/fa/index.esm.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>

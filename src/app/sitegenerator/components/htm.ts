@@ -307,20 +307,22 @@ export const education = `    <section id="education" class="sm:pt-20 w-screen p
 `
  */
 
-export const getContact = (email: string,socialmedialinks:TypeSocialMediaLinks) => {
+export const getContact = (email: string,socialmedialinks:TypeSocialMediaLinks,uniqueid:string) => {
   const {instagram,facebook,twitter,youtube} = socialmedialinks
 
   return `    <section id="contact" class="sm:pt-20 w-screen px-2 sm:px-5 md:px-10 xl:px-40 py-10 pb-0">
   <h1 class="text-4xl font-bold mb-5 md:mb-20 lg:mb-26">Contact</h1>
   <div class="w-full h-full">
     <div class="contact lg:w-[80%] lg:mx-auto border-black p-2 flex flex-col sm:flex-row">
-      <form class="contact-form flex flex-col sm:w-1/2 sm:pr-8"
-        action="https://formsubmit.co/livingasrb007@email.com" method="post">
-        <input class="n mb-4 p-2 rounded" type="text" placeholder="Your name" name="name" required>
-        <input class="e mb-4 p-2 rounded" type="text" placeholder="Your email" name="email" required>
-        <textarea class="m mb-4 p-2 rounded" placeholder="Message" name="message" required></textarea>
-        <input class="send p-2 rounded bg-blue-500 text-white" type="button" value="Send">
-      </form>
+    <form class="contact-form flex flex-col sm:w-1/2 sm:pr-8"
+    action="https://formsubmit.co/livingasrb007@email.com" method="post">
+    <div class="response-msg"></div>
+    <input class="n mb-4 p-2 rounded" type="text" placeholder="Your name" name="name" required>
+    <input class="e mb-4 p-2 rounded" type="text" placeholder="Your email" name="email" required>
+    <textarea class="m mb-4 p-2 rounded" placeholder="Message" name="message" required></textarea>
+    <input class="send p-2 rounded bg-blue-500 text-white hover:bg-blue-700 cursor-pointer" type="button"
+      value="Send">
+  </form>
       <div class="block sm:hidden w-full h-1 my-5 bg-blue-900"></div>
       <div
       class="contact-right lg:pl-[5rem] flex flex-col justify-between mt-2 sm:mt-0 sm:w-1/2 sm:pl-8 sm:border-l-4 border-blue-900 ">
@@ -338,6 +340,77 @@ export const getContact = (email: string,socialmedialinks:TypeSocialMediaLinks) 
     </div>
   </div>
   </section>
+
+
+
+  <script>
+
+  let buttonClicked = null;
+
+  $('.warn').css({ 'display': 'none' })
+
+  $('.send').on('click', (e) => {
+    e.preventDefault()
+    console.log("🚀 ~ file: index.html:212 ~ $ ~ preventDefault:", 'preventDefault')
+
+    $('.send').val('sending..')
+
+
+    const name = $('.n').val()
+    const email = $('.e').val()
+    const message = $('.m').val()
+
+    if (message && email) {
+      const payload = {
+        sendername: name,
+        senderemail: email,
+        sendermessage: message
+      }
+      console.log(payload)
+      // https://sajidportfolio.adaptable.app
+      fetch('https://sajidportfolio.adaptable.app/sendformmessage/${uniqueid}', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+        .then(response => {
+          if (response.ok) {
+            $('.send').val('send')
+            buttonClicked = 'success';
+            $('.response-msg').css({ 'display': 'block', 'color': 'green' })
+            $('.response-msg').text('Feedback sent successfully!')
+            $('.n').val('')
+            $('.e').val('')
+            $('.m').val('')
+          } else {
+            $('.send').val('send')
+            buttonClicked = 'failed';
+            console.error('Failed to send feedback:', response);
+            $('.response-msg').css({ 'display': 'block', 'color': 'red' })
+            $('.response-msg').text('Failed to send feedback. Please try again.')
+          }
+        })
+        .catch(error => {
+          $('.send').val('send')
+          buttonClicked = 'failed';
+          console.error('An error occurred while sending feedback:', error);
+          $('.response-msg').css({ 'display': 'block', 'color': 'red' })
+          $('.response-msg').text('An error occurred while sending feedback. Please try again.')
+        });
+        
+      } else {
+      $('.send').val('send')
+      $('.response-msg').css({ 'display': 'block', 'color': 'red' })
+      $('.response-msg').text('Email and message are required fields')
+    }
+
+  })
+</script>
+
+
+
   `
 }
 

@@ -23,8 +23,8 @@ async function fetchData(uniqueid: string) {
 
 const page = async (props: TypeParamProps) => {
     const uniqueid = props.params.uniqueid
-    // const data = await fetchData(uniqueid)
-    const data = dummyResData
+    const data = await fetchData(uniqueid)
+    // const data = dummyResData
 
     const {
         username,

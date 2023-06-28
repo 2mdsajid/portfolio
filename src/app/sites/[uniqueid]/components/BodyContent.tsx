@@ -14,6 +14,7 @@ import SiteHeader from './SiteHeader';
 const BodyContent = ({ data }: { data: TypeHtmlResData }) => {
 
     const {
+        uniqueid,
         username,
         email,
         address,
@@ -52,7 +53,7 @@ const BodyContent = ({ data }: { data: TypeHtmlResData }) => {
            <SiteAboutPage about={about} resumefile={resumefile} />
            {works.length > 0 && <SiteWorkSection works={works} />}
            {schools.length > 0 && <SiteSchoolPage schools={schools} />}
-           <SiteContactPage email={email} socialMediaLinks={socialmedialinks} />
+           <SiteContactPage email={email} socialMediaLinks={socialmedialinks} uniqueid={uniqueid} />
            <SiteFooterPage username={username} address={address} />
         </div>
     )

@@ -45,7 +45,7 @@ const PreviewModel = ({ formData }: { formData: TypeHtmlResData }) => {
     } else {
         education = ``
     }
-    const contact = getContact('someone@example.com', socialmedialinks)
+    const contact = getContact(email, socialmedialinks, uniqueid)
     const footer = getFooter(username, address)
     const jsvar = getJsVar(professions)
 
@@ -68,12 +68,12 @@ const PreviewModel = ({ formData }: { formData: TypeHtmlResData }) => {
     return (
         // <div dangerouslySetInnerHTML={{ __html: htmlpage }} />
 
-        <iframe
-            title="Preview"
-            srcDoc={htmlpage}
-            sandbox="allow-scripts"
-            style={{ width: '100vw', height: '100vh', border: 'none' }}
-        />
+        // <iframe
+        //     title="Preview"
+        //     srcDoc={htmlpage}
+        //     sandbox="allow-scripts"
+        //     style={{ width: '100vw', height: '100vh', border: 'none' }}
+        // />
 
 
 
@@ -81,13 +81,13 @@ const PreviewModel = ({ formData }: { formData: TypeHtmlResData }) => {
         // <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-opacity-50 backdrop-blur z-50">
 
 
-        //     <div className='w-[95%] sm:w-[85%] md:w-[70%] lg:w-[60%] xl:[50%] max-h-[85vh] overflow-auto mx-auto bg-primarybg border p-4 flex flex-col rounded-md drop-shadow-sm'>
-        //         <CopyIcon uniqueid={uniqueid} />
-        //         <div className='flex justify-center items-center space-x-3'>
-        //             <PreviewButton uniqueid={uniqueid} />
-        //             <DownloadButton htmlpage={htmlpage} />
-        //         </div>
-        //     </div>
+        <div className='w-[95%] sm:w-[85%] md:w-[70%] lg:w-[60%] xl:[50%] max-h-[85vh] overflow-auto mx-auto bg-primarybg border p-4 flex flex-col rounded-md drop-shadow-sm'>
+            <CopyIcon uniqueid={uniqueid} />
+            <div className='flex justify-center items-center space-x-3'>
+                <PreviewButton uniqueid={uniqueid} />
+                <DownloadButton htmlpage={htmlpage} />
+            </div>
+        </div>
         // </div>
     )
 }

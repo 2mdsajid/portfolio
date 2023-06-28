@@ -4,6 +4,7 @@ import React, { FC, useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FaInstagram, FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
+import { BACKEND } from "@/lib/utils/Constants";
 
 
 interface SocialMediaLinks {
@@ -16,11 +17,12 @@ interface SocialMediaLinks {
 interface ContactProps {
   email: string;
   socialMediaLinks: SocialMediaLinks;
+  uniqueid:string
 }
 
 
 
-const SiteContactPage: FC<ContactProps> = ({ email, socialMediaLinks }) => {
+const SiteContactPage: FC<ContactProps> = ({ email, socialMediaLinks,uniqueid }) => {
   const { instagram, facebook, twitter, youtube } = socialMediaLinks;
 
   const [sendername, setSenderName] = useState('');
@@ -33,19 +35,24 @@ const SiteContactPage: FC<ContactProps> = ({ email, socialMediaLinks }) => {
     event.preventDefault();
     setButtonText('Sending...');
 
-    console.log(sendername,senderemail,senderemail);
-    return
-
     // Perform your form submission logic here, e.g., using fetch or axios
     try {
-      // Make your API call to submit the form data
-      const response = await fetch(`https://formsubmit.co/${email}`, {
+      const response = await fetch(BACKEND + `/sendformmessage/${uniqueid}`, {
         method: 'POST',
-        body: JSON.stringify({ sendername, senderemail, sendermessage }),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          sendername,senderemail,sendermessage
+        }),
       });
 
+      const data = await response.json();
       if (response.ok) {
         setResponse('Form submitted successfully!');
+        setSenderEmail('')
+        setSenderMessage('')
+        setSenderName('')
       } else {
         setResponse('Failed to submit the form.');
       }
@@ -54,6 +61,9 @@ const SiteContactPage: FC<ContactProps> = ({ email, socialMediaLinks }) => {
     }
 
     setButtonText('Send');
+    setTimeout(() => {
+      setResponse('')
+    }, 2000);
   };
 
 
