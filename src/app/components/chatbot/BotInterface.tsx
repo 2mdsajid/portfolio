@@ -6,6 +6,7 @@ import { DisplayShell } from '../terminal/displayShell';
 import { TypeBotReqRes } from '@/lib/utils/Types';
 import { botdata, dummyBotData } from '@/lib/utils/Constants';
 import { AiOutlineSend } from 'react-icons/ai';
+import { CgClose } from 'react-icons/cg';
 
 interface BotProps {
     closeBotInterface?: () => void;
@@ -85,9 +86,9 @@ const BotInterface: FC<BotProps> = ({ closeBotInterface = () => { } }) => {
     return (
         <div className='w-full h-full flex items-center justify-center px-4'>
             <div className='w-full flex-col flex justify-between sm:w-[90%] md:w-[80%] lg:w-[65%] xl:w-[50%] h-[27rem] max-h-fit md:h-[33rem] rounded-lg z-10 bg-black border border-b-0'>
-                <div className='w-full border-b p-4 bg-gray-900 rounded-t-lg'>
+                <div className='w-full border-b p-4 bg-primarybg rounded-t-lg'>
                     <div className=' w-full flex justify-between'>
-                        <button onClick={closeBotInterface} className="h-5 w-5 rounded-full bg-red-600 border border-white"></button>
+                        <button onClick={closeBotInterface} className="p-1 rounded-full border-white"><CgClose /></button>
                         <p>{botname}</p>
                     </div>
                 </div>
@@ -96,16 +97,15 @@ const BotInterface: FC<BotProps> = ({ closeBotInterface = () => { } }) => {
                 <div ref={containerRef} className='h-full w-full overflow-auto pb-5 pt-2'>
                     {dataObject.map((data, index) => {
                         return <div key={index} className={` w-full rounded my-1 p-1 flex ${data.sender === 'bot' ? 'justify-start pl-2' : 'justify-end pr-2'}`}>
-                            <p className={`w-fit max-w-[80%] sm:max-w-[60%] border rounded-md p-2 ${data.sender === 'bot' ? 'text-left pl-3 bg-gray-900' : 'text-right pr-3 bg-gray-800'}`}>{data.value}</p>
+                            <p className={`w-fit max-w-[80%] sm:max-w-[60%] border rounded-md p-2 ${data.sender === 'bot' ? 'text-left pl-3 bg-primarybg' : 'text-right pr-3 bg-gray-800'}`}>{data.value}</p>
                         </div>
                     })}
-
                 </div>
 
 
                 <div className='w-full'>
-                    <form onSubmit={getUserInput} className='flex justify-between w-full border p-3 bg-gray-900 rounded-b-md'>
-                        <input type="text" placeholder='type here ....' className='w-full bg-gray-900 outline-none' value={userinput} onChange={(e) => setUserInput(e.currentTarget.value)} />
+                    <form onSubmit={getUserInput} className='flex justify-between w-full border p-3 bg-primarybg rounded-b-md'>
+                        <input type="text" placeholder='type here ....' className='w-full bg-primarybg outline-none' value={userinput} onChange={(e) => setUserInput(e.currentTarget.value)} />
                         <button className='text-2xl' type='submit'>
                             <AiOutlineSend />
                         </button>

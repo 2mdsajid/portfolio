@@ -2,8 +2,8 @@ import { FaBlog, FaBriefcase, FaGlobe, FaUser } from "react-icons/fa";
 import { TypeBotReqRes, TypeSingleBlog } from "./Types";
 
 
-export const BACKEND = 'http://localhost:4004'
-export const FRONTEND= 'http://localhost:3000'
+export const BACKEND = 'https://sajidportfolio.adaptable.app'
+export const FRONTEND= 'https://sajidportfolio.vercel.app/'
 
 export const events = [
   {
