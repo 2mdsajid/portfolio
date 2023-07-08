@@ -1,4 +1,10 @@
 import './globals.css'
+import Hotjar from '@hotjar/browser';
+
+const siteId = 3565377;
+const hotjarVersion = 6;
+
+Hotjar.init(siteId, hotjarVersion);
 
 import { Inter } from 'next/font/google'
 
