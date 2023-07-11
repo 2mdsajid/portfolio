@@ -1,8 +1,5 @@
 'use client'
 import React, { FC, useState } from "react";
-
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FaInstagram, FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
 import { BACKEND } from "@/lib/utils/Constants";
 

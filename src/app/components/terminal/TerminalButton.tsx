@@ -1,6 +1,5 @@
 'use client'
 
-
 import React, { useState } from 'react';
 import { IoTerminalOutline } from 'react-icons/io5';
 import Terminal from './Terminal';
@@ -20,7 +19,7 @@ const TerminalButton = () => {
   };
 
   return (
-    <div className='text-white flex items-center'>
+    <div className='text-color1 dark:text-dark-color1 flex items-center'>
       {showTerminal ? (
         <div className='fixed inset-0 flex items-center justify-center'>
           <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-opacity-50 backdrop-blur z-50">

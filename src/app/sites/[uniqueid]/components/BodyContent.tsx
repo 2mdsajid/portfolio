@@ -1,4 +1,4 @@
-import LandingPage from '@/app/components/(section1)/LandingPage';
+import LandingPage from '@/app/components/(landingpage)/LandingPage';
 import { getLandingPage, getAboutPage, getWorkSection, getEducationSection, getContact, getFooter } from '@/app/sitegenerator/components/htm';
 import { ParsedHtml } from '@/lib/utils/Functions';
 import { TypeHtmlResData } from '@/lib/utils/Types';

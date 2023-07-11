@@ -1,5 +1,27 @@
 import parse from 'html-react-parser';
 
+// get and set unique user id on first visit
+export const setUniqueUserId = async () => {
+    
+    const response = await fetch(FRONTEND + '/api/ip');
+    const data = await response.json();
+    
+    let uniqueid = localStorage.getItem('uniqueid')
+    if (uniqueid || !uniqueid) {
+        if (uniqueid) {
+            uniqueid = JSON.parse(uniqueid);
+        }
+        if (uniqueid === null || uniqueid === 'null' || uniqueid === 'undefined') {
+            console.log('null')
+            const { v4: uuidv4 } = require('uuid');
+            const vvid = uuidv4(); // generates a version 4 UUID 
+
+            localStorage.setItem(`uniqueid`, JSON.stringify(vvid));
+            return vvid;
+        }
+        return uniqueid;
+    }
+}
 
 /* PARSING HTML----------------------------- */
 export const ParsedHtml = (str: string) => {
@@ -17,9 +39,8 @@ export const IsoFOrmat = (date: string) => {
     return datee.toISOString();
 }
 
-import fs from 'fs';
-import path from 'path';
 import { saveAs } from 'file-saver';
+import { FRONTEND } from './Constants';
 
 
 // function to write content to file

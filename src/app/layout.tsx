@@ -1,14 +1,14 @@
+import ThemeWrapper from '@/lib/utils/ThemeWrapper'
 import './globals.css'
-import Hotjar from '@hotjar/browser';
+// import Hotjar from '@hotjar/browser';
 
-const siteId = 3565377;
-const hotjarVersion = 6;
+// const siteId = 3565377;
+// const hotjarVersion = 6;
 
-Hotjar.init(siteId, hotjarVersion);
+// Hotjar.init(siteId, hotjarVersion);
 
 import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Sajid',
@@ -22,8 +22,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {children}
+      <body>
+      <ThemeWrapper>
+          {children}
+        </ThemeWrapper>
       </body>
     </html>
   )
