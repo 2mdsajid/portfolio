@@ -4,28 +4,28 @@ import { FaTwitter, FaFacebook, FaInstagram, FaGithub, FaLinkedin } from 'react-
 const SocialMediaLinks = () => {
   return (
     <div className="flex flex-col space-y-2 lg:space-y-4 items-center">
-      <Link href="https://twitter.com">
-        <span className=" text-white font-bold py-1 rounded">
+      <Link target='_blank' href="https://twitter.com/c0mrad1_">
+        <span className=" text-color1 dark:text-dark-color1 font-bold py-1 rounded">
           <FaTwitter size={24} />
         </span>
       </Link>
-      <Link href="https://facebook.com">
-        <span className=" text-white font-bold py-1 rounded">
+      <Link target='_blank' href="https://www.facebook.com/c0mrad1/">
+        <span className=" text-color1 dark:text-dark-color1 font-bold py-1 rounded">
           <FaFacebook size={24} />
         </span>
       </Link>
-      <Link href="https://instagram.com">
-        <span className=" text-white font-bold py-1 rounded">
+      <Link target='_blank' href="https://www.instagram.com/c0mrad1/">
+        <span className=" text-color1 dark:text-dark-color1 font-bold py-1 rounded">
           <FaInstagram size={24} />
         </span>
       </Link>
-      <Link href="https://github.com">
-        <span className=" text-white font-bold py-1 rounded">
+      <Link target='_blank' href="https://github.com/2mdsajid">
+        <span className=" text-color1 dark:text-dark-color1 font-bold py-1 rounded">
           <FaGithub size={24} />
         </span>
       </Link>
-      <Link href="https://linkedin.com">
-        <span className=" text-white font-bold py-1 rounded">
+      <Link target='_blank' href="https://www.linkedin.com/in/c0mrad1/">
+        <span className=" text-color1 dark:text-dark-color1 font-bold py-1 rounded">
           <FaLinkedin size={24} />
         </span>
       </Link>

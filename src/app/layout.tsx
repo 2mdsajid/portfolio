@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-      <ThemeWrapper>
+        <ThemeWrapper>
           {children}
         </ThemeWrapper>
       </body>
