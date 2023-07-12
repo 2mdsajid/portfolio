@@ -1,4 +1,9 @@
 import { ReactElement } from "react";
+import { IconType } from "react-icons";
+import { BsPhone } from "react-icons/bs";
+import { FaBrain,FaWalking } from "react-icons/fa";
+import { GiDiscussion, GiNoseFront,GiPublicSpeaker } from "react-icons/gi";
+import {RiSpeakerLine} from 'react-icons/ri'
 
 // export type TypeSingleBlog = {
 //   _id: string;
@@ -183,6 +188,45 @@ export type TypeBotReqRes = {
   value: string;
   sender: 'bot' | 'user';
 }
+
+export type TypeTalent = {
+  icon:React.ReactNode;
+  title:string;
+  desc:string;
+}
+
+export const dummyTalents: TypeTalent[] = [
+  {
+    icon: <GiNoseFront />,
+    title: 'Allergic Rhinitis',
+    desc:'God gave me Allergic Rhinitis. I do not blame myself for that as it is god-gifted. i have to take Lukast Plus ( a medicine for allergies ) every 3 days because on the 3rd day i get the rhinitis.'
+  },
+  {
+    icon: <FaBrain />,
+    title: 'Distractibility Disorder',
+    desc:'a reduced ability to maintain attention on a specific task or stimuli due to the presence of external or internal distractions. It is exaggerated by notifications.'
+  },
+  {
+    icon: <BsPhone />,
+    title: 'Infomania',
+    desc:'a condition characterized by an excessive and compulsive need to constantly consume or seek out information, particularly through digital devices and technologies.'
+  },
+  {
+    icon: <FaWalking />,
+    title: 'Dance',
+    desc:'LOL! I don\'t know dancing. tbh I hate it. Last time I danced and the results were quite awkward'
+  },
+  {
+    icon: <GiPublicSpeaker />,
+    title: 'Public Speaking',
+    desc:'In the name public speaking, I have given some speeches in my school.'
+  },
+  {
+    icon: <GiDiscussion />,
+    title: 'Social Skills',
+    desc:'I am the INTROVERT GUY. I can not start a conversation. I can not keep one either. It\'s all Up to You.'
+  },
+]
 
 
 export const dummyPageData: TypeHtmlPageData = {
@@ -438,20 +482,20 @@ export const dummyFriendData: TypeFriendCard[] = [
 export const dummyData = [
   {
     image: "nodejs",
-    name: "Stack 1",
-    desc: "Description for Stack 1 limitedfor Stack 1 limitedfor Stack 1 limitedfor Stack 1 limited to 25 words",
+    name: "QBASIC",
+    desc: "i wrote my first 'Hello World! and then played around logics, loops and callbacks and made some games, quizzes until I ended up in my +2.",
     date: "2002 Dec 25" // Original date format
   },
   {
-    image: "react",
-    name: "Stack 2",
-    desc: "Description for Stack 2 limited tofor Stack 1 limitedfor Stack 1 limitedfor Stack 1 limited 25 words",
+    image: "Python",
+    name: "Python",
+    desc: "it was corona lockdown and i was watching some AI videos on yt and thought to learn one. I asked Roman, and he suggested me to learn Python.\nI still had my phone. No PC or Laptop",
     date: "2010 Nov 12" // Original date format
   },
   {
-    image: "tailwindcss",
-    name: "Stack 3",
-    desc: "Description for Stack 3 limited to 2for Stack 1 limitedfor Stack 1 limitedfor Stack 1 limitedfor Stack 1 limitedfor Stack 1 limitedfor Stack 1 limitedfor Stack 1 limited5 words",
+    image: "JavaScript",
+    name: "JavaScript",
+    desc: "As i was mastering the python, I found out Roman's website and thne realize I should have also one. so started HTML & CSS then moved to Javascript. Only after joining MBBS, in 2nd year i got Laptop and then made this all",
     date: "2021 Aug 31" // Original date format
   }
 ];

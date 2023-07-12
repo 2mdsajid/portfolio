@@ -1,6 +1,6 @@
 
 import React from 'react'
-import EventTimeline from '../components/(section3)/EventTimeline'
+import EventTimeline from '../components/(eventtimeline)/EventTimeline'
 import { events } from '@/lib/utils/Constants'
 
 const page = () => {

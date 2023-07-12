@@ -2,16 +2,17 @@ import React, { useEffect } from 'react'
 import Header from './components/header/Header'
 import LandingPage from './components/(landingpage)/LandingPage'
 import SectionTitle from './components/reused/SectionTitle'
-import EventTimeline from './components/(section3)/EventTimeline'
+import EventTimeline from './components/(eventtimeline)/EventTimeline'
 import { events } from '@/lib/utils/Constants'
 import ProjectsCards from './components/(section6)/ProjectsCards'
-import CodingTimeline from './components/(section4)/CodingTimeline'
+import CodingTimeline from './components/(codingtimeline)/CodingTimeline'
 import { dummyData } from '@/lib/utils/Types'
-import IntroPage from './components/(section2)/IntroPage'
+import IntroPage from './components/(intropage)/IntroPage'
 import TechStacks2 from './components/(section5)/TechStacks2'
 import Footer from './components/footer/Footer'
 import WebCli from './components/(section7)/WebCli'
 import SetUser from './components/reused/SetUser'
+import SkillsTalents from './components/(skills)/SkillsTalents'
 
 // style={{ backgroundImage: "url('/bg/bg-4.png')", backgroundSize: "cover" }}
 
@@ -57,6 +58,14 @@ const page = () => {
                         <TechStacks2 />
                     </div>
                 </section> */}
+
+                <section className='h-max w-full mb-10'>
+                    <SectionTitle title='WHAT I KNOW?' />
+                    {/* remaining contents */}
+                    <div className='w-full h-full my-10'>
+                        <SkillsTalents />
+                    </div>
+                </section>
 
                 <section className='h-max w-full mb-10'>
                     <SectionTitle title='AND PROJECTS?' />
