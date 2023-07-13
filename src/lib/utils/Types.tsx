@@ -214,17 +214,17 @@ export const dummyTalents: TypeTalent[] = [
   {
     icon: <FaWalking />,
     title: 'Dance',
-    desc:'LOL! I don\'t know dancing. tbh I hate it. Last time I danced and the results were quite awkward'
+    desc:'LOL! I don\'t know dancing. tbh I hate it. Last time I danced and the results were quite awkward. Don\'t know about the future. But I don\'t like being forced to dance! '
   },
   {
     icon: <GiPublicSpeaker />,
     title: 'Public Speaking',
-    desc:'In the name public speaking, I have given some speeches in my school.'
+    desc:'In the name public speaking, I have given some speeches in my school. But it is something I literally envy others for!'
   },
   {
     icon: <GiDiscussion />,
     title: 'Social Skills',
-    desc:'I am the INTROVERT GUY. I can not start a conversation. I can not keep one either. It\'s all Up to You.'
+    desc:'I am the INTROVERT GUY. I can not start a conversation. I can not keep one either. It\'s all Up to You. Sometimes I may not talk to you at all or Only talk to you.'
   },
 ]
 

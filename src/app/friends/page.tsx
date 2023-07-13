@@ -7,6 +7,9 @@ import { TypeFriendCard, dummyFriendData } from '@/lib/utils/Types'
 import elasticlunr, { Index } from 'elasticlunr';
 import { BsSearch } from 'react-icons/bs';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
+import KeyLayouut from '../components/reused/KeyLayouut';
+import Link from 'next/link';
+import MessageDialog from './components/MessageDialog';
 
 type FriendData = {
     name: string;
@@ -29,35 +32,37 @@ interface CustomToken {
 const Page = () => {
 
     const [searchedProfiles, setSearchedProfiles] = useState<TypeFriendCard[]>([])
-    
+
     // search bar
     const [showInput, setShowInput] = useState(true);
     const toggleInput = () => setShowInput(!showInput);
 
     const [inputValue, setInputValue] = useState('');
-    
+
     const handleClearInput = () => {
         setInputValue('');
     };
-    
+
     // search function
-    
+
     const [index, setIndex] = useState<Index<FriendData>>();
     const searchFun: ChangeEventHandler<HTMLInputElement> = async (event) => {
         const searchkey = event.currentTarget.value;
         setInputValue(event.target.value);
         // Filter the people array based on the search value
         const namesearched = dummyFriendData.filter((friend) =>
-            friend.name.toLowerCase().startsWith(searchkey)
+            friend.name.toLowerCase().includes(searchkey)
         );
 
         if (namesearched.length === 0) {
             const results = index?.search(searchkey);
             setSearchedProfiles(
-                results?.map((result) => dummyFriendData.find((note) => note.id === result.ref)).filter((note) => note !== undefined) as TypeFriendCard[]
+                results?.map((result) => dummyFriendData.find((friend) => friend.id === result.ref)).filter((friend) => friend !== undefined) as TypeFriendCard[]
             );
-        } else {
+        } else if (namesearched.length > 0) {
             setSearchedProfiles(namesearched)
+        } else {
+            setSearchedProfiles([])
         }
     }
 
@@ -87,13 +92,16 @@ const Page = () => {
     }, [dummyFriendData]);
 
     return (
-        <div className='w-full min-h-screen px-4 md:px-10 lg:px-40 xl:px-44 bg-primarybg text-white'>
+
+        <KeyLayouut>
             <div className='flex flex-col items-center pt-10 '>
+                <p className='w-full md:w-[70%] xl:w-[60%] text-center my-4'>My dear friend from my school, high school or college or from social media. This place is for you. But you know it&apos;s suhc a hectic task to scrap social media profile for your photos then DOB so you may not find yourself here.<br/><span className='text-accent2 italic'>( PS : click the profiles for more details )</span></p>
+
                 <div className="relative w-[90%] sm:w-[75%] md:w-[65%] lg:w-[55%] xl:w-[45%]">
                     <input
-                        className={`bg-gray-200 focus:bg-white border-transparent focus:border-gray-300 w-full rounded-md py-2 px-4 text-gray-700 leading-tight focus:outline-none`}
+                        className={`bg-gray-200 focus:border border-transparent focus:border-gray-300 w-full rounded-md py-2 px-4 text-gray-700 leading-tight focus:outline-none`}
                         type="text"
-                        placeholder="Search Your Name..."
+                        placeholder="Search Your Name, school, college..."
                         onChange={searchFun}
                         value={inputValue}
                     />
@@ -114,21 +122,28 @@ const Page = () => {
                     )}
                 </div>
                 <div className='flex flex-wrap justify-center mt-5'>
-                    {searchedProfiles.length > 0 
-                        ? searchedProfiles.map((friend, index) => (
-                            <div className='mx-5 mt-5' key={index}>
-                                <FriendCard data={friend} />
-                            </div>
-                        ))
-                        : dummyFriendData.map((friend, index) => (
+                    {inputValue ? <>
+                        {searchedProfiles.length > 0
+                            ? searchedProfiles.map((friend, index) => (
+                                <div className='mx-5 mt-5' key={index}>
+                                    <FriendCard data={friend} />
+                                </div>
+                            ))
+                            : <div>
+                                <MessageDialog />
+                            </div>}
+                    </> : <>
+                        {dummyFriendData.map((friend, index) => (
                             <div className='mx-5 mt-5' key={index}>
                                 <FriendCard data={friend} />
                             </div>
                         ))}
+                    </>}
                 </div>
 
             </div>
-        </div>
+
+        </KeyLayouut>
     )
 }
 

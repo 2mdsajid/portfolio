@@ -3,18 +3,13 @@
 import { BACKEND } from '@/lib/utils/Constants';
 import { Alert, AlertColor } from '@mui/material';
 import React, { FormEvent, useState } from 'react'
-import Rating from 'react-rating';
-
 
 const ContactForm = () => {
-
-
     // for alert and progress
     const [alertseverity, setalertSeverity] = useState<AlertColor>('success');
     const [alertmessage, setalertMessage] = useState<string>('successfully generated');
     const [showalert, setshowAlert] = useState<boolean>(false)
     const [showprogress, setshowProgress] = useState<boolean>(false)
-
 
 
     const [rating, setRating] = useState(0);
@@ -65,14 +60,13 @@ const ContactForm = () => {
         }
 
     };
-
     return (
         <>
             <form onSubmit={handleSubmit} className="text-gray-400 relative">
                 <div className='absolute w-full top-0 flex  '>
                     {showalert && <div className="my-1"><Alert severity={alertseverity} onClose={() => { setshowAlert(false) }}>{alertmessage}</Alert></div>}
                 </div>
-                <div className="mb-2">
+                <div className="my-4 relative">
                     <input
                         type="text"
                         id="name"
@@ -80,10 +74,12 @@ const ContactForm = () => {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         required
-                        className="border bg-primarybg border-gray-300 rounded px-3 py-2 mt-1 w-full focus:outline-none focus:border-blue-500"
-                    />
+                        autoComplete='off'
+                    className="peer h-10 w-full bg-primarybg dark:bg-transparent border pl-3 rounded-md placeholder-transparent focus:outline-none text-color1 dark:text-dark-color1 shadow-md"
+                  />
+                  <label htmlFor="name" className="absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-dark-primarybg  px-1 text-xs transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-color1  peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1  peer-focus:text-xs">Name</label>
                 </div>
-                <div className="mb-2">
+                <div className="my-4 relative">
                     <input
                         type="email"
                         id="email"
@@ -91,40 +87,38 @@ const ContactForm = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
-                        className="border bg-primarybg border-gray-300 rounded px-3 py-2 mt-1 w-full focus:outline-none focus:border-blue-500"
-                    />
+                        autoComplete='off'
+                    className="peer h-10 w-full bg-primarybg dark:bg-transparent border pl-3 rounded-md placeholder-transparent focus:outline-none text-color1 dark:text-dark-color1 shadow-md"
+                  />
+                  <label htmlFor="email" className="absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-dark-primarybg  px-1 text-xs transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-color1  peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1  peer-focus:text-xs">Email</label>
                 </div>
-                <div className="mb-2">
+                <div className="my-4 relative">
                     <textarea
                         id="opinion"
                         placeholder="What do you think about this site?"
                         value={opinion}
                         onChange={(e) => setOpinion(e.target.value)}
-                        required
-                        className="border bg-primarybg border-gray-300 rounded px-3 py-2 mt-1 w-full h-32 resize-none focus:outline-none focus:border-blue-500"
-                    ></textarea>
+                        autoComplete='off'
+                    className="peer h-28 w-full bg-primarybg  dark:bg-transparent border pl-3 pt-3 rounded-md placeholder-transparent focus:outline-none text-color1 dark:text-dark-color1 shadow-md"
+                  ></textarea>
+                  <label htmlFor="opinion" className="absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-dark-primarybg  px-1 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-color1 peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1  peer-focus:text-xs">How Was The Website ?</label>
+                
                 </div>
-                <div className="mb-2">
+                <div className="my-4 relative">
                     <textarea
                         id="message"
                         placeholder="Your message"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
                         required
-                        className="border bg-primarybg border-gray-300 rounded px-3 py-2 mt-1 w-full h-32 resize-none focus:outline-none focus:border-blue-500"
-                    ></textarea>
+                        autoComplete='off'
+                    className="peer h-28 w-full bg-primarybg  dark:bg-transparent border pl-3 pt-3 rounded-md placeholder-transparent focus:outline-none text-color1 dark:text-dark-color1 shadow-md"
+                  ></textarea>
+                  <label htmlFor="message" className="absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-dark-primarybg  px-1 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-color1 peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1  peer-focus:text-xs">Your Message</label>
                 </div>
-                {/* <div className="mb-2">
-                <Rating
-                initialRating={rating}
-                onChange={(value) => setRating(value)}
-                emptySymbol={<i className="far fa-star"></i>}
-                fullSymbol={<i className="fas fa-star"></i>}
-                />
-            </div> */}
                 <button
                     type="submit"
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
+                    className="flex items-center justify-center w-max py-2 px-4 text-white bg-accent2 hover:bg-accent3 rounded-lg font-semibold transition-colors duration-300"
                 >
                     {showprogress ? 'Submitting' : 'Submit'}
                 </button>

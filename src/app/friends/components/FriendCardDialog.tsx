@@ -16,20 +16,14 @@ const FriendCardDialog = ({ data, handleCloseDialog }: { data: TypeFriendCard, h
       </div>
 
 
-      <div className='max-h-[73vh] w-full overflow-auto mt-10'>
-        {/* sm:w-[60%] md:w-[35%] lg:w-[25%] xl:w-[] */}
+      <div className=' w-full overflow-auto mt-10'>
         <div className="flex flex-col sm:flex-row ">
-          {/* Render the image */}
           <img src={data.image} alt={data.name} className="w-[80%] sm:w-[15rem]  mx-auto sm:mx-0 rounded" height={100} width={100} />
-
           <div className='px-2 w-full sm:w-[80%]'>
-            {/* Render the name, birthday, and institution */}
             <h2 className='text-center sm:text-left text-2xl font-semibold'>{data.name}</h2>
-
             <div className={`flex items-center my-4 sm:hidden`}>
               <div className={`w-full border-t border-gray-400`}></div>
             </div>
-
             <p>
               <span className="font-semibold">Date of Birth:</span> {new Date(data.dob).toLocaleDateString('en-US', {
                 month: 'long',
