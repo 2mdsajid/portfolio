@@ -8,7 +8,6 @@ import ProjectsCards from './components/(projects)/ProjectsCards'
 import CodingTimeline from './components/(codingtimeline)/CodingTimeline'
 import { dummyData } from '@/lib/utils/Types'
 import IntroPage from './components/(intropage)/IntroPage'
-import TechStacks2 from './components/(section5)/TechStacks2'
 import Footer from './components/footer/Footer'
 import WebCli from './components/(section7)/WebCli'
 import SetUser from './components/reused/SetUser'
@@ -83,8 +82,8 @@ const page = () => {
                     </div>
                 </section>
 
-                <Footer />
             </div>
+            <Footer />
 
         </div>
     )

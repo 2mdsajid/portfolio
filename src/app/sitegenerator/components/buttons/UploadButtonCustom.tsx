@@ -26,7 +26,6 @@ const UploadComponent = ({ onUploadComplete, onUploadError }: UploadComponentPro
     try {
       const res = await DANGEROUS__uploadFiles(images, 'imageUploader');
       onUploadComplete && onUploadComplete(res);
-      console.log("🚀 ~ file: UploadButtonCustom.tsx:37 ~ handleUpload ~ res:", res)
       setImages([])
       setClick(false)
     } catch (error: any) {
@@ -46,10 +45,10 @@ const UploadComponent = ({ onUploadComplete, onUploadError }: UploadComponentPro
       />
       {images.length > 0 && (
         <button
-          className="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700"
+          className="flex items-center justify-center w-max py-2 px-4 text-white bg-accent2 hover:bg-accent3 rounded-lg font-semibold transition-colors duration-300"
           onClick={handleUpload}
         >
-          {click ? 'Uploading....' : `Upload ${images.length} file`}
+          {click ? 'Uploading....' : `Upload`}
         </button>
       )}
     </div>

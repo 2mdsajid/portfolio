@@ -1,5 +1,6 @@
 'use client'
 
+import './sitegen.css'
 import React, { useState } from 'react'
 import DownloadButton from './buttons/DownloadButton'
 import { TypeHtmlPageData, TypeHtmlResData, TypeSchool, TypeSocialMediaLinks, TypeWork } from '@/lib/utils/Types';
@@ -155,64 +156,88 @@ const GeneratorForm = () => {
 
 
   return (
-    <div className='min-h-screen max-h w-screen bg-gray-800 relative'>
+    <div className=' w-screen bg-primarybg dark:bg-dark-primarybg relative'>
       <div className='absolute w-full flex items-center justify-center pt-10 '>
         {showalert && <div className="my-1"><Alert severity={alertseverity} onClose={() => { setshowAlert(false) }}>{alertmessage}</Alert></div>}
       </div>
       {resData?.uniqueid ? <div className='w-full h-full'>
         <PreviewModel formData={resData} />
-      </div> :
+      </div>
+        :
         <div className='w-full'>
-          <form onSubmit={handleSubmit} className="w-full p-6  bg-gray-800 text-white rounded-lg flex flex-col items-center">
+          <form onSubmit={handleSubmit} className="w-full p-6  rounded-lg flex flex-col items-center">
 
-            <div className='w-full  flex flex-col md:flex-row '>
-              <div className='w-full md:w-[50%] lg:pr-[8.5rem] lg:pl-[2.5rem] max-h-[80vh] overflow-auto lg:border-r'>
-                <p className='text-2xl font-semibold py-5'>These are required</p>
-                <div className="mb-4">
-                  <label htmlFor="name" className=" text-white block font-medium">Name:</label>
+            <div className='w-full md:w-[50%] flex flex-col '>
+              <div className='w-full '>
+                <div className="w-full my-3 md:my-6 flex flex-row justify-center items-center">
+                  <div className="grow h-[0.1rem] bg-gray-500"></div>
+                  <div className="text-sm md:text-lg mx-1 capitalize">You have to fill all these</div>
+                  <div className="grow h-[0.1rem] bg-gray-500"></div>
+                </div>
+
+                {/* <p className='text-2xl font-semibold py-5'>These are required</p> */}
+
+                {/* taoi */}
+                {/* <div className="mt-10 relative">
+                  <input id="password" type="password" name="password" className="peer h-10 w-full bg-transparent border pl-3 rounded-md placeholder-transparent focus:outline-none " placeholder="Password" />
+                  <label htmlFor="password" className="absolute left-2 -top-2 bg-primarybg dark:bg-dark-primarybg px-1 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-white peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1 peer-focus:text-white peer-focus:text-xs">Password</label>
+                </div> */}
+
+
+                <div className="mb-4 relative">
                   <input
                     id="name"
                     type="text"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                     required
-                    className="p-2  mt-1 bg-gray-700 text-white block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    placeholder='First Name'
+                    autoComplete='off'
+                    className="peer h-10 w-full bg-primarybg dark:bg-transparent border pl-3 rounded-md placeholder-transparent focus:outline-none text-color1 dark:text-dark-color1 shadow-md"
                   />
+                  <label htmlFor="email" className="absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-dark-primarybg  px-1 text-xs transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-color1  peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1  peer-focus:text-xs">First Name</label>
                 </div>
-                <div className="mb-4">
-                  <label htmlFor="email" className=" text-white block font-medium">Email:</label>
+                <p className='text-sm'>Use corect email. You can receive up to 50 mails through your contact form !</p>
+                <div className="my-4 relative">
                   <input
                     id="email"
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className=" p-2   mt-1 bg-gray-700 text-white block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    placeholder='Email'
+                    autoComplete='off'
+                    className="peer h-10 w-full bg-primarybg  dark:bg-transparent border pl-3 rounded-md placeholder-transparent focus:outline-none text-color1 dark:text-dark-color1 shadow-md"
                   />
+                  <label htmlFor="email" className="absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-dark-primarybg  px-1 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-color1 peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1  peer-focus:text-xs">Email</label>
                 </div>
-                <div className="mb-4">
-                  <label htmlFor="address" className=" text-white block font-medium">Address:</label>
+                <div className="my-4 relative">
                   <input
                     id="address"
                     type="text"
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
                     required
-                    className=" p-2   mt-1 bg-gray-700 text-white block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    placeholder='Addresss'
+                    autoComplete='off'
+                    className="peer h-10 w-full bg-primarybg  dark:bg-transparent border pl-3 rounded-md placeholder-transparent focus:outline-none text-color1 dark:text-dark-color1 shadow-md"
                   />
+                  <label htmlFor="address" className="absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-dark-primarybg  px-1 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-color1 peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1  peer-focus:text-xs">Address</label>
                 </div>
-                <div className="mb-4">
-                  <label htmlFor="about" className=" text-white block font-medium">About:</label>
+                <div className="my-4 relative">
                   <textarea
                     id="about"
                     value={about}
                     onChange={(e) => setAbout(e.target.value)}
                     required
-                    className=" p-2   mt-1 bg-gray-700 text-white block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    placeholder='About'
+                    autoComplete='off'
+                    className="peer h-20 w-full bg-primarybg  dark:bg-transparent border pl-3 rounded-md placeholder-transparent focus:outline-none text-color1 dark:text-dark-color1 shadow-md"
                   ></textarea>
+                  <label htmlFor="about" className="absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-dark-primarybg  px-1 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-color1 peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1  peer-focus:text-xs">About</label>
                 </div>
 
-                <div className="mb-4">
+                <div className="my-4 relative">
                   {cover ? 'cover image uploaded' : <UploadButtonCustom
                     onUploadComplete={handleUploadComplete}
                     onUploadError={handleUploadError}
@@ -220,52 +245,65 @@ const GeneratorForm = () => {
                 </div>
 
 
-                <div className="mb-4">
-                  <h2 className="text-xl font-medium mb-2">Social Media Links:</h2>
+                <div className="my-4">
+                  <h2 className="text-lg mb-2">Social Media Links:</h2>
+                  <div className='my-4 relative'>
+                    <input
+                      id="facebook"
+                      placeholder='Facebook'
+                      type="text"
+                      value={socialmedialinks.facebook}
+                      onChange={(e) => handleSocialMediaLinkChange('facebook', e.target.value)}
+                      required
+                      autoComplete='off'
+                      className="peer h-10 w-full bg-primarybg  dark:bg-transparent border pl-3 rounded-md placeholder-transparent focus:outline-none text-color1 dark:text-dark-color1 shadow-md "
+                    />
+                    <label htmlFor="facebook" className="absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-dark-primarybg  px-1 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-color1 peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1  peer-focus:text-xs">Facebook Link</label>
+                  </div>
 
-                  <input
-                    id="facebook"
-                    placeholder='Facebook'
-                    type="text"
-                    value={socialmedialinks.facebook}
-                    onChange={(e) => handleSocialMediaLinkChange('facebook', e.target.value)}
-                    required
-                    className=" p-2   mt-1 bg-gray-700 text-white block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                  />
+                  <div className='my-4 relative'>
+                    <input
+                      id="instagram"
+                      placeholder='Instagram'
+                      type="text"
+                      value={socialmedialinks.instagram}
+                      onChange={(e) => handleSocialMediaLinkChange('instagram', e.target.value)}
+                      autoComplete='off'
+                      className="peer h-10 w-full bg-primarybg  dark:bg-transparent border pl-3 rounded-md placeholder-transparent focus:outline-none text-color1 dark:text-dark-color1 shadow-md "
+                    />
+                    <label htmlFor="instagram" className="absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-dark-primarybg  px-1 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-color1 peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1  peer-focus:text-xs">Instagram Link</label>
+                  </div>
 
-                  <input
-                    id="instagram"
-                    type="text"
-                    placeholder='Instagram'
-                    value={socialmedialinks.instagram}
-                    onChange={(e) => handleSocialMediaLinkChange('instagram', e.target.value)}
-                    required
-                    className=" p-2   mt-1 bg-gray-700 text-white block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                  />
+                  <div className='my-4 relative'>
+                    <input
+                      id="twitter"
+                      placeholder='Twitter'
+                      type="text"
+                      value={socialmedialinks.twitter}
+                      onChange={(e) => handleSocialMediaLinkChange('twitter', e.target.value)}
+                      autoComplete='off'
+                      className="peer h-10 w-full bg-primarybg  dark:bg-transparent border pl-3 rounded-md placeholder-transparent focus:outline-none text-color1 dark:text-dark-color1 shadow-md "
+                    />
+                    <label htmlFor="twitter" className="absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-dark-primarybg  px-1 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-color1 peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1  peer-focus:text-xs">Twitter Link</label>
+                  </div>
 
-                  <input
-                    id="twitter"
-                    type="text"
-                    placeholder='Twitter'
-                    value={socialmedialinks.twitter}
-                    onChange={(e) => handleSocialMediaLinkChange('twitter', e.target.value)}
-                    className=" p-2   mt-1 bg-gray-700 text-white block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                  />
                   <div className="mb-4">
-                    <p className='text-xl my-3'>Add Hobbies:</p>
+                    <p className='text-lg my-3'>Add Hobbies:</p>
                     {professions.map((profession, index) => (
-                      <div key={index} className="mb-2">
+                      <div key={index} className="my-4 relative">
                         <input
                           type="text"
                           value={profession}
                           onChange={(e) => handleProfessionChange(index, e.target.value)}
+                          placeholder={`Hobby ${index + 1}`}
                           required
-                          className="p-2   mt-1 bg-gray-700 text-white block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                          className="peer h-10 w-full bg-primarybg  dark:bg-transparent border pl-3 rounded-md placeholder-transparent focus:outline-none text-color1 dark:text-dark-color1 shadow-md"
                         />
+                        <label htmlFor="hobby" className="absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-dark-primarybg  px-1 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-color1 peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1  peer-focus:text-xs">{`Hobby ${index + 1}`}</label>
                       </div>
                     ))}
-                    <button type="button" onClick={handleAddProfession} className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded">
-                      Add
+                    <button type="button" onClick={handleAddProfession} className="flex items-center justify-center w-max py-2 px-4 text-white bg-accent2 hover:bg-accent3 rounded-lg font-semibold transition-colors duration-300">
+                      Click To Add Hobby
                     </button>
                   </div>
                   {/*
@@ -281,54 +319,67 @@ const GeneratorForm = () => {
                 </div>
               </div>
 
+              <div className="w-full my-3 md:my-6 flex flex-row justify-center items-center">
+                <div className="grow h-[0.1rem] bg-gray-500"></div>
+                <div className="text-sm md:text-lg mx-1 capitalize">You can leave these (if already bored)</div>
+                <div className="grow h-[0.1rem] bg-gray-500"></div>
+              </div>
 
-              <div className='w-full md:w-[50%] overflow-auto max-h-[80vh] lg:pl-[8.5rem] lg:pr-[2.5rem]'>
-                <p className='text-2xl font-semibold py-5'>Not really required!</p>
 
+              <div className='w-full overflow-auto '>
+                {/* <p className='text-2xl font-semibold py-5'>Not really required!</p> */}
                 <div className='w-full flex justify-evenly border my-5'>
-                  <div onClick={() => setCurrentInfo('school')} className=' text-center p-1 cursor-pointer border-r w-[33%]'>Education</div>
-                  <div onClick={() => setCurrentInfo('work')} className=' text-center p-1 cursor-pointer border-r w-[33%]'>Work</div>
-                  <div onClick={() => setCurrentInfo('resume')} className=' text-center p-1 cursor-pointer  w-[33%]'>Resume</div>
+                  <div onClick={() => setCurrentInfo('school')} className={` text-center p-1 cursor-pointer border-r w-[33%] ${currentInfo === 'school' && 'bg-secondarybg dark:bg-dark-secondarybg'}`}>Education</div>
+                  <div onClick={() => setCurrentInfo('work')} className={` text-center p-1 cursor-pointer border-r w-[33%] ${currentInfo === 'work' && 'bg-secondarybg dark:bg-dark-secondarybg'}`}>Work</div>
+                  <div onClick={() => setCurrentInfo('resume')} className={` text-center p-1 cursor-pointer  w-[33%] ${currentInfo === 'resume' && 'bg-secondarybg dark:bg-dark-secondarybg'}`}>Resume</div>
                 </div>
                 {currentInfo === 'school' && <div className="mb-4">
                   {schools.map((school, index) => (
                     <div key={index} className="mb-4">
-                      <label htmlFor={`schoolinstitution-${index}`} className=" text-white block font-medium">Institution:</label>
-                      <input
-                        id={`schoolinstitution-${index}`}
-                        type="text"
-                        value={school.schoolinstitution}
-                        onChange={(e) => handleSchoolChange(index, 'schoolinstitution', e.target.value)}
-                        required
-                        className="p-2  mt-1 bg-gray-700 text-white block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                      />
-                      <label htmlFor={`schoollevel-${index}`} className=" text-white block font-medium">Level:</label>
-                      <input
-                        id={`schoollevel-${index}`}
-                        type="text"
-                        value={school.schoollevel}
-                        onChange={(e) => handleSchoolChange(index, 'schoollevel', e.target.value)}
-                        required
-                        className="p-2  mt-1 bg-gray-700 text-white block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                      />
-                      <label htmlFor={`classof-${index}`} className=" text-white block font-medium">Class of:</label>
-                      <input
-                        id={`classof-${index}`}
-                        type="text"
-                        value={school.classof}
-                        onChange={(e) => handleSchoolChange(index, 'classof', e.target.value)}
-                        required
-                        className="p-2  mt-1 bg-gray-700 text-white block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                      />
-                      <label htmlFor={`schooldescription-${index}`} className=" text-white block font-medium">Description:</label>
-                      <input
-                        id={`schooldescription-${index}`}
-                        type="text"
-                        value={school.schooldescription}
-                        onChange={(e) => handleSchoolChange(index, 'schooldescription', e.target.value)}
-                        required
-                        className="p-2  mt-1 bg-gray-700 text-white block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                      />
+                      <div className='my-3 relative' >
+                        <input
+                          id={`schoolinstitution-${index}`}
+                          type="text"
+                          value={school.schoolinstitution}
+                          onChange={(e) => handleSchoolChange(index, 'schoolinstitution', e.target.value)}
+                          required
+                          className="peer h-10 w-full bg-primarybg  dark:bg-transparent border pl-3 rounded-md placeholder-transparent focus:outline-none text-color1 dark:text-dark-color1 shadow-md"
+                        />
+                        <label htmlFor={`schoolinstitution-${index}`} className=" absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-dark-primarybg  px-1 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-color1 peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1  peer-focus:text-xs">Institution</label>
+                      </div>
+                      <div className='my-3 relative' >
+                        <input
+                          id={`schoollevel-${index}`}
+                          type="text"
+                          value={school.schoollevel}
+                          onChange={(e) => handleSchoolChange(index, 'schoollevel', e.target.value)}
+                          required
+                          className="peer h-10 w-full bg-primarybg  dark:bg-transparent border pl-3 rounded-md placeholder-transparent focus:outline-none text-color1 dark:text-dark-color1 shadow-md"
+                        />
+                        <label htmlFor={`schoollevel-${index}`} className=" absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-dark-primarybg  px-1 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-color1 peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1  peer-focus:text-xs">Level</label>
+                      </div>
+                      <div className='my-3 relative' >
+                        <input
+                          id={`classof-${index}`}
+                          type="text"
+                          value={school.classof}
+                          onChange={(e) => handleSchoolChange(index, 'classof', e.target.value)}
+                          required
+                          className="peer h-10 w-full bg-primarybg  dark:bg-transparent border pl-3 rounded-md placeholder-transparent focus:outline-none text-color1 dark:text-dark-color1 shadow-md"
+                        />
+                        <label htmlFor={`classof-${index}`} className=" absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-dark-primarybg  px-1 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-color1 peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1  peer-focus:text-xs">Class of</label>
+                      </div>
+                      <div className='my-3 relative' >
+                        <input
+                          id={`schooldescription-${index}`}
+                          type="text"
+                          value={school.schooldescription}
+                          onChange={(e) => handleSchoolChange(index, 'schooldescription', e.target.value)}
+                          required
+                          className="peer h-10 w-full bg-primarybg  dark:bg-transparent border pl-3 rounded-md placeholder-transparent focus:outline-none text-color1 dark:text-dark-color1 shadow-md"
+                        />
+                        <label htmlFor={`schooldescription-${index}`} className="absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-dark-primarybg  px-1 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-color1 peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1  peer-focus:text-xs">Description</label>
+                      </div>
                       {/* <label htmlFor={`schoolimage-${index}`} className=" text-white block font-medium">Image:</label>
                     <input
                       id={`schoolimage-${index}`}
@@ -337,10 +388,10 @@ const GeneratorForm = () => {
                       onChange={(e) => handleSchoolChange(index, 'schoolimage', e.target.value)}
                       className="mt-1 block"
                     /> */}
-                      <p className='my-2 w-full h-1 bg-gray-900'></p>
+                      {schools.length > 1 && <p className='my-4 w-full h-1 bg-gray-900'></p>}
                     </div>
                   ))}
-                  <button type="button" onClick={handleAddSchool} className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded">
+                  <button type="button" onClick={handleAddSchool} className="flex items-center justify-center w-max py-2 px-4 text-white bg-accent2 hover:bg-accent3 rounded-lg font-semibold transition-colors duration-300">
                     Add School
                   </button>
                 </div>}
@@ -348,43 +399,51 @@ const GeneratorForm = () => {
                 {currentInfo === 'work' && <div className="mb-4">
                   {works.map((work, index) => (
                     <div key={index} className="mb-4">
-                      <label htmlFor={`jobinstitution-${index}`} className=" text-white block font-medium">Institution:</label>
-                      <input
-                        id={`jobinstitution-${index}`}
-                        type="text"
-                        value={work.jobinstitution}
-                        onChange={(e) => handleWorkChange(index, 'jobinstitution', e.target.value)}
-                        required
-                        className=" p-2   p-2  mt-1 bg-gray-700 text-white block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                      />
-                      <label htmlFor={`jobrole-${index}`} className=" text-white block font-medium">Role:</label>
-                      <input
-                        id={`jobrole-${index}`}
-                        type="text"
-                        value={work.jobrole}
-                        onChange={(e) => handleWorkChange(index, 'jobrole', e.target.value)}
-                        required
-                        className=" p-2   p-2  mt-1 bg-gray-700 text-white block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                      />
-                      <label htmlFor={`jobyear-${index}`} className=" text-white block font-medium">Year:</label>
-                      <input
-                        id={`jobyear-${index}`}
-                        type="text"
-                        value={work.jobyear}
-                        onChange={(e) => handleWorkChange(index, 'jobyear', e.target.value)}
-                        required
-                        className=" p-2   p-2  mt-1 bg-gray-700 text-white block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                      />
-                      <label htmlFor={`jobdescription-${index}`} className=" text-white block font-medium">Description:</label>
-                      <input
-                        id={`jobdescription-${index}`}
-                        type="text"
-                        value={work.jobdescription}
-                        onChange={(e) => handleWorkChange(index, 'jobdescription', e.target.value)}
-                        required
-                        className="p-2  mt-1 bg-gray-700 text-white block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                      />
-                      <p className='my-2 w-full h-1 bg-gray-900'></p>
+                      <div className='my-3 relative'>
+                        <input
+                          id={`jobinstitution-${index}`}
+                          type="text"
+                          value={work.jobinstitution}
+                          onChange={(e) => handleWorkChange(index, 'jobinstitution', e.target.value)}
+                          required
+                          className="peer h-10 w-full bg-primarybg  dark:bg-transparent border pl-3 rounded-md placeholder-transparent focus:outline-none text-color1 dark:text-dark-color1 shadow-md"
+                        />
+                        <label htmlFor={`jobinstitution-${index}`} className=" absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-dark-primarybg  px-1 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-color1 peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1  peer-focus:text-xs">Institution</label>
+                      </div>
+                      <div className='my-3 relative'>
+                        <input
+                          id={`jobrole-${index}`}
+                          type="text"
+                          value={work.jobrole}
+                          onChange={(e) => handleWorkChange(index, 'jobrole', e.target.value)}
+                          required
+                          className="peer h-10 w-full bg-primarybg  dark:bg-transparent border pl-3 rounded-md placeholder-transparent focus:outline-none text-color1 dark:text-dark-color1 shadow-md"
+                        />
+                        <label htmlFor={`jobrole-${index}`} className=" absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-dark-primarybg  px-1 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-color1 peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1  peer-focus:text-xs">Role</label>
+                      </div>
+                      <div className='my-3 relative'>
+                        <input
+                          id={`jobyear-${index}`}
+                          type="text"
+                          value={work.jobyear}
+                          onChange={(e) => handleWorkChange(index, 'jobyear', e.target.value)}
+                          required
+                          className="peer h-10 w-full bg-primarybg  dark:bg-transparent border pl-3 rounded-md placeholder-transparent focus:outline-none text-color1 dark:text-dark-color1 shadow-md"
+                        />
+                        <label htmlFor={`jobyear-${index}`} className="absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-dark-primarybg  px-1 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-color1 peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1  peer-focus:text-xs">Year</label>
+                      </div>
+                      <div className='my-3 relative'>
+                        <input
+                          id={`jobdescription-${index}`}
+                          type="text"
+                          value={work.jobdescription}
+                          onChange={(e) => handleWorkChange(index, 'jobdescription', e.target.value)}
+                          required
+                          className="peer h-10 w-full bg-primarybg  dark:bg-transparent border pl-3 rounded-md placeholder-transparent focus:outline-none text-color1 dark:text-dark-color1 shadow-md"
+                        />
+                        <label htmlFor={`jobdescription-${index}`} className=" absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-dark-primarybg  px-1 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-color1 peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1  peer-focus:text-xs">Description</label>
+                      </div>
+                      {works.length > 1 && <p className='my-4 w-full h-1 bg-gray-900'></p>}
                       {/* <label htmlFor={`jobimage-${index}`} className=" text-white block font-medium">Image:</label>
                     <input
                     id={`jobimage-${index}`}
@@ -395,7 +454,7 @@ const GeneratorForm = () => {
                   /> */}
                     </div>
                   ))}
-                  <button type="button" onClick={handleAddWork} className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded">
+                  <button type="button" onClick={handleAddWork} className="flex items-center justify-center w-max py-2 px-4 text-white bg-accent2 hover:bg-accent3 rounded-lg font-semibold transition-colors duration-300">
                     Add Work
                   </button>
                 </div>}
@@ -415,7 +474,7 @@ const GeneratorForm = () => {
 
             </div>
             <div className="flex justify-center space-x-2 my-10  w-full">
-              <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded border">
+              <button type="submit" className="flex items-center justify-center w-max py-2 px-4 text-white bg-accent2 hover:bg-accent3 rounded-lg font-semibold transition-colors duration-300">
                 {showprogress ? 'Generating' : "Generate"}
               </button>
             </div>

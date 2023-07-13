@@ -3,13 +3,12 @@ import React, { useEffect, useState } from 'react'
 import { getHeader, getLandingPage, getAboutPage, getWorkSection, getEducationSection, getContact, getFooter, getJsVar, getMetaData } from './htm';
 import { generateFinalPageHtml } from './PageGenerator';
 import DownloadButton from './buttons/DownloadButton';
-import { FRONTEND } from '@/lib/utils/Constants';
-import { RiFileCopyLine } from 'react-icons/ri';
 import { CopyIcon } from './buttons/CopyIcon';
-import router from 'next/router';
 import PreviewButton from './buttons/PreviewButton';
 
 import he from 'he';
+import Balancer from 'react-wrap-balancer';
+import Link from 'next/link';
 
 const PreviewModel = ({ formData }: { formData: TypeHtmlResData }) => {
     const [htmlPage, setHtmlPage] = useState('')
@@ -67,26 +66,30 @@ const PreviewModel = ({ formData }: { formData: TypeHtmlResData }) => {
 
     return (
         // <div dangerouslySetInnerHTML={{ __html: htmlpage }} />
-
-        // <iframe
-        //     title="Preview"
-        //     srcDoc={htmlpage}
-        //     sandbox="allow-scripts"
-        //     style={{ width: '100vw', height: '100vh', border: 'none' }}
-        // />
-
-
-
-
-        // <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-opacity-50 backdrop-blur z-50">
-
-
-        <div className='w-[95%] sm:w-[85%] md:w-[70%] lg:w-[60%] xl:[50%] max-h-[85vh] overflow-auto mx-auto bg-primarybg border p-4 flex flex-col rounded-md drop-shadow-sm'>
+        <div className='w-[95%] sm:w-[85%] md:w-[70%] lg:w-[60%] xl:[50%] h-max py-2 mt-20 shadow-md bg-modalbg dark:bg-dark-modalbg border p-4 flex flex-col rounded-md drop-shadow-sm'>
+            <p>UNIQUE ID : {uniqueid}</p>
             <CopyIcon uniqueid={uniqueid} />
             <div className='flex justify-center items-center space-x-3'>
                 <PreviewButton uniqueid={uniqueid} />
                 <DownloadButton htmlpage={htmlpage} />
             </div>
+            <p className='text-center mt-5 text-sm'>
+                <Balancer>
+                    please copy your UNIQUE ID so that you can later download your website index.html file and host it else where ( if you want to, which I know you won&apos;t )
+                </Balancer>
+            </p>
+            <p className='text-center my-2'>---OR---</p>
+            <p className='text-sm text-center'>
+                <Balancer>
+                    Check how to host your website and get a desired Domain. <Link className='text-blue-600 underline' target='_blank' href=''>click here</Link>
+                </Balancer>
+            </p>
+            <p className='text-sm text-center my-3'>
+                <Balancer>
+                    PS : now plese reconsider visiting different sections of <Link className='text-blue-500 underline' href={'/'}>my website</Link>, you may find some interesting stuffs.<br/>Also please feedback me <Link className='text-blue-500 underline' href={'/contact'}>here</Link>
+                </Balancer>
+            </p>
+
         </div>
         // </div>
     )

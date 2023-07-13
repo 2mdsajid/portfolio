@@ -6,7 +6,7 @@ import { TypeBotReqRes, TypeSingleBlog } from "./Types";
 // export const FRONTEND= 'https://sajidportfolio.vercel.app/'
 
 export const BACKEND = 'http://localhost:4004'
-export const FRONTEND= 'http://localhost:3000'
+export const FRONTEND = 'http://localhost:3000'
 
 export const events = [
   {
@@ -302,8 +302,8 @@ export const serviceData = [
     modelcontent: `
       <div className="">
         <h2 className="text-xl font-bold mb-2">Blog site</h2>
-        <h2 className="text-gray-600">Create your first blog website according to your needs.</h2>
-        <p className="text-gray-600">
+        <h2 className="">Create your first blog website according to your needs.</h2>
+        <p className="">
           Easily operable and manageable with free maintenance. Made with the latest technology. Features include:
           <br>
           - Customizable blog templates
@@ -324,7 +324,7 @@ export const serviceData = [
     modelcontent: `
       <div className="">
         <h2 className="text-xl font-bold mb-2">Personal Website</h2>
-        <p className="text-gray-600">
+        <p className="">
           Get a custom website designed and developed based on your specific needs. Features include:
           <br>
           - Personalized design and layout
@@ -345,7 +345,7 @@ export const serviceData = [
     modelcontent: `
       <div className="">
         <h2 className="text-xl font-bold mb-2">Business Website</h2>
-        <p className="text-gray-600">
+        <p className="">
           Build a professional business website tailored to your requirements. Features include:
           <br>
           - Corporate design and branding
@@ -366,7 +366,7 @@ export const serviceData = [
     modelcontent: `
       <div className="">
         <h2 className="text-xl font-bold mb-2">Website On Demand</h2>
-        <p className="text-gray-600 text-left">
+        <p className=" text-left">
           Create any type of website as needed. Features include:
           <br>
           - Custom design and functionality
@@ -384,6 +384,81 @@ export const serviceData = [
 ];
 
 export const blogs: TypeSingleBlog[] = [
+  {
+    "_id": "3",
+    "title": "How To Host Your Website Made By MY Website",
+    "url": "hostwebsite-1",
+    "category": "web",
+    "subcategory": "web",
+    "author": "Dr. Michael Adams",
+    "intro": "Learn how to host the website you generated in my website generator tool. This will also help you host your own created website on Netlify for free. You can even get your custom domain there.",
+    "introimage": "space-image.jpg",
+    "content": `<div>
+    <div>
+    Bro i recommend you watching this 5 minutes tutorial on youtube<br/>
+    <a className="text-blue-500 underline" href="https://www.youtube.com/watch?v=qAcOhFdC0-k" target="_blank" >How To Host Your Website</a>
+    </div>
+  <h1 className="my-3 mb-5">or<h1/>
+    <h1>For Hosting a Website on Netlify with Custom Domain Follow These Steps :</h1>
+    <h2>Step 1: Set up your React project</h2>
+    <p>
+      Before hosting your website on Netlify, make sure you have the index.html downloaded.
+    </p>
+    <br />
+  
+    <h2>Step 2: Sign up on Netlify</h2>
+    <p>
+      Go to the Netlify website (https://www.netlify.com/) and sign up for an account. It's free to get started, and you can upgrade to a paid plan if needed.
+    </p>
+    <br />
+  
+    <h2>Step 3: Deploy your React project on Netlify</h2>
+    <p>
+      Once you're logged in to Netlify, click on the "New site from Git" button to connect your project repository. Follow the instructions to authorize Netlify's access to your repository and choose the branch you want to deploy.
+    </p>
+    <p>
+      Configure the build settings as needed (e.g., set the build command to "npm run build" for a Create React App project). Netlify will automatically trigger a new deployment whenever you push changes to your repository.
+    </p>
+    <br />
+  
+    <h2>Step 4: Set up a custom domain</h2>
+    <p>
+      In Netlify, navigate to your site's settings and click on the "Domain Management" section. Click the "Add custom domain" button and follow the steps to configure your custom domain.
+    </p>
+    <p>
+      You'll need to set up DNS records with your domain provider to point your custom domain to Netlify. Netlify provides detailed instructions specific to your DNS provider, so follow those instructions carefully.
+    </p>
+    <br />
+  
+    <h2>Step 5: Verify and wait for DNS propagation</h2>
+    <p>
+      After setting up the DNS records, Netlify will verify the domain configuration. Once the verification is successful, you'll need to wait for DNS propagation, which can take some time (usually a few hours or up to 48 hours).
+    </p>
+    <p>
+      During this waiting period, your website will still be accessible via the Netlify subdomain (e.g., https://your-site-name.netlify.app/).
+    </p>
+    <br />
+  
+    <h2>Step 6: Enjoy your hosted website with a custom domain</h2>
+    <p>
+      Once DNS propagation is complete, your website will be accessible using your custom domain (e.g., https://www.your-domain.com/). You've successfully hosted your React website on Netlify with a custom domain!
+    </p>
+    <br />
+  
+    <h2>Conclusion</h2>
+    <p>
+      Hosting a website on Netlify and setting up a custom domain is a straightforward process. By following these steps, you can deploy and share your React projects with the world using your own domain name. Happy hosting!
+    </p>
+  </div>
+  `,
+    "review": true,
+    "keywords": ['some3'],
+    "published": true,
+    "readtime": "8 minutes",
+    "date": "2023-06-21",
+    "views": 1000,
+    "rating": 4.9
+  },
   {
     "_id": "1",
     "title": "Artificial Intelligence: Transforming the Future",
@@ -437,7 +512,8 @@ export const blogs: TypeSingleBlog[] = [
     "date": "2023-06-21",
     "views": 1000,
     "rating": 4.9
-  }
+  },
+
 ]
 
 export const blogsdata = [

@@ -19,7 +19,7 @@ const PreviewButton = ({uniqueid}:{uniqueid:string}) => {
     
     return (
         <div>
-            <button className='bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded border' onClick={routeToPreview}>Preview</button>
+            <button className='flex items-center justify-center w-max py-2 px-4 text-white bg-accent2 hover:bg-color1 rounded-lg font-semibold transition-colors duration-300' onClick={routeToPreview}>Preview</button>
         </div>
     )
 }

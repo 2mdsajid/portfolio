@@ -317,9 +317,9 @@ export const getContact = (email: string,socialmedialinks:TypeSocialMediaLinks,u
     <form class="contact-form flex flex-col sm:w-1/2 sm:pr-8"
     action="https://formsubmit.co/livingasrb007@email.com" method="post">
     <div class="response-msg"></div>
-    <input class="n mb-4 p-2 rounded" type="text" placeholder="Your name" name="name" required>
-    <input class="e mb-4 p-2 rounded" type="text" placeholder="Your email" name="email" required>
-    <textarea class="m mb-4 p-2 rounded" placeholder="Message" name="message" required></textarea>
+    <input class="n mb-4 p-2 bg-white text-black rounded" type="text" placeholder="Your name" name="name" required>
+    <input class="e mb-4 p-2 bg-white text-black rounded" type="text" placeholder="Your email" name="email" required>
+    <textarea class="m mb-4 p-2 bg-white text-black rounded" placeholder="Message" name="message" required></textarea>
     <input class="send p-2 rounded bg-blue-500 text-white hover:bg-blue-700 cursor-pointer" type="button"
       value="Send">
   </form>

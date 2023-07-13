@@ -1,11 +1,18 @@
 import { blogs, blogsdata } from '@/lib/utils/Constants'
 import React from 'react'
 import BlogCard from './components/BlogCard'
+import KeyLayouut from '../components/reused/KeyLayouut'
+import Balancer from 'react-wrap-balancer'
 
 const page = () => {
     return (
-        <div className='min-h-screen w-screen  bg-primarybg text-white px-4 md:px-10 lg:px-40 xl:px-44 py-5'>
-            <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <KeyLayouut>
+            <p className='text-center pt-10 mb-5'>
+                <Balancer>
+                    May be in future I&apos;ll write blogs. I have so many limitations like <span className='text-accent2'> Poor language, poor vocabulary, poor critics, poor thinking capacity, and most importantly poor time management.</span> So I may not be writing blogs!
+                </Balancer>
+            </p>
+            <div className="py-10 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 {blogs.map((blog, index) => (
                     <BlogCard
                         key={index}
@@ -17,7 +24,7 @@ const page = () => {
                     />
                 ))}
             </div>
-        </div>
+        </KeyLayouut>
     )
 }
 

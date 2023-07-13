@@ -15,12 +15,12 @@ const DownloadButton = ({ htmlpage }:{htmlpage:string}) => {
     // router.push(`/${filename}`)
     downloadLink.href = `/${filename}`; // Update the href to point to the public folder
     // downloadLink.download = filename;
-    downloadLink.click();
+    // downloadLink.click();
   };
 
   return (
-    <button onClick={handleClick} className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded border">
-      Download
+    <button onClick={handleClick} className="flex items-center justify-center w-max py-2 px-4 text-white bg-accent2 hover:bg-color1 rounded-lg font-semibold transition-colors duration-300">
+      Download index file
     </button>
   );
 };

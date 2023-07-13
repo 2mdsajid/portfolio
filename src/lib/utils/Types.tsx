@@ -278,7 +278,6 @@ export const dummyPageData: TypeHtmlPageData = {
   address: "123 Street, City, Country",
 };
 
-
 export const dummyFriendData: TypeFriendCard[] = [
   {
     id: '1',
@@ -477,8 +476,6 @@ export const dummyFriendData: TypeFriendCard[] = [
   // Add more dummy data objects as needed
 ];
 
-
-
 export const dummyData = [
   {
     image: "nodejs",
@@ -499,7 +496,6 @@ export const dummyData = [
     date: "2021 Aug 31" // Original date format
   }
 ];
-
 
 export const dummyProjects: TypeProject[] = [
   {

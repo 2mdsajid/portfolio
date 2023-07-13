@@ -2,10 +2,9 @@
 
 import { BACKEND } from '@/lib/utils/Constants'
 import { ParsedHtml } from '@/lib/utils/Functions'
-import { TypeProject } from '@/lib/utils/Types'
+import { BiX } from 'react-icons/bi'
 import { Alert, AlertColor } from '@mui/material'
 import React, { FormEvent, useState } from 'react'
-import { BiExpand, BiX } from 'react-icons/bi'
 
 const ServiceModel = ({ modelContent }: { modelContent: string }) => {
     const [showModel, setShowModel] = useState(false)
@@ -79,32 +78,32 @@ const ServiceModel = ({ modelContent }: { modelContent: string }) => {
 
     return (
         <>
-            <button onClick={toggleModel} className="w-max bg-color2 hover:bg-primarybg hover:border text-white font-bold py-2 px-4 rounded">
+            <button onClick={toggleModel} className="flex items-center justify-center w-max py-2 px-4 text-white bg-accent2 hover:bg-accent3 rounded-lg font-semibold transition-colors duration-300">
                 Proceed
             </button>
 
 
             {/* model */}
             {showModel && (
-                <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-opacity-50 backdrop-blur z-50">
+                <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-opacity-50 backdrop-blur z-50 ">
 
                     <div className='absolute w-full flex top-5 justify-center '>
                         {showalert && <div className="my-1"><Alert severity={alertseverity} onClose={() => { setshowAlert(false) }}>{alertmessage}</Alert></div>}
                     </div>
 
-                    <div className='w-[95%] mx-auto sm:w-max h-max bg-primarybg border p-4 flex flex-col'>
+                    <div className='w-[95%] mx-auto sm:w-max h-max border p-4 flex flex-col rounded-md  shadow-md dark:border-secondarybg '>
                         <div className='w-full h-fit flex justify-end'>
-                            <button className="p-2 text-gray-500 hover:text-gray-700" onClick={toggleModel}>
+                            <button className="p-2 " onClick={toggleModel}>
                                 <BiX size={40} />
                             </button>
                         </div>
 
-                        <div className='w-full'>
+                        <div className='w-full text-color1 dark:text-dark-color1'>
                             {ParsedHtml(modelContent)}
                         </div>
 
                         <div className="mt-4">
-                            <form onSubmit={handleSubmit} className='text-gray-400'>
+                            <form onSubmit={handleSubmit} className=''>
                                 <div className="mb-2">
                                     <input
                                         type="text"
@@ -113,7 +112,7 @@ const ServiceModel = ({ modelContent }: { modelContent: string }) => {
                                         value={name}
                                         onChange={(e) => setName(e.target.value)}
                                         required
-                                        className="border bg-primarybg border-gray-300 rounded px-3 py-2 mt-1 w-full focus:outline-none focus:border-blue-500"
+                                        className="border bg-transparent dark:border-primarybg bg-transparent dark:border-primarybg  rounded px-3 py-2 mt-1 w-full focus:outline-none focus:border-blue-500"
                                     />
                                 </div>
                                 <div className="mb-2">
@@ -124,7 +123,7 @@ const ServiceModel = ({ modelContent }: { modelContent: string }) => {
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
                                         required
-                                        className="border bg-primarybg border-gray-300 rounded px-3 py-2 mt-1 w-full focus:outline-none focus:border-blue-500"
+                                        className="border bg-transparent dark:border-primarybg  rounded px-3 py-2 mt-1 w-full focus:outline-none focus:border-blue-500"
                                     />
                                 </div>
                                 <div className="mb-2">
@@ -135,7 +134,7 @@ const ServiceModel = ({ modelContent }: { modelContent: string }) => {
                                         value={phoneNumber}
                                         onChange={(e) => setPhoneNumber(e.target.value)}
                                         required
-                                        className="border bg-primarybg border-gray-300 rounded px-3 py-2 mt-1 w-full focus:outline-none focus:border-blue-500"
+                                        className="border bg-transparent dark:border-primarybg  rounded px-3 py-2 mt-1 w-full focus:outline-none focus:border-blue-500"
                                     />
                                 </div>
                                 <div className="mb-2">
@@ -145,12 +144,12 @@ const ServiceModel = ({ modelContent }: { modelContent: string }) => {
                                         value={description}
                                         onChange={(e) => setDescription(e.target.value)}
                                         required
-                                        className="border bg-primarybg border-gray-300 rounded px-3 py-2 mt-1 w-full focus:outline-none focus:border-blue-500"
+                                        className="border bg-transparent dark:border-primarybg  rounded px-3 py-2 mt-1 w-full focus:outline-none focus:border-blue-500"
                                     />
                                 </div>
                                 <button
                                     type="submit"
-                                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
+                                    className="flex items-center justify-center w-max py-2 px-4 text-white bg-accent2 hover:bg-accent3 rounded-lg font-semibold transition-colors duration-300"
                                 >
                                     {showprogress ? 'Submitting' : 'Submit'}
                                 </button>

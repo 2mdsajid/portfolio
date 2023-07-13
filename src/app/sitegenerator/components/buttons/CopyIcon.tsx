@@ -9,7 +9,7 @@ export const CopyIcon = ({ uniqueid }: { uniqueid: string }) => {
     const [isCopied, setIsCopied] = useState(false);
 
     const handleCopyClick = () => {
-        const url = `${FRONTEND}/${uniqueid}`;
+        const url = `${FRONTEND}/sites/${uniqueid}`;
         navigator.clipboard.writeText(url);
         setIsCopied(true);
 
@@ -19,8 +19,8 @@ export const CopyIcon = ({ uniqueid }: { uniqueid: string }) => {
     };
 
     return (
-        <div className="w-full  my-3 border flex items-center space-x-2 rounded-md">
-            <p className='bg-gray-800 p-3 rounded-md'>URL</p>
+        <div className="w-full  my-3 border border-color3 flex items-center space-x-2 rounded-md">
+            <p className='bg-color3 p-3 rounded-md'>URL</p>
             <p id="url" className="overflow-x-auto scrollbar-hidden">
                 {frontendUrl}
             </p>
