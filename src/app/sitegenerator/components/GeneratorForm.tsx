@@ -20,7 +20,7 @@ const GeneratorForm = () => {
   const [currentInfo, setCurrentInfo] = useState('school')
 
   const [showPreviewModel, setShowPreviewModel] = useState(true)
-  const [resData, setResData] = useState<TypeHtmlResData>()
+  const [resData, setResData] = useState<TypeHtmlResData>(dummyResData)
 
   const [alertseverity, setalertSeverity] = useState<AlertColor>('success');
   const [alertmessage, setalertMessage] = useState<string>('successfully generated');

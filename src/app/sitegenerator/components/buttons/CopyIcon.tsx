@@ -4,7 +4,7 @@ import { FaCheck, FaCopy } from 'react-icons/fa';
 
 
 export const CopyIcon = ({ uniqueid }: { uniqueid: string }) => {
-    const frontendUrl = `${FRONTEND}/${uniqueid}`;
+    const frontendUrl = `${FRONTEND}/sites/${uniqueid}`;
 
     const [isCopied, setIsCopied] = useState(false);
 
