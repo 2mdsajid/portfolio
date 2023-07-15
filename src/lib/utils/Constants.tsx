@@ -4,11 +4,11 @@ import { BsPhone } from "react-icons/bs";
 import { GiNoseFront, GiPublicSpeaker, GiDiscussion } from "react-icons/gi";
 
 
-// export const BACKEND = 'https://sajidportfolio.adaptable.app'
-// export const FRONTEND= 'https://sajidportfolio.vercel.app'
+export const BACKEND = 'https://sajidportfolio.adaptable.app'
+export const FRONTEND= 'https://sajidportfolio.vercel.app'
 
-export const BACKEND = 'http://localhost:4004'
-export const FRONTEND = 'http://localhost:3000'
+// export const BACKEND = 'http://localhost:4004'
+// export const FRONTEND = 'http://localhost:3000'
 
 type TypeSmallProjects = {
   title: string;
