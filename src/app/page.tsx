@@ -13,6 +13,7 @@ import SkillsTalents from './components/(skills)/SkillsTalents'
 import SetUser from './components/reused/SetUser'
 import Balancer from 'react-wrap-balancer'
 import Link from 'next/link'
+import AosAnimation from './components/reused/AosAnimation'
 
 const page = async () => {
 
@@ -21,6 +22,7 @@ const page = async () => {
     return (
         <div className="h-max w-screen bg-primarybg dark:bg-dark-primarybg ">
             <Header />
+            <AosAnimation />
             <SetUser path='home' />
             {/* remaining contents */}
             <div className='pt-20 px-4 md:px-10 lg:px-20 xl:px-32'>
@@ -68,7 +70,7 @@ const page = async () => {
                     </div>
                 </section>
 
-                <section className='h-max w-full mb-10'>
+                <section className='h-max w-full mb-20'>
                     <SectionTitle title='LAST BUT NOT THE LEAST' />
                     {/* remaining contents */}
                     <div className='w-full h-full my-10'>
@@ -76,8 +78,8 @@ const page = async () => {
                     </div>
                 </section>
 
-                <div>
-                    <h1 className=' text-center mx-auto my-10'>
+                <div className='my-[2rem] py-5 h-max border'>
+                    <h1 className=' text-center text-lg mx-auto '>
                         <Balancer>
                             Also check out my <Link target='_blank' className='text-blue-500 hover:underline' href={'https://oldsajidportfolio.netlify.app'}>Old Website</Link>
                         </Balancer>

@@ -13,7 +13,7 @@ const LandingPage = () => {
         <div className='w-full h-full '>
 
             {/* intro text */}
-            <div className='static md:absolute right-0 pt-3 md:pt-10 md:px-10 lg:px-40 xl:px-[25rem]  md:top-32'>
+            <div data-aos={'zoom-in'} className='static md:absolute right-0 pt-3 md:pt-10 md:px-10 lg:px-40 xl:px-[25rem]  md:top-32'>
                 <div className='z-10 flex flex-col items-center text-xl md:text-2xl lg:text-3xl '>
                     <p className='text-gradient'>Hey welcome to</p>
                     <p className='text-5xl md:text-6xl font-bold text-gradient mb-10'>SAJID-VERSE</p>
@@ -25,7 +25,7 @@ const LandingPage = () => {
 
 
             {/* <p className='mt-20'>( now just scroll )</p> */}
-            <div className='text-xl lg:text-2xl xl:text-3xl flex items-center justify-center space-x-4 my-5 md:my-10 md:absolute md:bottom-20 md:right-0  md:px-10 lg:px-40 xl:px-[25rem]'>
+            <div data-aos={'zoom-in'} className='text-xl lg:text-2xl xl:text-3xl flex items-center justify-center space-x-4 my-5 md:my-10 md:absolute md:bottom-20 md:right-0  md:px-10 lg:px-40 xl:px-[25rem]'>
                 <p> Here is something </p>
                 <Link href='/services'>
                     <button className='flex items-center justify-center w-full py-2 px-4 text-white bg-accent2 hover:bg-accent3 rounded-lg font-semibold transition-colors duration-300'>
@@ -38,7 +38,7 @@ const LandingPage = () => {
 
 
             {/* intro image */}
-            <div className=' absolute bottom-0 z-10'>
+            <div data-aos={'zoom-in'} className=' absolute bottom-0 z-10'>
                 <Image className='' alt='landing-page-image' src='/icons/i1.png' height={400} width={400} />
             </div>
 

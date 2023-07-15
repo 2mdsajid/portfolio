@@ -13,7 +13,7 @@ const ProjectsCards = () => {
         })}
       </div>
       <div>
-        <h1 className=' text-center mx-auto mt-5'>
+        <h1 className=' text-center text-lg mx-auto mt-5'>
           <Balancer>
             Check out my <Link className='text-blue-500 hover:underline' href={'/allprojects'}>other projects</Link>
           </Balancer>

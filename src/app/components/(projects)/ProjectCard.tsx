@@ -8,7 +8,7 @@ import ProjectModel from './ProjectModel';
 
 const ProjectCard = ({ project }: { project: TypeProject }) => {
     return (
-        <div className="bg-secondarybg dark:bg-dark-secondarybg shadow-md rounded-lg p-2 w-fit border dark:border-dark-secondarybg m-2">
+        <div data-aos={'zoom-in'} className="bg-secondarybg dark:bg-dark-secondarybg shadow-md rounded-lg p-2 w-fit border dark:border-dark-secondarybg m-2">
             <div className="relative">
                 <Image
                     src={project.image}

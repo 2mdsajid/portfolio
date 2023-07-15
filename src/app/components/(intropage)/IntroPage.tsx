@@ -7,8 +7,8 @@ import React from 'react'
 const IntroPage = () => {
     return (
         <div className='w-full h-full mb-20 mt-5 px-4'>
-            <div className='w-full h-full flex flex-col-reverse sm:flex-row items-center justify-center md:justify-between sm:items-start'>
-                <div className="w-full px-4 md:w-max lg:w-1/2 lg:pr-10 md:pr-8 sm:pr-6 my-5">
+            <div  className='w-full h-full flex flex-col-reverse sm:flex-row items-center justify-center md:justify-between sm:items-start'>
+                <div data-aos={'zoom-in'} className="w-full px-4 md:w-max lg:w-1/2 lg:pr-10 md:pr-8 sm:pr-6 my-5">
                     {/* <p className='text-xl md:text-2xl lg:text-3xl'>I am <span className='text-xs'>not a</span></p> */}
                     <div className='w-full my-1'>
                         <p className='text-md'>so my name is [read my name from the header haha], </p>
@@ -27,7 +27,7 @@ const IntroPage = () => {
 
 
                 </div>
-                <div className="w-fit">
+                <div data-aos={'zoom-in'} className="w-fit">
                     <div className='w-[17rem] h-[17rem] lg:w-[20rem] lg:h-[20rem] relative'>
                         <div className='relative z-10 w-full'>
                             <Image src={'/intro.jpg'} alt='Intro Image' height={400} width={400} />

@@ -174,16 +174,6 @@ const GeneratorForm = () => {
                   <div className="text-sm md:text-lg mx-1 capitalize">You have to fill all these</div>
                   <div className="grow h-[0.1rem] bg-gray-500"></div>
                 </div>
-
-                {/* <p className='text-2xl font-semibold py-5'>These are required</p> */}
-
-                {/* taoi */}
-                {/* <div className="mt-10 relative">
-                  <input id="password" type="password" name="password" className="peer h-10 w-full bg-transparent border pl-3 rounded-md placeholder-transparent focus:outline-none " placeholder="Password" />
-                  <label htmlFor="password" className="absolute left-2 -top-2 bg-primarybg dark:bg-dark-primarybg px-1 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-white peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1 peer-focus:text-white peer-focus:text-xs">Password</label>
-                </div> */}
-
-
                 <div className="mb-4 relative">
                   <input
                     id="name"
@@ -236,16 +226,13 @@ const GeneratorForm = () => {
                   ></textarea>
                   <label htmlFor="about" className="absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-dark-primarybg  px-1 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-color1 peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1  peer-focus:text-xs">About</label>
                 </div>
-
                 <div className="my-4 relative">
-                  <p className="text-sm">Choose File and then Upload !</p>
+                  <p className="text-sm">Cover Photo - Choose (1:1 preferred) and then Upload !</p>
                   {cover ? 'cover image uploaded' : <UploadButtonCustom
                     onUploadComplete={handleUploadComplete}
                     onUploadError={handleUploadError}
                   />}
                 </div>
-
-
                 <div className="my-4">
                   <h2 className="text-lg mb-2">Social Media Links:</h2>
                   <p className='text-sm'>facebook profile link is required</p>
