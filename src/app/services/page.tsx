@@ -4,10 +4,12 @@ import { BsFillBookmarkStarFill, BsGlobe, BsPersonWorkspace } from 'react-icons/
 import ServiceCard from './components/ServiceCard'
 import Link from 'next/link'
 import KeyLayouut from '../components/reused/KeyLayouut'
+import SetUser from '../components/reused/SetUser'
 
 const page = () => {
   return (
     <KeyLayouut>
+       <SetUser path='services' />
       <div>
         <div>
           <h1 className="w-max flex items-center font-bold text-lg p-2 pr-3 border rounded-r-full my-10">

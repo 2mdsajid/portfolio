@@ -1,26 +1,25 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Header from './components/header/Header'
 import LandingPage from './components/(landingpage)/LandingPage'
 import SectionTitle from './components/reused/SectionTitle'
 import EventTimeline from './components/(eventtimeline)/EventTimeline'
-import { events } from '@/lib/utils/Constants'
+import { dummyData, events } from '@/lib/utils/Constants'
 import ProjectsCards from './components/(projects)/ProjectsCards'
 import CodingTimeline from './components/(codingtimeline)/CodingTimeline'
-import { dummyData } from '@/lib/utils/Types'
 import IntroPage from './components/(intropage)/IntroPage'
 import Footer from './components/footer/Footer'
 import WebCli from './components/(section7)/WebCli'
-import SetUser from './components/reused/SetUser'
 import SkillsTalents from './components/(skills)/SkillsTalents'
+import SetUser from './components/reused/SetUser'
 
-// style={{ backgroundImage: "url('/bg/bg-4.png')", backgroundSize: "cover" }}
+const page = async () => {
 
-const page = () => {
+    // const dat = await setUniqueUserId('home')
 
     return (
         <div className="h-max w-screen bg-primarybg dark:bg-dark-primarybg ">
             <Header />
-            <SetUser />
+            <SetUser path='home' />
             {/* remaining contents */}
             <div className='pt-20 px-4 md:px-10 lg:px-20 xl:px-32'>
                 <section className='h-screen w-full'  >
@@ -43,7 +42,7 @@ const page = () => {
                     </div>
                 </section>
 
-                <section className='min-h-screen w-full'>
+                <section className='h-max my-5 w-full'>
                     <SectionTitle title='BUT CODING?' />
                     {/* remaining contents */}
                     <div className='w-full h-full'>
@@ -51,17 +50,10 @@ const page = () => {
                     </div>
                 </section>
 
-                {/* <section className='h-max w-full'>
-                    <SectionTitle title='SO WHAT I DID SO FAR?' />
-                    <div className='w-full h-full'>
-                        <TechStacks2 />
-                    </div>
-                </section> */}
-
                 <section className='h-max w-full mb-10'>
-                    <SectionTitle title='WHAT I KNOW?' />
+                    <SectionTitle title='SKILLS & TALENTS' />
                     {/* remaining contents */}
-                    <div className='w-full h-full my-10'>
+                    <div className='w-full h-full'>
                         <SkillsTalents />
                     </div>
                 </section>

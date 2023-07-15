@@ -7,7 +7,7 @@ import Link from 'next/link'
 import React, { FormEvent, useState } from 'react'
 import { BiX } from 'react-icons/bi'
 
-const MessageDialog = () => {
+const MessageDialog = ({ children,string }: { children: React.ReactNode,string:string }) => {
     const [showDialog, setShowDialog] = useState(false)
 
     const [alertseverity, setalertSeverity] = useState<AlertColor>('success');
@@ -66,11 +66,11 @@ const MessageDialog = () => {
         <>
             {showDialog ?
                 <DialogBox>
-                    <div className='w-[95%] md:w-[60%] lg:w-[50%] xl:w-[45%] mx-auto border p-2 py-4 md:p-5 rounded-md relative'>
-                        <button className="absolute top-0 right-0 p-2 text-color3 hover:text-gray-500 text-2xl" onClick={toggleDialog}>
+                    <div className='w-[95%] md:w-[60%] lg:w-[50%] xl:w-[45%] mx-auto border p-2 py-4 md:p-5 rounded-md relative bg-white dark:bg-transparent dark:backdrop-blur '>
+                        <button className="absolute top-0 right-0 p-2 text-color3 hover:text-gray-500 text-2xl " onClick={toggleDialog}>
                             <BiX />
                         </button>
-                        <form onSubmit={handleSubmit} className="text-gray-400 relative">
+                        <form onSubmit={handleSubmit} className="text-gray-400 relative ">
                             <div className='absolute w-full top-0 flex  '>
                                 {showalert && <div className="my-1"><Alert severity={alertseverity} onClose={() => { setshowAlert(false) }}>{alertmessage}</Alert></div>}
                             </div>
@@ -85,7 +85,7 @@ const MessageDialog = () => {
                                     autoComplete='off'
                                     className="peer h-10 w-full bg-primarybg dark:bg-transparent border pl-3 rounded-md placeholder-transparent focus:outline-none text-color1 dark:text-dark-color1 shadow-md"
                                 />
-                                <label htmlFor="email" className="absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-dark-primarybg  px-1 text-xs transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-color1  peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1  peer-focus:text-xs">Name</label>
+                                <label htmlFor="email" className="absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-transparent  px-1 text-xs transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-color1  peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-transparent peer-focus:px-1  peer-focus:text-xs">Name</label>
                             </div>
                             <div className="my-4 relative">
                                 <textarea
@@ -94,9 +94,9 @@ const MessageDialog = () => {
                                     value={opinion}
                                     onChange={(e) => setOpinion(e.target.value)}
                                     autoComplete='off'
-                                    className="peer h-28 w-full bg-primarybg  dark:bg-transparent border pl-3 pt-3 rounded-md placeholder-transparent focus:outline-none text-color1 dark:text-dark-color1 shadow-md"
+                                    className="peer h-28 w-full bg-primarybg dark:bg-transparent border pl-3 pt-3 rounded-md placeholder-transparent focus:outline-none text-color1 dark:text-dark-color1 shadow-md"
                                 ></textarea>
-                                <label htmlFor="opinion" className="absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-dark-primarybg  px-1 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-color1 peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1  peer-focus:text-xs">Any Queries?</label>
+                                <label htmlFor="opinion" className="absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-transparent  px-1 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-color1 peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-transparent peer-focus:px-1  peer-focus:text-xs">Hi Text?</label>
                             </div>
                             <button
                                 type="submit"
@@ -107,8 +107,8 @@ const MessageDialog = () => {
                     </div>
                 </DialogBox> :
                 <div>
-                    <p>Didn&apos;t see your name? Don&apos;t worry. Even i&apos;m not in the list.</p>
-                    <p>( PS : If you want me to add you just <span onClick={toggleDialog} className='text-blue-500 underline cursor-pointer' >send me a Hi</span> )</p>
+                    {children}
+                    <p className='text-center mb-2 -mt-1'> ( {string} <span onClick={toggleDialog} className='text-blue-500 underline cursor-pointer capitalize' >send me a Hi</span> )</p>
                 </div>
             }
         </>

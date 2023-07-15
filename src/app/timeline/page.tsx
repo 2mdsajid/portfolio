@@ -2,12 +2,17 @@
 import React from 'react'
 import EventTimeline from '../components/(eventtimeline)/EventTimeline'
 import { events } from '@/lib/utils/Constants'
+import KeyLayouut from '../components/reused/KeyLayouut'
+import SetUser from '../components/reused/SetUser'
 
 const page = () => {
   return (
-    <div className='w-full h-full px-0 md:px-10 lg:px-40 xl:px-44'>
+
+    <KeyLayouut>
+       <SetUser path='timeline' />
       <EventTimeline events={events} isHomePage={false} />
-    </div>
+    </KeyLayouut>
+
   )
 }
 

@@ -5,6 +5,7 @@ import { ParsedHtml } from '@/lib/utils/Functions'
 import { BiX } from 'react-icons/bi'
 import { Alert, AlertColor } from '@mui/material'
 import React, { FormEvent, useState } from 'react'
+import DialogBox from '@/app/components/reused/DialogBox'
 
 const ServiceModel = ({ modelContent }: { modelContent: string }) => {
     const [showModel, setShowModel] = useState(false)
@@ -85,77 +86,81 @@ const ServiceModel = ({ modelContent }: { modelContent: string }) => {
 
             {/* model */}
             {showModel && (
-                <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-opacity-50 backdrop-blur z-50 ">
+                // <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-opacity-50 backdrop-blur z-50 ">
 
-                    <div className='absolute w-full flex top-5 justify-center '>
-                        {showalert && <div className="my-1"><Alert severity={alertseverity} onClose={() => { setshowAlert(false) }}>{alertmessage}</Alert></div>}
-                    </div>
+                    <DialogBox>
 
-                    <div className='w-[95%] mx-auto sm:w-max h-max border p-4 flex flex-col rounded-md  shadow-md dark:border-secondarybg '>
-                        <div className='w-full h-fit flex justify-end'>
-                            <button className="p-2 " onClick={toggleModel}>
-                                <BiX size={40} />
-                            </button>
+
+                        <div className='absolute w-full flex top-5 justify-center '>
+                            {showalert && <div className="my-1"><Alert severity={alertseverity} onClose={() => { setshowAlert(false) }}>{alertmessage}</Alert></div>}
                         </div>
 
-                        <div className='w-full text-color1 dark:text-dark-color1'>
-                            {ParsedHtml(modelContent)}
-                        </div>
-
-                        <div className="mt-4">
-                            <form onSubmit={handleSubmit} className=''>
-                                <div className="mb-2">
-                                    <input
-                                        type="text"
-                                        id="name"
-                                        placeholder='Name'
-                                        value={name}
-                                        onChange={(e) => setName(e.target.value)}
-                                        required
-                                        className="border bg-transparent dark:border-primarybg bg-transparent dark:border-primarybg  rounded px-3 py-2 mt-1 w-full focus:outline-none focus:border-blue-500"
-                                    />
-                                </div>
-                                <div className="mb-2">
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        placeholder='Email'
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
-                                        required
-                                        className="border bg-transparent dark:border-primarybg  rounded px-3 py-2 mt-1 w-full focus:outline-none focus:border-blue-500"
-                                    />
-                                </div>
-                                <div className="mb-2">
-                                    <input
-                                        type="tel"
-                                        id="phoneNumber"
-                                        placeholder='Phone Number'
-                                        value={phoneNumber}
-                                        onChange={(e) => setPhoneNumber(e.target.value)}
-                                        required
-                                        className="border bg-transparent dark:border-primarybg  rounded px-3 py-2 mt-1 w-full focus:outline-none focus:border-blue-500"
-                                    />
-                                </div>
-                                <div className="mb-2">
-                                    <textarea
-                                        id="description"
-                                        placeholder='Describe your desired website in short'
-                                        value={description}
-                                        onChange={(e) => setDescription(e.target.value)}
-                                        required
-                                        className="border bg-transparent dark:border-primarybg  rounded px-3 py-2 mt-1 w-full focus:outline-none focus:border-blue-500"
-                                    />
-                                </div>
-                                <button
-                                    type="submit"
-                                    className="flex items-center justify-center w-max py-2 px-4 text-white bg-accent2 hover:bg-accent3 rounded-lg font-semibold transition-colors duration-300"
-                                >
-                                    {showprogress ? 'Submitting' : 'Submit'}
+                        <div className='w-[95%] mx-auto sm:w-max h-max border p-4 flex flex-col rounded-md bg-primarybg dark:bg-transparent shadow-md dark:border-secondarybg dark:backdrop-blur-md'>
+                            <div className='w-full h-fit flex justify-end'>
+                                <button className="p-2 " onClick={toggleModel}>
+                                    <BiX size={40} />
                                 </button>
-                            </form></div>
-                    </div>
-                </div >
+                            </div>
+
+                            <div className='w-full text-color1 dark:text-dark-color1'>
+                                {ParsedHtml(modelContent)}
+                            </div>
+
+                            <div className="mt-4">
+                                <form onSubmit={handleSubmit} className=''>
+                                    <div className="mb-2">
+                                        <input
+                                            type="text"
+                                            id="name"
+                                            placeholder='Name'
+                                            value={name}
+                                            onChange={(e) => setName(e.target.value)}
+                                            required
+                                            className="border bg-transparent dark:border-primarybg  rounded px-3 py-2 mt-1 w-full focus:outline-none focus:border-blue-500"
+                                        />
+                                    </div>
+                                    <div className="mb-2">
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            placeholder='Email'
+                                            value={email}
+                                            onChange={(e) => setEmail(e.target.value)}
+                                            required
+                                            className="border bg-transparent dark:border-primarybg  rounded px-3 py-2 mt-1 w-full focus:outline-none focus:border-blue-500"
+                                        />
+                                    </div>
+                                    <div className="mb-2">
+                                        <input
+                                            type="tel"
+                                            id="phoneNumber"
+                                            placeholder='Phone Number'
+                                            value={phoneNumber}
+                                            onChange={(e) => setPhoneNumber(e.target.value)}
+                                            required
+                                            className="border bg-transparent dark:border-primarybg  rounded px-3 py-2 mt-1 w-full focus:outline-none focus:border-blue-500"
+                                        />
+                                    </div>
+                                    <div className="mb-2">
+                                        <textarea
+                                            id="description"
+                                            placeholder='Describe your desired website in short'
+                                            value={description}
+                                            onChange={(e) => setDescription(e.target.value)}
+                                            required
+                                            className="border bg-transparent dark:border-primarybg  rounded px-3 py-2 mt-1 w-full focus:outline-none focus:border-blue-500"
+                                        />
+                                    </div>
+                                    <button
+                                        type="submit"
+                                        className="flex items-center justify-center w-max py-2 px-4 text-white bg-accent2 hover:bg-accent3 rounded-lg font-semibold transition-colors duration-300"
+                                    >
+                                        {showprogress ? 'Submitting' : 'Submit'}
+                                    </button>
+                                </form></div>
+                        </div>
+                    </DialogBox>
+                // </div >
             )}
         </>
     )

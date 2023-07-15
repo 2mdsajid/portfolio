@@ -14,13 +14,10 @@ const FooterForm = () => {
     const [showprogress, setshowProgress] = useState<boolean>(false)
 
     const [message, setMessage] = useState('')
-
+    
     const submitForm = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
         setshowProgress(true)
-        // Reset the form fields after submission
-
         try {
             const response = await fetch(BACKEND + '/sendanonymous', {
                 method: 'POST',
@@ -31,33 +28,23 @@ const FooterForm = () => {
                     message
                 }),
             });
-
             const data = await response.json()
             setshowAlert(true)
             setalertMessage(data.message)
             setshowProgress(false)
-
             if (data.status === 201) {
                 setalertSeverity('success')
                 setMessage('')
             } else {
                 setalertSeverity('warning')
             }
-
             setTimeout(() => {
                 setshowAlert(false)
             }, 2000);
-
         } catch (error) {
             console.error('Error saving note:', error);
-            // setalertMessage(error?.message)
         }
-
     };
-
-
-
-
 
     return (
         <form onSubmit={submitForm} className='flex flex-col justify-center w-full mt-3'>

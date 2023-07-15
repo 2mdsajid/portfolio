@@ -11,7 +11,7 @@ const EventTimeline = ({ events, isHomePage }: { events: Event[], isHomePage: bo
             {/* birth  */}
             <h1 className=' text-center mx-auto my-6'>
                 <Balancer>
-                    not too long ago, in a galaxy that definitely wasn&apos;t far, far away (despite what some might claim), the entire universe was caught up in the midst of festive Christmas cheer !
+                    not too long ago, in a galaxy that definitely wasn&apos;t far, far away, the christmas night, I .... ... !
                 </Balancer>
             </h1>
 

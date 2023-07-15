@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      zIndex: {
+        '100': '100',
+      },
       colors: {
         primarybg: "#ffffff",
         secondarybg: "#f1f1f1",

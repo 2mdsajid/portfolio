@@ -33,9 +33,6 @@ const Header = () => {
 
         {/* visible in small devices ---client component */}
         <SideBarC />
-
-
-
       </div>
     </div>
   )

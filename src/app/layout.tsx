@@ -1,5 +1,6 @@
 import ThemeWrapper from '@/lib/utils/ThemeWrapper'
 import './globals.css'
+import Preloader from './components/reused/Preloader'
 
 export const metadata = {
   title: 'Sajid',
@@ -14,6 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Preloader />
         <ThemeWrapper>
           {children}
         </ThemeWrapper>

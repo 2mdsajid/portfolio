@@ -1,14 +1,20 @@
 'use client'
 
-import { setUniqueUserId } from '@/lib/utils/Functions'
+import { BACKEND } from '@/lib/utils/Constants'
+// import { setUniqueUserId } from '@/lib/utils/Functions'
+// import { setUniqueUserId } from '@/lib/utils/Functions'
 import React, { useEffect } from 'react'
 
-const SetUser = () => {
-    useEffect(()=>{
+const SetUser = ({ path }: { path: string }) => {
 
-
-        setUniqueUserId()
-    },[])
+  const setUniqueUserId = async (path: string) => {
+    const res = await fetch(`${BACKEND}/addvisitor/${path}`)
+    const data = await res.json()
+    console.log("🚀 ~ file: SetUser.tsx:13 ~ setUniqueUserId ~ data:", path)
+  }
+  useEffect(() => {
+    setUniqueUserId(path)
+  }, [])
   return (
     <></>
   )

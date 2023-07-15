@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { IoTerminalOutline } from 'react-icons/io5';
 import Terminal from '../components/terminal/Terminal';
+import SetUser from '../components/reused/SetUser';
 
 const Page = () => {
   const [showTerminal, setShowTerminal] = useState(false);
@@ -17,6 +18,7 @@ const Page = () => {
 
   return (
     <div className='w-screen h-screen bg-black text-white flex items-center'>
+       <SetUser path='terminal' />
       {showTerminal ? (
         <div className='fixed inset-0 flex items-center justify-center'>
           <div className='absolute inset-0 bg-black opacity-50 backdrop-blur-sm' />

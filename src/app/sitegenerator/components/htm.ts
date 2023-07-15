@@ -1,4 +1,5 @@
-import { TypeSchool, TypeSocialMediaLinks, TypeWork, dummyPageData } from "@/lib/utils/Types";
+import { dummyPageData } from "@/lib/utils/Constants";
+import { TypeSchool, TypeSocialMediaLinks, TypeWork } from "@/lib/utils/Types";
 
 
 // Destructure the values from the dummyData object

@@ -1,4 +1,4 @@
-import { blogs, blogsdata } from '@/lib/utils/Constants'
+import { blogs } from '@/lib/utils/Constants'
 import React from 'react'
 import BlogCard from './components/BlogCard'
 import KeyLayouut from '../components/reused/KeyLayouut'

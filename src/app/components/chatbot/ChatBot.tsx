@@ -25,7 +25,7 @@ const ChatBot = () => {
           <BotInterface closeBotInterface={handleCloseBotInterface} />
         </DialogBox>
       ) : (
-        <div className='flex items-center justify-center fixed z-50 bottom-10 right-0 lg:right-10 p-2'>
+        <div className='flex items-center justify-center fixed z-50 bottom-10 right-0 lg:right-10 p-2 text-color1 dark:text-dark-color1'>
           <BsRobot size={40} className='cursor-pointer' onClick={handleIconClick} />
         </div>
       )}

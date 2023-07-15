@@ -1,9 +1,6 @@
-import { dummyTalents } from '@/lib/utils/Types'
 import React from 'react'
-import { FaBrain } from 'react-icons/fa'
-import { GiNoseFront } from 'react-icons/gi'
-import { Balancer } from 'react-wrap-balancer'
 import Talent from './Talent'
+import { dummyTalents } from '@/lib/utils/Constants'
 
 const Talents = () => {
     return (

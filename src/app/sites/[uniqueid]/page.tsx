@@ -6,6 +6,7 @@ import { generateFinalPageHtml } from '@/app/sitegenerator/components/PageGenera
 import { ParsedHtml } from '@/lib/utils/Functions';
 import BodyContent from './components/BodyContent';
 import SiteHeader from './components/SiteHeader';
+import SetUser from '@/app/components/reused/SetUser';
 
 type TypeResponse = {
     htmldata: TypeHtmlResData;
@@ -60,6 +61,7 @@ const page = async (props: TypeParamProps) => {
 
     return (
         <div className=' bg-blue-200'>
+             <SetUser path='sites' />
             <SiteHeader username={data.username} works={data.works} schools={data.schools} />
             <BodyContent data={data} />
         </div>

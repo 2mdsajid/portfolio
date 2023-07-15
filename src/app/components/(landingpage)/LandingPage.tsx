@@ -42,7 +42,7 @@ const LandingPage = () => {
                 <Image className='' alt='landing-page-image' src='/icons/i1.png' height={400} width={400} />
             </div>
 
-            <div className='fixed bottom-0 left-2 lg:left-10'>
+            <div className='fixed z-50 bottom-0 left-2 lg:left-10'>
                 <SocialMediaLinks />
             </div>
 

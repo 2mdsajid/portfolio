@@ -1,5 +1,7 @@
-import { FaBlog, FaBriefcase, FaGlobe, FaUser } from "react-icons/fa";
-import { TypeBotReqRes, TypeSingleBlog } from "./Types";
+import { FaBlog, FaBrain, FaBriefcase, FaGlobe, FaUser, FaWalking } from "react-icons/fa";
+import { TypeBotReqRes, TypeFriendCard, TypeHtmlPageData, TypeProject, TypeSingleBlog, TypeTalent } from "./Types";
+import { BsPhone } from "react-icons/bs";
+import { GiNoseFront, GiPublicSpeaker, GiDiscussion } from "react-icons/gi";
 
 
 export const BACKEND = 'https://sajidportfolio.adaptable.app'
@@ -516,36 +518,6 @@ export const blogs: TypeSingleBlog[] = [
 
 ]
 
-export const blogsdata = [
-  {
-    _id: "1",
-    noteid: "10 Tips for Better Time Management",
-    title: "10 Tips for Better Time Management",
-    url: "10-tips-for-better-time-management",
-    intro: "In today's fast-paced world, time management has become an essential skill to have...",
-    readtime: "5 min read",
-    date: "2022-05-01"
-  },
-  {
-    _id: "2",
-    noteid: "How to Start a Successful Blog",
-    title: "How to Start a Successful Blog",
-    url: "how-to-start-a-successful-blog",
-    intro: "Blogging has become a popular way to share information, express creativity, and make money...",
-    readtime: "8 min read",
-    date: "2022-04-25"
-  },
-  {
-    _id: "3",
-    noteid: "The Benefits of Regular Exercise",
-    title: "The Benefits of Regular Exercise",
-    url: "the-benefits-of-regular-exercise",
-    intro: "Exercise is an important part of a healthy lifestyle. Not only does it help you maintain a healthy weight...",
-    readtime: "6 min read",
-    date: "2022-04-19"
-  }
-];
-
 
 export const dummyResData = {
   "uniqueid": "sajid6e9659fd85bf4b41aae1c050dc4edc0f",
@@ -608,26 +580,144 @@ export const dummyResData = {
 }
 
 
-export const dummyBotData: TypeBotReqRes[] = [
+export const dummyTalents: TypeTalent[] = [
   {
-    value: 'Hello, how can I assist you today?',
-    sender: 'bot',
+    icon: <GiNoseFront />,
+    title: 'Allergic Rhinitis',
+    desc:'God gave me Allergic Rhinitis. I do not blame myself for that as it is god-gifted. i have to take Lukast Plus ( a medicine for allergies ) every 3 days because on the 3rd day i get the rhinitis.'
   },
   {
-    value: 'I have a question regarding your products.',
-    sender: 'user',
+    icon: <FaBrain />,
+    title: 'Distractibility Disorder',
+    desc:'a reduced ability to maintain attention on a specific task or stimuli due to the presence of external or internal distractions. It is exaggerated by notifications.'
   },
   {
-    value: 'Sure, Im here to help. What is your question?',
-    sender: 'bot',
+    icon: <BsPhone />,
+    title: 'Infomania',
+    desc:'a condition characterized by an excessive and compulsive need to constantly consume or seek out information, particularly through digital devices and technologies.'
   },
   {
-    value: 'Can you provide more information about the warranty?',
-    sender: 'user',
+    icon: <FaWalking />,
+    title: 'Dance',
+    desc:'LOL! I don\'t know dancing. tbh I hate it. Last time I danced and the results were quite awkward. Don\'t know about the future. But I don\'t like being forced to dance! '
   },
   {
-    value: 'Certainly! Our products come with a 1-year warranty.',
-    sender: 'bot',
+    icon: <GiPublicSpeaker />,
+    title: 'Public Speaking',
+    desc:'In the name public speaking, I have given some speeches in my school. But it is something I literally envy others for!'
   },
+  {
+    icon: <GiDiscussion />,
+    title: 'Social Skills',
+    desc:'I am the INTROVERT GUY. I can not start a conversation. I can not keep one either. It\'s all Up to You. Sometimes I may not talk to you at all or Only talk to you.'
+  },
+]
+
+
+export const dummyPageData: TypeHtmlPageData = {
+  metadescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  username: "John Doe",
+  professions: ["Web Developer", "Graphic Designer"],
+  cover: "https://res.cloudinary.com/dww0rxb4q/image/upload/v1686937083/landingpagenobg_z9ay8r.png",
+  about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet eleifend metus in dapibus.",
+  resumefile: "https://example.com/resume.pdf",
+  works: [
+    {
+      jobinstitution: "ABC Company",
+      jobrole: "Front-end Developer",
+      jobyear: "2019-2021",
+      jobdescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      jobimage: "https://example.com/images/work1.jpg",
+    },
+    {
+      jobinstitution: "XYZ Agency",
+      jobrole: "Graphic Designer",
+      jobyear: "2018-2019",
+      jobdescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      jobimage: "https://example.com/images/work2.jpg",
+    },
+  ],
+  schools: [
+    {
+      schoolinstitution: "ABC School",
+      schoollevel: "High School",
+      classof: "2015",
+      schooldescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      schoolimage: "https://example.com/images/school1.jpg",
+    },
+    {
+      schoolinstitution: "XYZ College",
+      schoollevel: "Bachelor's Degree",
+      classof: "2019",
+      schooldescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      schoolimage: "https://example.com/images/school2.jpg",
+    },
+  ],
+  email: "johndoe@example.com",
+  socialmedialinks: {
+    facebook: "https://facebook.com/johndoe",
+    instagram: "https://instagram.com/johndoe",
+    twitter: "https://twitter.com/johndoe",
+    telegram: "https://telegram.me/johndoe",
+  },
+  address: "123 Street, City, Country",
+};
+
+export const dummyData = [
+  {
+    image: "nodejs",
+    name: "QBASIC",
+    desc: "I wrote my first 'Hello World! in class 10 and then played around logics, loops and callbacks and made some games, quizzes. Everything in my android phone.",
+    date: "2002 Dec 25" // Original date format
+  },
+  {
+    image: "Python",
+    name: "Python",
+    desc: "It was corona lockdown and I was watching some AI videos on yt and thought to learn about AI. I asked Roman, and he suggested me to learn Python.\nI still had my phone. No PC or Laptop",
+    date: "2010 Nov 12" // Original date format
+  },
+  {
+    image: "JavaScript",
+    name: "JavaScript",
+    desc: "As I was learning the python, I found out Roman's website and then realized I should have also one. so started HTML & CSS then moved to Javascript. Only after joining MBBS, in 2nd year i got Laptop and then made this all",
+    date: "2021 Aug 31" // Original date format
+  }
 ];
+
+export const dummyProjects: TypeProject[] = [
+  {
+    image: "/projects/kafleblog.png",
+    name: "Aayushma's Blog Website",
+    desc: "This is the personal blog website for my friend Aayushma Kafle (@aayushm_19). She writes her personal experiences in the medical field along with tips, guidance regarding her field. ",
+    websitelink: "https://aayushmakafle.com.np",
+    techstacks: ['nextjs', 'tailwind', 'typescript', 'nodejs','expressjs','mongodb'],
+    githublink: "https://github.com/2mdsajid/kafleblog-client2",
+  },
+  {
+    image: "/projects/bdaycounter.png",
+    name: "MCOMS Bdays Reminder",
+    desc: "This is the official birthdays counter website for the students of MCOMS, Pokhara. This will send birthday reminders to the students on someone's birthday.",
+    websitelink: "https://birthdays.rajbasel.com.np/",
+    techstacks: ['react', 'nextjs', 'tailwind', 'typescript', 'nodejs','expressjs','mongodb'],
+    githublink: "https://github.com/2mdsajid/bday-client",
+  },
+  {
+    image: "/projects/homesplit.png",
+    name: "Flat Expense Sharing",
+    desc: "This site helps to track expenses by the members of a house or flat when living together. It has a dashboard and has features sush as  Add members, Invite members, Realtime etc ",
+    websitelink: "https://homesplit.netlify.app/",
+    techstacks: ['react', 'nextjs', 'tailwind', 'typescript', 'nodejs','expressjs','mongodb'],
+    githublink: "https://github.com/2mdsajid/expense-client/tree/master",
+  },
+  {
+    image: "/projects/rajwebsite.png",
+    name: "Raj Portfolio",
+    desc: "This is a simple portfolio website for my friend Raj Basel (@livingasrb007).",
+    websitelink: "https://rajbasel.com.np/",
+    techstacks: ['html', 'css', 'javascript'],
+    githublink: "https://github.com/2mdsajid/rajbasel",
+  },
+  // Add more dummy projects as needed
+];
+
 

@@ -2,7 +2,7 @@
 
 import React, { ChangeEventHandler, useEffect, useState } from 'react'
 import FriendCard from './components/FriendCard'
-import { TypeFriendCard, dummyFriendData } from '@/lib/utils/Types'
+import { TypeFriendCard } from '@/lib/utils/Types'
 
 import elasticlunr, { Index } from 'elasticlunr';
 import { BsSearch } from 'react-icons/bs';
@@ -10,6 +10,10 @@ import { AiOutlineCloseCircle } from 'react-icons/ai';
 import KeyLayouut from '../components/reused/KeyLayouut';
 import Link from 'next/link';
 import MessageDialog from './components/MessageDialog';
+import { dummyFriendData } from '@/lib/utils/friends';
+import SetUser from '../components/reused/SetUser';
+import { shuffleArray } from '@/lib/utils/Functions';
+// import { dummyFriendData } from '@/lib/utils/Constants';
 
 type FriendData = {
     name: string;
@@ -30,6 +34,9 @@ interface CustomToken {
 
 
 const Page = () => {
+
+    const shuffledData = shuffleArray(dummyFriendData);
+
 
     const [searchedProfiles, setSearchedProfiles] = useState<TypeFriendCard[]>([])
 
@@ -94,9 +101,11 @@ const Page = () => {
     return (
 
         <KeyLayouut>
-            <div className='flex flex-col items-center pt-10 '>
-                <p className='w-full md:w-[70%] xl:w-[60%] text-center my-4'>My dear friend from my school, high school or college or from social media. This place is for you. But you know it&apos;s suhc a hectic task to scrap social media profile for your photos then DOB so you may not find yourself here.<br/><span className='text-accent2 italic'>( PS : click the profiles for more details )</span></p>
-
+            <SetUser path='friends' />
+            <div className='flex flex-col items-center  '>
+                <p className='w-full md:w-[70%] xl:w-[60%] text-center my-4'>FInd yourself haha. Since I only scrapped the names from facebook so other details may be wrong.<br /><span className='text-accent2 italic'>( PS : click the profiles for more details )</span></p>
+                    <MessageDialog string='I&apos;ll add your details here, '>
+                    </MessageDialog>
                 <div className="relative w-[90%] sm:w-[75%] md:w-[65%] lg:w-[55%] xl:w-[45%]">
                     <input
                         className={`bg-gray-200 focus:border border-transparent focus:border-gray-300 w-full rounded-md py-2 px-4 text-gray-700 leading-tight focus:outline-none`}
@@ -130,10 +139,14 @@ const Page = () => {
                                 </div>
                             ))
                             : <div>
-                                <MessageDialog />
+                                <MessageDialog string='I&apos;ll add you '>
+                                    <div>
+                                        <p>Didn&apos;t see your name? Don&apos;t worry. Even i&apos;m not in the list.</p>
+                                    </div>
+                                </MessageDialog>
                             </div>}
                     </> : <>
-                        {dummyFriendData.map((friend, index) => (
+                        {shuffledData?.map((friend, index) => (
                             <div className='mx-5 mt-5' key={index}>
                                 <FriendCard data={friend} />
                             </div>
