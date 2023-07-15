@@ -19,7 +19,7 @@ const ChatBot = () => {
   };
 
   return (
-    <div className='text-white w-max h-max flex items-center'>
+    <div className='text-color2 dark:text-dark-color1 w-max h-max flex items-center'>
       {showBotInterface ? (
         <DialogBox>
           <BotInterface closeBotInterface={handleCloseBotInterface} />

@@ -30,7 +30,7 @@ interface TerminalProps {
     const [currentUser, setCurrentUser] = useState('c0mrad1')
     
     const [initialRootValue, setInitialRootvalue] = useState('$ ')
-    const [preRootValue, setPreRootvalue] = useState('a terminal created by sajid')
+    const [preRootValue, setPreRootvalue] = useState('a terminal created by sajid | start by typing --help')
     const [inputValue, setInputValue] = useState('')
     
     const [dataObject, setDataObject] = useState<reqresDataType[]>([])
@@ -60,7 +60,7 @@ interface TerminalProps {
             return
         }
 
-        if (inputValue === "--cuser <name>") {
+        if (inputValue === "--c-user <name>") {
             return
         }
         
@@ -76,7 +76,7 @@ interface TerminalProps {
                 response: '',
             });
             
-            setInitialRootvalue('C:/bot/$')
+            setInitialRootvalue('C:/saara/$')
             return;
         }
         
@@ -96,7 +96,6 @@ interface TerminalProps {
         if (inputValue === 'exit' && botMode) {
             setBotMode(false)
             setPreRootvalue('exit bot mode!')
-            console.log("🚀 ~ file: Terminal.tsx:92 ~ getUserInput ~ dataTemporaryObject:", dataTemporaryObject)
             setDataObject(dataTemporaryObject)
             setDataTemporaryObject([])
             setNewResponse({
@@ -106,7 +105,11 @@ interface TerminalProps {
             setEnterClicked(false);
             setInputValue('');
             setInitialRootvalue('$')
-            
+            return
+        }
+
+        if (inputValue === 'exit' && !botMode) {
+            closeTerminal()
             return
         }
 

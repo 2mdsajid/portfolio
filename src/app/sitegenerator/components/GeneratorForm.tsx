@@ -20,7 +20,7 @@ const GeneratorForm = () => {
   const [currentInfo, setCurrentInfo] = useState('school')
 
   const [showPreviewModel, setShowPreviewModel] = useState(true)
-  const [resData, setResData] = useState<TypeHtmlResData>(dummyResData)
+  const [resData, setResData] = useState<TypeHtmlResData>()
 
   const [alertseverity, setalertSeverity] = useState<AlertColor>('success');
   const [alertmessage, setalertMessage] = useState<string>('successfully generated');
@@ -238,6 +238,7 @@ const GeneratorForm = () => {
                 </div>
 
                 <div className="my-4 relative">
+                  <p className="text-sm">Choose File and then Upload !</p>
                   {cover ? 'cover image uploaded' : <UploadButtonCustom
                     onUploadComplete={handleUploadComplete}
                     onUploadError={handleUploadError}
@@ -247,6 +248,7 @@ const GeneratorForm = () => {
 
                 <div className="my-4">
                   <h2 className="text-lg mb-2">Social Media Links:</h2>
+                  <p className='text-sm'>facebook profile link is required</p>
                   <div className='my-4 relative'>
                     <input
                       id="facebook"
@@ -258,7 +260,7 @@ const GeneratorForm = () => {
                       autoComplete='off'
                       className="peer h-10 w-full bg-primarybg  dark:bg-transparent border pl-3 rounded-md placeholder-transparent focus:outline-none text-color1 dark:text-dark-color1 shadow-md "
                     />
-                    <label htmlFor="facebook" className="absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-dark-primarybg  px-1 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-color1 peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1  peer-focus:text-xs">Facebook Link</label>
+                    <label htmlFor="facebook" className="absolute left-2 -top-2 text-color1 dark:text-dark-color1 bg-primarybg dark:bg-dark-primarybg  px-1 text-xs transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-color1 peer-placeholder-shown:dark:text-gray-500 peer-placeholder-shown:top-2 peer-placeholder-shown:left-3 peer-focus:-top-2 peer-focus:left-2 peer-focus:text-color1 peer-focus:dark:text-dark-color1 peer-focus:bg-primarybg peer-focus:dark:bg-dark-primarybg peer-focus:px-1  peer-focus:text-xs">Facebook Link*</label>
                   </div>
 
                   <div className='my-4 relative'>

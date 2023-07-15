@@ -20,7 +20,7 @@ const IntroPage = () => {
                         </div>
                     </div>
                     {/* about me */}
-                    <p className='lg:text-lg mb-4'>Greetings, fellow! I&apos;m a 21-year-old MBBS student. When I&apos;m not saving lives or buried in books, you&apos;ll find me <span className='text-dark-color2 font-semibold'>coding</span> like a wizard, conquering virtual realms through <span className='text-dark-color2 font-semibold'>gaming</span>, or exploring the great outdoors while <span className='text-dark-color2 font-semibold'>trekking</span>.</p>
+                    <p className='lg:text-lg mb-4'>I&apos;m a 21-year-old <span className='text-dark-color2 font-semibold'>MBBS</span> student. When I&apos;m not saving lives or buried in books, you&apos;ll find me <span className='text-dark-color2 font-semibold'>coding</span> like a wizard, conquering virtual realms through <span className='text-dark-color2 font-semibold'>gaming</span>, or exploring the great outdoors while <span className='text-dark-color2 font-semibold'>trekking</span>.</p>
                     <Link href="/aboutme" className=" bg-accent2 hover:scale-125 hover:bg-accent3 text-white font-bold py-2 px-4 rounded transition-colors duration-300">
                         Know Me More
                     </Link>

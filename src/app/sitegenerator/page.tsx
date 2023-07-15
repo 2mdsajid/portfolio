@@ -7,7 +7,7 @@ import KeyLayouut from '../components/reused/KeyLayouut'
 import SetUser from '../components/reused/SetUser'
 
 const Page = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const handleToggleModel = () => {
     setIsOpen(!isOpen);
   };

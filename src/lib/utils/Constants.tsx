@@ -4,11 +4,59 @@ import { BsPhone } from "react-icons/bs";
 import { GiNoseFront, GiPublicSpeaker, GiDiscussion } from "react-icons/gi";
 
 
-export const BACKEND = 'https://sajidportfolio.adaptable.app'
-export const FRONTEND= 'https://sajidportfolio.vercel.app'
+// export const BACKEND = 'https://sajidportfolio.adaptable.app'
+// export const FRONTEND= 'https://sajidportfolio.vercel.app'
 
-// export const BACKEND = 'http://localhost:4004'
-// export const FRONTEND = 'http://localhost:3000'
+export const BACKEND = 'http://localhost:4004'
+export const FRONTEND = 'http://localhost:3000'
+
+type TypeSmallProjects = {
+  title: string;
+  desc: string;
+  github: string;
+  lang: string;
+};
+
+export const dummySmallProject: TypeSmallProjects[] = [
+  {
+    title: 'First Portfolio Website',
+    desc: 'My first portfolio website showcasing my projects and skills.',
+    github: 'https://github.com/2mdsajid/First-Portfolio-Website',
+    lang: 'HTML, CSS, JavaScript',
+  },
+  {
+    title: 'Equalizer - Hawking\'s Voice Maker Prototype',
+    lang: 'Javascript',
+    desc: 'This is the replica of the program used by Stephen Hawking to generate his voice based on the sensor attached to his cheeks.',
+    github: 'https://github.com/2mdsajid/Equalizer-The-Program-Behind-Stephen-Hawking-Voice'
+  },
+  {
+    title: 'Shop Entries Talliers',
+    desc: 'This is a program which can be used to tally entries and sellings of my shop. It has a backend and a database (MySQL).',
+    github: 'https://github.com/2mdsajid/Shop-Receipt-Generator',
+    lang: 'PHP, Javascript'
+  },
+  {
+    title: 'Space Invader Game',
+    desc: 'A space invader game inspired by Star Wars.',
+    github: 'https://github.com/2mdsajid/space-invaders-star-wars-based',
+    lang: 'JavaScript',
+  },
+  {
+    title: 'ML Chatbot',
+    desc: 'An ML-powered chatbot developed using your conversation data.',
+    github: 'https://github.com/2mdsajid/ML_CHATBOT',
+    lang: 'Python',
+  },
+  {
+    title: 'Viva Sharing',
+    desc: 'A platform for sharing viva experiences and tips.',
+    github: 'https://github.com/2mdsajid/viva-client',
+    lang: 'JavaScript',
+  },
+
+
+]
 
 export const events = [
   {
@@ -232,9 +280,8 @@ export const events = [
 export const terminaldata = [
   {
     t: '--help',
-    r: `Welcome<br>This is a simple terminal using some html css and Js !<br>
-  I'm just a beginner dev !!<br>
-  Use the following commands to explore this website !!!<br><br>about >> To know about me<br>exit >> To exit the terminal<br>bot >> To talk to my ChatBot <br>clear >> To clear the terminal window<br>status >> To know my current status`
+    r: `Welcome<br>This is a simple terminal made with ReactJS !<br>
+  Use the following commands to explore this website !!!<br><br>about >> To know about me<br>exit >> To exit the terminal<br>bot >> To talk to my ChatBot Saara <br>clear >> To clear the terminal window<br>status >> To know my current status`
   },
   {
     t: 'about',
@@ -242,7 +289,7 @@ export const terminaldata = [
   },
   {
     t: 'status',
-    r: `I'm Fine. I'm currently studying MBBS 1st year in MCOMS, Pokhara.`
+    r: `I'm Fine. I'm currently studying MBBS 2nd year in MCOMS, Pokhara.`
   },
   {
     t: 'image',
@@ -261,7 +308,7 @@ export const botdata = [
   },
   {
     t: 'hey',
-    r: 'hello, im sajid'
+    r: 'hello, im saara'
   },
   {
     t: 'bot',
@@ -281,7 +328,7 @@ export const botdata = [
   },
   {
     t: '',
-    r: 'Nothing found'
+    r: 'ooops I\'m not ChatGPT haha !'
   },
   {
     t: 'study',
@@ -294,7 +341,39 @@ export const botdata = [
   {
     t: 'where',
     r: 'Pokhara'
-  }
+  },
+  {
+    t: 'weather',
+    r: 'I\'m sorry, I don\'t have access to real-time weather information.',
+  },
+  {
+    t: 'time',
+    r: `The current time is ${new Date().toLocaleTimeString()}.`,
+  },
+  {
+    t: 'music',
+    r: 'I enjoy listening to a wide variety of music genres.',
+  },
+  {
+    t: 'food',
+    r: 'I like trying different cuisines and exploring new flavors.',
+  },
+  {
+    t: 'hobbies',
+    r: 'Some of my hobbies include reading, coding, and playing video games.',
+  },
+  {
+    t: 'movies',
+    r: 'I enjoy watching movies from various genres, including action, comedy, and sci-fi.',
+  },
+  {
+    t: 'help',
+    r: 'I\m here to assist you with any questions or information you need.',
+  },
+  {
+    t: 'bye',
+    r: 'Goodbye! Have a great day!',
+  },
 ]
 
 export const serviceData = [
@@ -584,32 +663,32 @@ export const dummyTalents: TypeTalent[] = [
   {
     icon: <GiNoseFront />,
     title: 'Allergic Rhinitis',
-    desc:'God gave me Allergic Rhinitis. I do not blame myself for that as it is god-gifted. i have to take Lukast Plus ( a medicine for allergies ) every 3 days because on the 3rd day i get the rhinitis.'
+    desc: 'God gave me Allergic Rhinitis. I do not blame myself for that as it is god-gifted. i have to take Lukast Plus ( a medicine for allergies ) every 3 days because on the 3rd day i get the rhinitis.'
   },
   {
     icon: <FaBrain />,
     title: 'Distractibility Disorder',
-    desc:'a reduced ability to maintain attention on a specific task or stimuli due to the presence of external or internal distractions. It is exaggerated by notifications.'
+    desc: 'a reduced ability to maintain attention on a specific task or stimuli due to the presence of external or internal distractions. It is exaggerated by notifications.'
   },
   {
     icon: <BsPhone />,
     title: 'Infomania',
-    desc:'a condition characterized by an excessive and compulsive need to constantly consume or seek out information, particularly through digital devices and technologies.'
+    desc: 'a condition characterized by an excessive and compulsive need to constantly consume or seek out information, particularly through digital devices and technologies.'
   },
   {
     icon: <FaWalking />,
     title: 'Dance',
-    desc:'LOL! I don\'t know dancing. tbh I hate it. Last time I danced and the results were quite awkward. Don\'t know about the future. But I don\'t like being forced to dance! '
+    desc: 'LOL! I don\'t know dancing. tbh I hate it. Last time I danced and the results were quite awkward. Don\'t know about the future. But I don\'t like being forced to dance! '
   },
   {
     icon: <GiPublicSpeaker />,
     title: 'Public Speaking',
-    desc:'In the name public speaking, I have given some speeches in my school. But it is something I literally envy others for!'
+    desc: 'In the name public speaking, I have given some speeches in my school. But it is something I literally envy others for!'
   },
   {
     icon: <GiDiscussion />,
     title: 'Social Skills',
-    desc:'I am the INTROVERT GUY. I can not start a conversation. I can not keep one either. It\'s all Up to You. Sometimes I may not talk to you at all or Only talk to you.'
+    desc: 'I am the INTROVERT GUY. I can not start a conversation. I can not keep one either. It\'s all Up to You. Sometimes I may not talk to you at all or Only talk to you.'
   },
 ]
 
@@ -690,7 +769,7 @@ export const dummyProjects: TypeProject[] = [
     name: "Aayushma's Blog Website",
     desc: "This is the personal blog website for my friend Aayushma Kafle (@aayushm_19). She writes her personal experiences in the medical field along with tips, guidance regarding her field. ",
     websitelink: "https://aayushmakafle.com.np",
-    techstacks: ['nextjs', 'tailwind', 'typescript', 'nodejs','expressjs','mongodb'],
+    techstacks: ['nextjs', 'tailwind', 'typescript', 'nodejs', 'expressjs', 'mongodb'],
     githublink: "https://github.com/2mdsajid/kafleblog-client2",
   },
   {
@@ -698,7 +777,7 @@ export const dummyProjects: TypeProject[] = [
     name: "MCOMS Bdays Reminder",
     desc: "This is the official birthdays counter website for the students of MCOMS, Pokhara. This will send birthday reminders to the students on someone's birthday.",
     websitelink: "https://birthdays.rajbasel.com.np/",
-    techstacks: ['react', 'nextjs', 'tailwind', 'typescript', 'nodejs','expressjs','mongodb'],
+    techstacks: ['react', 'nextjs', 'tailwind', 'typescript', 'nodejs', 'expressjs', 'mongodb'],
     githublink: "https://github.com/2mdsajid/bday-client",
   },
   {
@@ -706,7 +785,7 @@ export const dummyProjects: TypeProject[] = [
     name: "Flat Expense Sharing",
     desc: "This site helps to track expenses by the members of a house or flat when living together. It has a dashboard and has features sush as  Add members, Invite members, Realtime etc ",
     websitelink: "https://homesplit.netlify.app/",
-    techstacks: ['react', 'nextjs', 'tailwind', 'typescript', 'nodejs','expressjs','mongodb'],
+    techstacks: ['react', 'nextjs', 'tailwind', 'typescript', 'nodejs', 'expressjs', 'mongodb'],
     githublink: "https://github.com/2mdsajid/expense-client/tree/master",
   },
   {

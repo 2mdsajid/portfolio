@@ -1,9 +1,6 @@
 'use client'
 
 import { ParsedHtml } from '@/lib/utils/Functions';
-import { useEffect, useRef, useState } from 'react';
-import Typewriter from 'typewriter-effect';
-
 // const TypewriterPrint = ({ text, reqtext }: { text: string, reqtext: string }) => {
 //     const [displayText, setDisplayText] = useState("");
 

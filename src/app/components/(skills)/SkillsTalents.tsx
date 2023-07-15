@@ -1,5 +1,4 @@
 import React from 'react'
-import Skills from './Skills'
 import Talents from './Talents'
 import Balancer from 'react-wrap-balancer'
 
@@ -14,7 +13,6 @@ const SkillsTalents = () => {
                 </Balancer>
             </h1>
             <Talents />
-            <Skills />
             <h1 className=' text-center mx-auto my-5 using Next.JS'>
                 <Balancer>
                     and by the way, I made this website !

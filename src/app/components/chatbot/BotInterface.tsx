@@ -30,7 +30,7 @@ const BotInterface: FC<BotProps> = ({ closeBotInterface = () => { } }) => {
     const [botname, setBotName] = useState('Saara')
     const [dataObject, setDataObject] = useState<TypeBotReqRes[]>([
         {
-            value: `welcome to the chatbot. I'm ${botname}. My creator sajid is still learning the machines ( Machine Learning ) so I'm not yet trained. I may respond very bad ! try hello, Hi .. `,
+            value: `Hey Hi. I'm ${botname}. My creator sajid is still learning the machines ( Machine Learning ) so I'm not yet trained. I may respond very bad ! try hello, Hi .. `,
             sender: 'bot'
         }
     ])
@@ -38,7 +38,7 @@ const BotInterface: FC<BotProps> = ({ closeBotInterface = () => { } }) => {
 
     const getBotResponse = (inputValue: string) => {
         const matchingData = botdata.find((data) => data.t.includes(inputValue.toLowerCase()));
-        return matchingData ? matchingData.r : "Nothing found";
+        return matchingData ? matchingData.r : "ooops I\'m not ChatGPT haha !";
     };
 
     const getUserInput = async (e: FormEvent<HTMLFormElement>) => {

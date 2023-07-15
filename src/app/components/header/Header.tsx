@@ -18,10 +18,10 @@ const Header = () => {
 
         {/* hidden in small devices */}
         <div className='space-x-4 hidden sm:block text-xl font-semibold lg:text-2xl'>
-          <Link href='/friends' className='navLink text-color1 dark:text-dark-color3 '>Friends</Link>
-          <Link href='/blogs' className='navLink text-color1 dark:text-dark-color3 '>Blogs</Link>
-          <Link href='/services' className='navLink text-color1 dark:text-dark-color3 '>Services</Link>
-          <Link href='/contact' className='navLink text-color1 dark:text-dark-color3 '>Contact</Link>
+          <Link href='/friends' className='navLink text-color1 dark:text-dark-color1 '>Friends</Link>
+          <Link href='/blogs' className='navLink text-color1 dark:text-dark-color1 '>Blogs</Link>
+          <Link href='/services' className='navLink text-color1 dark:text-dark-color1 '>Services</Link>
+          <Link href='/contact' className='navLink text-color1 dark:text-dark-color1 '>Contact</Link>
         </div>
 
         <div className='hidden sm:block '>

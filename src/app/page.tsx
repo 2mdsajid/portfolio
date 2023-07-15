@@ -11,6 +11,8 @@ import Footer from './components/footer/Footer'
 import WebCli from './components/(section7)/WebCli'
 import SkillsTalents from './components/(skills)/SkillsTalents'
 import SetUser from './components/reused/SetUser'
+import Balancer from 'react-wrap-balancer'
+import Link from 'next/link'
 
 const page = async () => {
 
@@ -73,6 +75,14 @@ const page = async () => {
                         <WebCli />
                     </div>
                 </section>
+
+                <div>
+                    <h1 className=' text-center mx-auto my-10'>
+                        <Balancer>
+                            Also check out my <Link target='_blank' className='text-blue-500 hover:underline' href={'https://oldsajidportfolio.netlify.app'}>Old Website</Link>
+                        </Balancer>
+                    </h1>
+                </div>
 
             </div>
             <Footer />

@@ -7,14 +7,11 @@ const Talents = () => {
         <div className='w-full'>
             <div className='w-full flex flex-wrap justify-between '>
                 {dummyTalents.map((talent, index) => {
-                    return <div className='w-[48%] md:w-[30%] flex shadow-md my-3' key={index}>
+                    return <div className='w-[50%] md:w-[30%] flex shadow-md my-3' key={index}>
                         <Talent icon={talent.icon} title={talent.title} desc={talent.desc} />
                     </div>
                 })}
-
-
             </div>
-
         </div>
     )
 }
