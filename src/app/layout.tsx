@@ -17,7 +17,7 @@ export default function RootLayout({
         <meta name="keywords" content="c0mrad1, sajid, mbbs, mcoms, pokhara, gaming, trekking, coding" />
         <meta name="og:title" content="Sajid | c0mrad1" />
         <meta name="og:description" content="Portfolio Website of Sajid Aalam aka c0mrad1" />
-        <meta name="og:image" content="/200909.jpg" />
+        <meta name="og:image" content="/c0mradlogo.jpg" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="any"/>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />

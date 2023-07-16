@@ -72,7 +72,7 @@ const page = async () => {
                 <section className='h-max w-full mb-20'>
                     <SectionTitle title='LAST BUT NOT THE LEAST' />
                     {/* remaining contents */}
-                    <div className='w-full h-full my-10'>
+                    <div data-aos={'zoom-in'} className='w-full h-full my-10'>
                         <WebCli />
                     </div>
                 </section>
