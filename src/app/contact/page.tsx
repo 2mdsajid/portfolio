@@ -2,9 +2,15 @@ import Link from 'next/link'
 import React from 'react'
 import { FaTwitter, FaFacebook, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa'
 import ContactForm from './components/ContactForm'
-import Header from '../components/header/Header'
-import WhatsAppLink from './components/WhatsAppLink'
 import KeyLayouut from '../components/reused/KeyLayouut'
+
+export const metadata = {
+    title: 'Sajid | Contact',
+    openGraph: {
+      title: 'Sajid | Contact',
+      description: 'Contact page by Sajid aka c0mrad1',
+    },
+  }
 
 const page = () => {
     return (
@@ -12,7 +18,7 @@ const page = () => {
             <div className='w-full h-max flex flex-col md:flex-row items-center  md:items-start md:justify-around pt-10'>
                 <div className='w-[90%] sm:w-[70%] md:w-[45%] flex flex-col  items-start h-max pb-5 justify-between'>
                     <div className=''>
-                        <h1 className='text-5xl font-semibold'>Hey There<br />Lets get Connected !</h1>
+                        <h1 className='text-3xl md:text-5xl font-semibold'>Hey There<br />Lets get Connected !</h1>
                         <div className='my-5'>
                             {/* addresss */}
                             <div className=" my-3">

@@ -2,6 +2,14 @@ import React from 'react'
 import Balancer from 'react-wrap-balancer'
 import SetUser from '../components/reused/SetUser'
 
+export const metadata = {
+  title: 'Sajid | Terms & Conditions',
+  openGraph: {
+    title: 'Sajid | Terms & Conditions',
+    description: 'Terms & Conditions for sajid page',
+  },
+}
+
 const page = () => {
   return (
     <div className='min-h-screen w-screen bg-primarybg dark:bg-dark-primarybg flex items-center'>

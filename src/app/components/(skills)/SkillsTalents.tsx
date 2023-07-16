@@ -4,7 +4,7 @@ import Balancer from 'react-wrap-balancer'
 
 const SkillsTalents = () => {
     return (
-        <div className='w-full flex flex-wrap justify-center my-10 px-2 md:px-10 lg:px-20 xl:px-32'>
+        <div className='w-full flex flex-col justify-center my-10 px-0 md:px-10 lg:px-20 xl:px-32'>
             <h1 className=' text-center mx-auto mb-3'>
                 <Balancer>
                     Skills - Learned by own<br/>

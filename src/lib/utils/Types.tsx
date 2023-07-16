@@ -1,10 +1,4 @@
 import { ReactElement } from "react";
-import { IconType } from "react-icons";
-import { BsPhone } from "react-icons/bs";
-import { FaBrain,FaWalking } from "react-icons/fa";
-import { GiDiscussion, GiNoseFront,GiPublicSpeaker } from "react-icons/gi";
-import {RiSpeakerLine} from 'react-icons/ri'
-
 // export type TypeSingleBlog = {
 //   _id: string;
 //   title: string;

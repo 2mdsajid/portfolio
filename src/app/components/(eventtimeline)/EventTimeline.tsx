@@ -54,7 +54,7 @@ const EventTimeline = ({ events, isHomePage }: { events: Event[], isHomePage: bo
                     </div>
 
                     {/* midline */}
-                    <div data-aos={animationtype} className="w-max flex flex-col items-center">
+                    <div className="w-max flex flex-col items-center">
                         <div className='w-1 bg-accent2 h-[5rem]'></div>
                         <div className="rounded-full flex items-center justify-center border shadow-md border-accent2">
                             <p className="absolute text-xs font-bold ">{event.yr}</p>

@@ -19,6 +19,7 @@ async function fetchData(url: string) {
 // }
 
 
+
 const page = async (props: TypeParamProps) => {
   const url = props.params.url
   const blog = blogs.find(blog => blog.url === url);

@@ -6,6 +6,14 @@ import Link from 'next/link'
 import KeyLayouut from '../components/reused/KeyLayouut'
 import SetUser from '../components/reused/SetUser'
 
+export const metadata = {
+  title: 'Sajid | Offerings',
+  openGraph: {
+    title: 'Sajid | Offerings',
+    description: 'Offerings by Sajid aka c0mrad1',
+  },
+}
+
 const page = () => {
   return (
     <KeyLayouut>

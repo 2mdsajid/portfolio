@@ -7,7 +7,7 @@ import Balancer from 'react-wrap-balancer'
 
 const Talent = ({icon,title,desc}:TypeTalent) => {
   return (
-    <div data-aos={'zoom-in'} className='w-full m-1 flex flex-col space-y-3 justify-start items-center p-2 md:p-3 bg-modalbg border dark:border-dark-modalbg dark:bg-dark-modalbg rounded-md shadow-md'>
+    <div className='w-full  flex flex-col space-y-3 justify-start items-center p-2 md:p-3 bg-modalbg border dark:border-dark-modalbg dark:bg-dark-modalbg rounded-md shadow-md'>
     <div className='text-3xl md:text-5xl w-max'>
         {icon}
     </div>

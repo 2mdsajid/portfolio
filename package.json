@@ -16,6 +16,7 @@
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
     "@uploadthing/react": "^4.1.3",
+    "@vercel/analytics": "^1.0.1",
     "aos": "^2.3.4",
     "autoprefixer": "10.4.14",
     "elasticlunr": "^0.9.5",

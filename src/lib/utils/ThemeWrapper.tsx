@@ -8,7 +8,7 @@ export default function ThemeWrapper({ children }: { children: React.ReactNode }
     
     useEffect(() => {
         setMounted(true);
-        
+        setTheme('dark')
     }, []);
 
     if (!mounted) {

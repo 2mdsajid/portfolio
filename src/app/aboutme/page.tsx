@@ -1,5 +1,13 @@
 import React from 'react';
 
+export const metadata = {
+  title: 'Sajid | About',
+  openGraph: {
+    title: 'Sajid | About',
+    description: 'Aboout me page by Sajid aka c0mrad1',
+  },
+}
+
 const Page = () => {
   return (
     <div className="min-h-screen w-screen flex flex-col items-center justify-center p-4 bg-primarybg">

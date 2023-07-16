@@ -3,7 +3,13 @@ import KeyLayouut from '../components/reused/KeyLayouut';
 import { dummySmallProject } from '@/lib/utils/Constants';
 import Link from 'next/link';
 
-
+export const metadata = {
+  title: 'Sajid | All Projects',
+  openGraph: {
+    title: 'Sajid | All Projects',
+    description: 'All Projects by Sajid aka c0mrad1',
+  },
+}
 
 const Page = () => {
   return (

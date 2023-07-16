@@ -15,9 +15,8 @@ import Balancer from 'react-wrap-balancer'
 import Link from 'next/link'
 import AosAnimation from './components/reused/AosAnimation'
 
-const page = async () => {
 
-    // const dat = await setUniqueUserId('home')
+const page = async () => {
 
     return (
         <div className="h-max w-screen bg-primarybg dark:bg-dark-primarybg ">
@@ -78,7 +77,7 @@ const page = async () => {
                     </div>
                 </section>
 
-                <div className='my-[2rem] py-5 h-max border'>
+                <div className='my-[2rem] py-5 h-max'>
                     <h1 className=' text-center text-lg mx-auto '>
                         <Balancer>
                             Also check out my <Link target='_blank' className='text-blue-500 hover:underline' href={'https://oldsajidportfolio.netlify.app'}>Old Website</Link>

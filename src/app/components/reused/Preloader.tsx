@@ -27,6 +27,7 @@ const Preloader = () => {
       {/* Preloader content */}
       <div className={`preloader-image ${isImageVisible ? 'visible' : 'hidden'}`}>
         <Image alt="Preloader Image" height={200} width={200} src={'/c0mradlogo.jpg'} />
+        <p>Inspired by - Jonathan James</p>
       </div>
     </div>
   );

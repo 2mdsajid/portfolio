@@ -4,6 +4,14 @@ import BlogCard from './components/BlogCard'
 import KeyLayouut from '../components/reused/KeyLayouut'
 import Balancer from 'react-wrap-balancer'
 
+export const metadata = {
+    title: 'Sajid | Blogs',
+    openGraph: {
+      title: 'Sajid | Blogs',
+      description: 'Blogs written by Sajid aka c0mrad1',
+    },
+  }
+
 const page = () => {
     return (
         <KeyLayouut>

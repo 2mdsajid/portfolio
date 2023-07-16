@@ -5,7 +5,7 @@ import { GiNoseFront, GiPublicSpeaker, GiDiscussion } from "react-icons/gi";
 
 
 export const BACKEND = 'https://sajidportfolio.adaptable.app'
-export const FRONTEND= 'https://sajidportfolio.vercel.app'
+export const FRONTEND= 'https://sajidaalam.com.np'
 
 // export const BACKEND = 'http://localhost:4004'
 // export const FRONTEND = 'http://localhost:3000'
@@ -466,7 +466,7 @@ export const serviceData = [
 
 export const blogs: TypeSingleBlog[] = [
   {
-    "_id": "3",
+    "_id": "999",
     "title": "How To Host Your Website Made By MY Website",
     "url": "hostwebsite-1",
     "category": "web",

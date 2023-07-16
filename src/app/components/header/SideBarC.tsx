@@ -47,7 +47,7 @@ const SideBarC = () => {
                             </Link>
                             <Link href='/services' className='flex items-center text-color1 dark:text-dark-color1'>
                                 <FiBriefcase className='mr-2' />
-                                Services
+                                Offerings
                             </Link>
                             <Link href='/contact' className='flex items-center text-color1 dark:text-dark-color1'>
                                 <FiMail className='mr-2' />
