@@ -1,3 +1,5 @@
+'use client'
+
 import KeyLayouut from '@/app/components/reused/KeyLayouut';
 import SetUser from '@/app/components/reused/SetUser';
 import React, { useState } from 'react'
