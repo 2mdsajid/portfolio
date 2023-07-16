@@ -274,6 +274,24 @@ export const events = [
     src: '202108',
     title: 'Cracked CEE',
     desc: 'It was an exciting moment. Hadn\'t expected scholarship. First I cheered on terrace and then told my father and brothers.'
+  }, 
+  {
+    yr: 2021,
+    mon: 'Dec',
+    day: 5,
+    num: 0,
+    src: 'mcoms',
+    title: 'Joined MCOMS',
+    desc: 'Frankly speaking, the unexpected MBBS journey started. And the unexpected turn was about to happen in the life. Let\'s see where it takes me '
+  },
+  {
+    yr: 2023,
+    mon: 'July',
+    day: 18,
+    num: 0,
+    src: 'website',
+    title: 'Made This Website',
+    desc: 'So finally, after 3 years, I fulfilled my dream of having my personal website. And luckily I made this.'
   }
 ]
 
