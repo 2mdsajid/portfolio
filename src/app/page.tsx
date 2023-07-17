@@ -80,7 +80,15 @@ const page = async () => {
                 <div className='my-[2rem] py-5 h-max'>
                     <h1 className=' text-center text-lg mx-auto '>
                         <Balancer>
-                            Also check out my <Link target='_blank' className='text-blue-500 hover:underline' href={'https://oldsajidportfolio.netlify.app'}>Old Website</Link>
+                            Do check out my <Link target='_blank' className='text-blue-500 hover:underline' href={'https://oldsajidportfolio.netlify.app'}>Old Website</Link>
+                        </Balancer>
+                    </h1>
+                </div>
+
+                <div className='my-[2rem] py-3 h-max'>
+                    <h1 className=' text-center text-lg mx-auto '>
+                        <Balancer>
+                            Also check out <Link target='_blank' className='text-blue-500 hover:underline' href={'https://www.instagram.com/stories/highlights/17976623704752499/'}>My Gaming</Link> and  <Link target='_blank' className='text-blue-500 hover:underline' href={'https://www.instagram.com/stories/highlights/17852516654783515/'}>Trekking</Link> highlights in my <Link target='_blank' className='text-blue-500 hover:underline' href={'https://www.instagram.com/c0mrad1/'}>Instagram (@c0mrad1)</Link> account !
                         </Balancer>
                     </h1>
                 </div>

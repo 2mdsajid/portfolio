@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import AnimatedButton from './AnimatedMoreButton';
 import { Balancer } from 'react-wrap-balancer';
+import GoBackButton from '@/app/components/reused/GoBackButton';
 
 const EventTimeline = ({ events, isHomePage }: { events: Event[], isHomePage: boolean }) => {
     const animationtype = 'zoom-in'
@@ -96,8 +97,9 @@ const EventTimeline = ({ events, isHomePage }: { events: Event[], isHomePage: bo
             </>}
 
             {!isHomePage &&
-                <div className='w-full flex items-center justify-center my-10  '>
-                    <p>more to go .... </p>
+                <div className='w-full flex flex-col space-y-3 items-center justify-center my-10  '>
+                    <p className='text-center'>You have reached the end of the magnificent timeline. Congratulations! <br/>But don&apos;t worry, the adventure doesn&apos;t end here. Stay tuned !! haha</p>
+                    <GoBackButton/>
                 </div>
             }
 
