@@ -7,10 +7,10 @@ import KeyLayouut from '../components/reused/KeyLayouut'
 export const metadata = {
     title: 'Sajid | Contact',
     openGraph: {
-      title: 'Sajid | Contact',
-      description: 'Contact page by Sajid aka c0mrad1',
+        title: 'Sajid | Contact',
+        description: 'Contact page by Sajid aka c0mrad1',
     },
-  }
+}
 
 const page = () => {
     return (
@@ -66,7 +66,13 @@ const page = () => {
                         </Link>
                     </div>
                 </div>
-                <div className='md:hidden h-1 w-[90%] my-10 bg-slate-600'></div>
+                {/* <div className='md:hidden h-1 w-[90%] my-5 bg-slate-600'></div> */}
+
+                <div className="md:hidden h-1 w-[90%] my-5 flex flex-row justify-center items-center">
+                    <div className="grow h-[0.25rem] bg-slate-600 "></div>
+                    <div className="text-sm md:text-lg mx-1 capitalize"> OR </div>
+                    <div className="grow h-[0.25rem] bg-slate-600 "></div>
+                </div>
                 <div className='w-[90%] sm:w-[70%] md:w-[40%] mb-10'>
                     <ContactForm />
                 </div>
