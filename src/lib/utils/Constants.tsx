@@ -783,6 +783,14 @@ export const dummyData = [
 
 export const dummyProjects: TypeProject[] = [
   {
+    image: "/projects/medlocus.png",
+    name: "Medlocus Website",
+    desc: "This website helps students attend online tests and is designed especially for CEE appearing students",
+    websitelink: "https://medlocusweb.com",
+    techstacks: ['nextjs', 'tailwind', 'typescript', 'nodejs', 'expressjs', 'mongodb'],
+    githublink: "",
+  },
+  {
     image: "/projects/kafleblog.png",
     name: "Aayushma's Blog Website",
     desc: "This is the personal blog website for my friend Aayushma Kafle (@aayushm_19). She writes her personal experiences in the medical field along with tips, guidance regarding her field. ",
@@ -799,12 +807,12 @@ export const dummyProjects: TypeProject[] = [
     githublink: "https://github.com/2mdsajid/bday-client",
   },
   {
-    image: "/projects/homesplit.png",
-    name: "Flat Expense Sharing",
-    desc: "This site helps to track expenses by the members of a house or flat when living together. It has a dashboard and has features sush as  Add members, Invite members, Realtime etc ",
-    websitelink: "https://homesplit.netlify.app/",
+    image: "/projects/muk.png",
+    name: "Mukunda's Website",
+    desc: "so i made this website ot help my friend write his personal experience and journey in medicine field and his views on different aspects of life",
+    websitelink: "https://www.mukundarajjoshi.com.np/",
     techstacks: ['react', 'nextjs', 'tailwind', 'typescript', 'nodejs', 'expressjs', 'mongodb'],
-    githublink: "https://github.com/2mdsajid/expense-client/tree/master",
+    githublink: "",
   },
   {
     image: "/projects/rajwebsite.png",
