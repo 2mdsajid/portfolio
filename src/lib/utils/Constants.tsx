@@ -2,10 +2,55 @@ import { FaBlog, FaBrain, FaBriefcase, FaGlobe, FaUser, FaWalking } from "react-
 import { TypeBotReqRes, TypeFriendCard, TypeHtmlPageData, TypeProject, TypeSingleBlog, TypeTalent } from "./Types";
 import { BsPhone } from "react-icons/bs";
 import { GiNoseFront, GiPublicSpeaker, GiDiscussion } from "react-icons/gi";
+import { Metadata } from "next";
 
 
 export const BACKEND = 'https://sajidportfolio.adaptable.app'
 export const FRONTEND= 'https://sajidaalam.com.np'
+
+export function constructMetadata({
+  title = "Sajid | c0mrad1",
+  description = "Portfolio Website of Sajid Aalam aka c0mrad1. Sajid aalam or comrad1 or c0mrad1 is a student at Manipal college of Medical sciences pokhara. He studies mbbs.",
+  image = "/c0mradlogo.jpg",
+  icons = "/favicon.ico",
+  noIndex = false
+}: {
+  title?: string
+  description?: string
+  image?: string
+  icons?: string
+  noIndex?: boolean
+} = {}): Metadata {
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: [
+        {
+          url: image
+        }
+      ]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [image],
+      creator: "@c0mrad1_"
+    },
+    icons,
+    metadataBase: new URL('https://sajidaalam.com.np'),
+    themeColor: '#FFF',
+    ...(noIndex && {
+      robots: {
+        index: false,
+        follow: false
+      }
+    })
+  }
+}
 
 // export const BACKEND = 'http://localhost:4004'
 // export const FRONTEND = 'http://localhost:3000'
