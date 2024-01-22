@@ -14,6 +14,7 @@ import SetUser from './components/reused/SetUser'
 import Balancer from 'react-wrap-balancer'
 import Link from 'next/link'
 import AosAnimation from './components/reused/AosAnimation'
+import Rocket from './components/Rocket'
 
 
 const page = async () => {
@@ -25,9 +26,11 @@ const page = async () => {
             <SetUser path='home' />
             {/* remaining contents */}
             <div className='pt-20 px-4 md:px-10 lg:px-20 xl:px-32'>
+                <Rocket />
                 <section className='h-screen w-full'  >
                     <LandingPage />
                 </section>
+
 
                 <section className='my-10 w-full '>
                     <SectionTitle title='WHO AM I?' />
