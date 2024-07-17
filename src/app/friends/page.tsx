@@ -20,6 +20,7 @@ const Page = () => {
             <div className='flex flex-col items-center  '>
                 <p className='w-full md:w-[70%] xl:w-[60%] text-center my-4'>FInd yourself haha. Since I only scrapped the names from facebook so other details may be wrong.<br /><span className='text-accent2 italic'>( PS : click the profiles for more details )</span></p>
                 <MessageDialog string='I&apos;ll add your details here, '>
+                    <></>
                 </MessageDialog>
                 <ClientCodes />
             </div>

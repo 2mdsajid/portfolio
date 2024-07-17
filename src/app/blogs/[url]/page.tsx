@@ -4,8 +4,8 @@ import React from 'react'
 import { blogs } from '@/lib/utils/Constants';
 import SingleBlog from './components/SingleBlog';
 import KeyLayouut from '@/app/components/reused/KeyLayouut';
+import { Metadata, ResolvingMetadata } from 'next';
 
-const BACKEND = ''
 
 async function fetchData(url: string) {
   const blog = blogs.filter(blog => blog.url === url)
@@ -18,6 +18,23 @@ async function fetchData(url: string) {
 //   return data.data;
 // }
 
+
+export async function generateMetadata(
+  { params, searchParams }: TypeParamProps,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const url = params.url
+  const blog = blogs.find(blog => blog.url === url);
+ 
+  return {
+    title: `sajid | ${blog?.url}`,
+    openGraph: {
+      title: `sajid | ${blog?.url}`,
+      description: blog?.intro,
+
+    },
+  }
+}
 
 
 const page = async (props: TypeParamProps) => {

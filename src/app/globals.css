@@ -71,3 +71,25 @@
     font-size: 1rem;
   }
 }
+
+
+.responsive-image-container {
+  text-align: center;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+}
+
+.responsive-image-caption {
+  @apply text-sm -mt-5 italic
+}
+
+@media  (max-width: 600px) {
+  .responsive-image-container {
+      max-width: 100%;
+  }
+}

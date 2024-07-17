@@ -7,20 +7,20 @@ import Balancer from 'react-wrap-balancer'
 export const metadata = {
     title: 'Sajid | Blogs',
     openGraph: {
-      title: 'Sajid | Blogs',
-      description: 'Blogs written by Sajid aka c0mrad1',
+        title: 'Sajid | Blogs',
+        description: 'Blogs written by Sajid aka c0mrad1',
     },
-  }
+}
 
 const page = () => {
     return (
         <KeyLayouut>
-            <p className='text-center pt-10 mb-5'>
+            <p className='text-center py-3 font-semibold italic'>
                 <Balancer>
-                    May be in future I&apos;ll write blogs. I have so many limitations like <span className='text-accent2'> Poor language, poor vocabulary, poor critics, poor thinking capacity, and most importantly poor time management.</span> So I may not be writing blogs!
+                    &quot; transpiling my hectic life to my best friend who understands only 0s and 1s... &quot;
                 </Balancer>
             </p>
-            <div className="py-10 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <div className="py-5 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 {blogs.map((blog, index) => (
                     <BlogCard
                         key={index}
@@ -29,6 +29,7 @@ const page = () => {
                         intro={blog.intro}
                         date={blog.date}
                         url={blog.url}
+                        introimage={blog.introimage}
                     />
                 ))}
             </div>

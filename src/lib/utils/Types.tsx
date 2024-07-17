@@ -65,6 +65,7 @@ export type TypeBlogCard = {
   intro: string;
   date: string;
   url: string;
+  introimage:string
 }
 
 export type TypeServiceCard = {

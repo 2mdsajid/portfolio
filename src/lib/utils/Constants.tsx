@@ -6,7 +6,7 @@ import { Metadata } from "next";
 
 
 export const BACKEND = 'https://sajidportfolio.adaptable.app'
-export const FRONTEND= 'https://sajidaalam.com.np'
+export const FRONTEND = 'https://sajidaalam.com.np'
 
 export function constructMetadata({
   title = "Sajid | c0mrad1",
@@ -318,7 +318,7 @@ export const events = [
     src: '202108',
     title: 'Cracked CEE',
     desc: 'It was an exciting moment. Hadn\'t expected scholarship. First I cheered on terrace and then told my father and brothers.'
-  }, 
+  },
   {
     yr: 2021,
     mon: 'Dec',
@@ -527,134 +527,176 @@ export const serviceData = [
 ];
 
 export const blogs: TypeSingleBlog[] = [
+  // {
+  //   "_id": "999",
+  //   "title": "How To Host Your Website Made By MY Website",
+  //   "url": "hostwebsite-1",
+  //   "category": "web",
+  //   "subcategory": "web",
+  //   "author": "Dr. Michael Adams",
+  //   "intro": "Learn how to host the website you generated in my website generator tool. This will also help you host your own created website on Netlify for free. You can even get your custom domain there.",
+  //   "introimage": "space-image.jpg",
+  //   "content": `<div>
+  //   <div>
+  //   Bro i recommend you watching this 5 minutes tutorial on youtube<br/>
+  //   <a className="text-blue-500 underline" href="https://www.youtube.com/watch?v=qAcOhFdC0-k" target="_blank" >How To Host Your Website</a>
+  //   </div>
+  // <h1 className="my-3 mb-5">or<h1/>
+  //   <h1>For Hosting a Website on Netlify with Custom Domain Follow These Steps :</h1>
+  //   <h2>Step 1: Set up your React project</h2>
+  //   <p>
+  //     Before hosting your website on Netlify, make sure you have the index.html downloaded.
+  //   </p>
+  //   <br />
+  
+  //   <h2>Step 2: Sign up on Netlify</h2>
+  //   <p>
+  //     Go to the Netlify website (https://www.netlify.com/) and sign up for an account. It's free to get started, and you can upgrade to a paid plan if needed.
+  //   </p>
+  //   <br />
+  
+  //   <h2>Step 3: Deploy your React project on Netlify</h2>
+  //   <p>
+  //     Once you're logged in to Netlify, click on the "New site from Git" button to connect your project repository. Follow the instructions to authorize Netlify's access to your repository and choose the branch you want to deploy.
+  //   </p>
+  //   <p>
+  //     Configure the build settings as needed (e.g., set the build command to "npm run build" for a Create React App project). Netlify will automatically trigger a new deployment whenever you push changes to your repository.
+  //   </p>
+  //   <br />
+  
+  //   <h2>Step 4: Set up a custom domain</h2>
+  //   <p>
+  //     In Netlify, navigate to your site's settings and click on the "Domain Management" section. Click the "Add custom domain" button and follow the steps to configure your custom domain.
+  //   </p>
+  //   <p>
+  //     You'll need to set up DNS records with your domain provider to point your custom domain to Netlify. Netlify provides detailed instructions specific to your DNS provider, so follow those instructions carefully.
+  //   </p>
+  //   <br />
+  
+  //   <h2>Step 5: Verify and wait for DNS propagation</h2>
+  //   <p>
+  //     After setting up the DNS records, Netlify will verify the domain configuration. Once the verification is successful, you'll need to wait for DNS propagation, which can take some time (usually a few hours or up to 48 hours).
+  //   </p>
+  //   <p>
+  //     During this waiting period, your website will still be accessible via the Netlify subdomain (e.g., https://your-site-name.netlify.app/).
+  //   </p>
+  //   <br />
+  
+  //   <h2>Step 6: Enjoy your hosted website with a custom domain</h2>
+  //   <p>
+  //     Once DNS propagation is complete, your website will be accessible using your custom domain (e.g., https://www.your-domain.com/). You've successfully hosted your React website on Netlify with a custom domain!
+  //   </p>
+  //   <br />
+  
+  //   <h2>Conclusion</h2>
+  //   <p>
+  //     Hosting a website on Netlify and setting up a custom domain is a straightforward process. By following these steps, you can deploy and share your React projects with the world using your own domain name. Happy hosting!
+  //   </p>
+  // </div>
+  // `,
+  //   "review": true,
+  //   "keywords": ['some3'],
+  //   "published": true,
+  //   "readtime": "8 minutes",
+  //   "date": "2023-06-21",
+  //   "views": 1000,
+  //   "rating": 4.9
+  // },
   {
-    "_id": "999",
-    "title": "How To Host Your Website Made By MY Website",
-    "url": "hostwebsite-1",
-    "category": "web",
-    "subcategory": "web",
-    "author": "Dr. Michael Adams",
-    "intro": "Learn how to host the website you generated in my website generator tool. This will also help you host your own created website on Netlify for free. You can even get your custom domain there.",
-    "introimage": "space-image.jpg",
-    "content": `<div>
-    <div>
-    Bro i recommend you watching this 5 minutes tutorial on youtube<br/>
-    <a className="text-blue-500 underline" href="https://www.youtube.com/watch?v=qAcOhFdC0-k" target="_blank" >How To Host Your Website</a>
-    </div>
-  <h1 className="my-3 mb-5">or<h1/>
-    <h1>For Hosting a Website on Netlify with Custom Domain Follow These Steps :</h1>
-    <h2>Step 1: Set up your React project</h2>
-    <p>
-      Before hosting your website on Netlify, make sure you have the index.html downloaded.
-    </p>
-    <br />
-  
-    <h2>Step 2: Sign up on Netlify</h2>
-    <p>
-      Go to the Netlify website (https://www.netlify.com/) and sign up for an account. It's free to get started, and you can upgrade to a paid plan if needed.
-    </p>
-    <br />
-  
-    <h2>Step 3: Deploy your React project on Netlify</h2>
-    <p>
-      Once you're logged in to Netlify, click on the "New site from Git" button to connect your project repository. Follow the instructions to authorize Netlify's access to your repository and choose the branch you want to deploy.
-    </p>
-    <p>
-      Configure the build settings as needed (e.g., set the build command to "npm run build" for a Create React App project). Netlify will automatically trigger a new deployment whenever you push changes to your repository.
-    </p>
-    <br />
-  
-    <h2>Step 4: Set up a custom domain</h2>
-    <p>
-      In Netlify, navigate to your site's settings and click on the "Domain Management" section. Click the "Add custom domain" button and follow the steps to configure your custom domain.
-    </p>
-    <p>
-      You'll need to set up DNS records with your domain provider to point your custom domain to Netlify. Netlify provides detailed instructions specific to your DNS provider, so follow those instructions carefully.
-    </p>
-    <br />
-  
-    <h2>Step 5: Verify and wait for DNS propagation</h2>
-    <p>
-      After setting up the DNS records, Netlify will verify the domain configuration. Once the verification is successful, you'll need to wait for DNS propagation, which can take some time (usually a few hours or up to 48 hours).
-    </p>
-    <p>
-      During this waiting period, your website will still be accessible via the Netlify subdomain (e.g., https://your-site-name.netlify.app/).
-    </p>
-    <br />
-  
-    <h2>Step 6: Enjoy your hosted website with a custom domain</h2>
-    <p>
-      Once DNS propagation is complete, your website will be accessible using your custom domain (e.g., https://www.your-domain.com/). You've successfully hosted your React website on Netlify with a custom domain!
-    </p>
-    <br />
-  
-    <h2>Conclusion</h2>
-    <p>
-      Hosting a website on Netlify and setting up a custom domain is a straightforward process. By following these steps, you can deploy and share your React projects with the world using your own domain name. Happy hosting!
-    </p>
-  </div>
-  `,
-    "review": true,
-    "keywords": ['some3'],
-    "published": true,
-    "readtime": "8 minutes",
-    "date": "2023-06-21",
-    "views": 1000,
-    "rating": 4.9
-  },
-  {
-    "_id": "1",
-    "title": "Artificial Intelligence: Transforming the Future",
-    "url": "ai-blog-1",
-    "category": "Technology",
-    "subcategory": "AI",
-    "author": "Sarah Johnson",
-    "intro": "Artificial Intelligence (AI) is revolutionizing various industries and transforming the future. In this blog, we explore the potential of AI and its impact on society.",
-    "introimage": "ai-image.jpg",
-    "content": "AI has made significant advancements in areas such as healthcare, finance, and transportation. It has the potential to revolutionize how we live, work, and interact with technology. From self-driving cars to personalized healthcare, AI is enhancing efficiency and making complex tasks more accessible.\n\nHowever, AI also poses challenges, including ethical considerations, job displacement, and privacy concerns. It is crucial to strike a balance between technological advancements and ethical guidelines to ensure AI benefits humanity.\n\nAs AI continues to evolve, it opens up endless possibilities and exciting opportunities for innovation. Embracing AI responsibly can lead to a future where intelligent machines work hand in hand with humans to create a better world.",
+    "_id": "5th-semester-the-honeymoon-semester",
+    "title": "5th Semester : Honeymoon semester they say, what I enjoyed !",
+    "url": "5th-semester-the-honeymoon-semester",
+    "category": "Life",
+    "subcategory": "MBBS",
+    "author": "c0mrad1",
+    "intro": "Unlike other semesters, I found myself immersed in a very different life experiences in 5th semester. From partying, to making new connections to learning balance in life I enjoyed this semester truly.",
+    "introimage": "https://res.cloudinary.com/dww0rxb4q/image/upload/v1721224274/px5e9fwayuo2o3533mkr.jpg",
+    "content": `
+This is a short journey of how I enjoyed my 5th semester, often called the "honeymoon semester." This rock-'n'-roll journey of mine started when I moved to Stupa, room number 209, a residential building near our Manipal Teaching Hospital, from Deep, as my basic science courses were about to end.
+
+<div class="responsive-image-container">
+    <img class="responsive-image" src="https://res.cloudinary.com/dww0rxb4q/image/upload/v1721215695/uermxexggutgpkgmfwuo.png" alt="Stupa Building" />
+    <p class="responsive-image-caption"><em>Stupa Building</em></p>
+</div>
+
+It was my second day at Stupa and I met Sangam dai. He asked me about one of my friends and I, a little afraid to speak, replied promptly. Soon I also met Tej dai, Sangya didi.
+
+I was always enthusiastic about meeting and knowing new people. But the main red flag in me is that I'm very introverted and shy to start a conversation. So, in the early days, many seniors would come to Stupa, and they would often ask me about myself, and I would promptly reply. This way, I came to know Adhish dai, Prakash dai, and Ashbin dai. I was trying to adjust myself slowly to the new environment.
+
+Things got spicy when they arrived from Kathmandu after attempting the NMC license examination, Kushal Bhatta dai and Rahul Goit dai. I remember the first interaction with them. They were sitting for lunch, and I came from my examination and sat in front of them. They realized I was from Manipal as I was in my college uniform. Goit dai said, "Oh hello, don't you know who we are? Can't you greet your seniors?" I got a little afraid. I had a bad image of Goit dai from things I had heard about him. I said, "Sorry, dai.". Later on, dai asked me about my name and other things.
+
+One day, I went to Rahul dai's room on the top floor of Stupa. I had to take a lot of courage to do that. I often used to go to the terrace but never went to their room. That day, I thought a lot and finally dared to step inside. Guess what? They welcomed me so well. I felt so loved by their attitude and behavior toward me. Then I saw the big screen and a PS4. Being a game lover, it was a big moment for me to see a PlayStation in front of me. They used to play FIFA on it. I played Uncharted 3. 
+
+The next day, I went to their room again. I sat and had some talks, and then a guy came. The guy was Niraj dai, PG anesthesia. After talking for a while, they realized I was an introvert. They told me to start playing football, stop playing video games too much, and not stay inside my room all the time.
+
+Days passed, and then came the Manipal Premier League (MPL), a football tournament held every year. This year, I also thought of playing. I gave my name and got into Bhatta dai's team. It was Team Anaesthesia aka Team Mahakaal, owned by Dr. Santosh Dhakal, a very generous and kind-hearted person. I gave my jersey name as 'c0mrad1' and jersey number '404'. 
+
+<div class="responsive-image-container">
+    <img class="responsive-image" src="https://res.cloudinary.com/dww0rxb4q/image/upload/v1721216291/yvxmscadhpy0701frpn9.jpg" alt="Team Mahakaal" />
+    <p class="responsive-image-caption"><em>Team Mahakaal & My unique jersey number and name</em></p>
+</div>
+
+My name and number were unique and drew a lot of attention during the MPL season. Things got spiced up when we won our first game. We had a great party. I never drink, so they brought Coca-Cola for me. This was my first party after coming to Stupa. Guess what happened next? We had a party every other day at Stupa. Whether winning or losing the game, we used to have a party. Sometimes for team meetings, we were partying. It became a daily routine: coming from college at 4, watching a football game, and then partying. 
+
+I used to sit and listen to their talks patiently. They used to give me advice. "Comrade, do this, you should talk to other people, try to be social, don't be too introverted, you should enjoy your life." The way I used to enjoy my life was by playing and spending my time on my computer. Soon, I was about to change my definition of enjoying life. From those parties, I got to know a lot of people, especially PGs and interns from Manipal. They all knew me by the name 'Comrade'. We even discussed at one point the origin of the name 'c0mrad1' and the '404' jersey number. I was slowly getting into the real medical field.
+
+<div class="responsive-image-container">
+    <img class="responsive-image" src="https://res.cloudinary.com/dww0rxb4q/image/upload/v1721216562/ls1erq6cgkqxxwvjouma.jpg" alt="Halaal Cocktail" />
+    <p class="responsive-image-caption"><em>Special halaal cocktail for me</em></p>
+</div>
+
+Soon, the MPL ended. They didn’t let me play in any of the matches which hurt my ego. With that inside me, I started learning football the next day after the MPL ended. Bhatta dai then suggested I play enough to make my body fit and not injure myself as I have rods in my back. Following that, I also started going to the gym and having a high-protein diet like meat every alternate day and two eggs every day. I loved that new way of life, partly due to the new excitement I got from meeting my seniors.
+
+Soon I got the opportunity to visit OT. It was all a coincidence that I met Dr. Santosh sir on the way after our classes ended. He gave me his scrubs and took me in OT with him. It was a really an amazing experience to visit OT with him. I was lucky as nobody else from my batch visited OT before me. Hehe.
+
+Soon, Bhatta dai and Goit dai left Stupa after completing their internship. For a few days, I literally missed them, the parties on the top floor of Stupa. After that, Sangam dai came back from his exam, and I started going to his room. Guess what? The void got filled. Sangam dai is the person who has a very big connection in Manipal. Almost everyone knew him, I felt that. With Sangam dai, I literally met so many people, PGs, Interns not only from Manipal but from outside also. He was also like a motivator who always used to tell me, "Comrade, you have to meet new people, make new friends, make connections. In life, at some point, you'll need them." Amid all these, our parties never stopped in Stupa. We literally had a party every day, every other day, sometimes in Bastola, sometimes in Almond café.
+
+More adventure awaited me before I met Dr. Manish dai. He lives in the room next to me. I used to go to his room and have some talks. He was the kind of person who really doesn't give a shit about others; he likes to enjoy his own world. He has very good relations with others and is a very cheerful person, but at times he likes to enjoy being alone. I felt like we matched our vibes. Together, we would go to Kahu Dada at 2 am, sometimes at 12, sometimes in rain. I didn't know how to drive, and he taught me. After that, I was the one driving and taking him up the hill. I remember he said, "Let's go to Lakeside," and I was like, "OK." But then he said, "You won't learn much driving on plain roads. Let's go to Kahu Dada. Think big so you learn big." That night, around 1 am, I took him up to Kahu Dada on his Bullet bike. That was literally my first time driving a Bullet bike, and I took it uphill. 
+
+<div class="responsive-image-container">
+    <img class="responsive-image" src="https://res.cloudinary.com/dww0rxb4q/image/upload/v1721216562/cigvhb5wfjfkyke4o2hu.jpg" alt="Mid-night boating & Hike on Bullet" />
+    <p class="responsive-image-caption"><em>Mid-night boating & Hike on Bullet</em></p>
+</div>
+
+After that, together we visited Lakesides, had so many parties, and yes clubs. He first took me to the club at around 1 am when we were returning from a party. That was the first time in my life I entered a club. That was a very different experience. I danced a little in the club. We enjoyed a lot that night. After that, it became a regular routine to go to the club. Every now and then, I would go to the club, sometimes with Manish dai, sometimes with Sangam dai, sometimes alone.
+
+<div class="responsive-image-container">
+    <img class="responsive-image" src="https://res.cloudinary.com/dww0rxb4q/image/upload/v1721216562/xf1jqoqvws0acjc7nqqt.jpg" alt="Clubbing" />
+    <p class="responsive-image-caption"><em>Club-16 & Catwalk</em></p>
+</div>
+
+Amid all these, I got the opportunity to visit IOM to participate in National Pharmacology Quiz. There i met some amazing people like Aayushma, my old friend, Neetika, Ashik,  and made some good memories. Few days later, I got my 2nd year result, and guess what ? Again party with my friends, with seniors.
+
+
+My partying craze wasn't just limited to these. I even went to picnics with other groups during their community visits, bunking my own posting classes.
+
+<div class="responsive-image-container">
+    <img class="responsive-image" src="https://res.cloudinary.com/dww0rxb4q/image/upload/v1721216562/ol3w3almmr69tlxjhhyz.jpg" alt="In a picnic after bunking my posting classes" />
+    <p class="responsive-image-caption"><em>In a picnic after bunking my posting classes</em></p>
+</div>
+
+
+Amid all these parties, clubs, and enjoyment, I almost forgot that I had a syllabus to complete before my semester exam. I realized this a week before the end semester exam, and I was like, "Oh shit, what have I done to myself? I was once a topper of my class. Now I don't even know what has been taught in the class. It's the biggest academic downfall of my life." I hadn't touched a book throughout the semester. I got just pass marks in my EOP exams because I couldn't answer a single question in the viva. You know? My attendance was so low—60% in pediatrics, 65% in gynecology, and 79-80% in medicine and surgery. I always used to play 'BrickMania' in my classroom, at last bench. I was so worried about failing the semester exam. I expressed this to Manish dai, and he said, "The way you were dancing in the club, now start studying the same way. You'll pass the exams." I started studying a week prior. And guess what? I completed almost all the topics and appeared in the exam. I did very well and am expecting to pass in all the subjects. I have promised to give a party if I pass all the subjects.
+
+Lastly, we got a 5-day vacation. With a lot of things to do, I spent all of it sleeping day and night. On the last day of vacation, I went kayaking with some friends. It was a very unreal experience swimming in fewa lake in a life jacket.
+
+<div class="responsive-image-container">
+    <img class="responsive-image" src="https://res.cloudinary.com/dww0rxb4q/image/upload/v1721216562/mqo05nernmqvxolp9nhi.jpg" alt="Ended the semester with Kayaking" />
+    <p class="responsive-image-caption"><em>Ended the semester with Kayaking</em></p>
+</div>
+
+
+In short, This semester, filled with friendships, parties, clubs, and personal growth, taught me to balance fun with responsibilities and the significance of forming meaningful connections, truly lived up to its "honeymoon" reputation.
+
+
+    `,
     "review": true,
     "keywords": ['some'],
     "published": true,
     "readtime": "6 minutes",
-    "date": "2023-06-21",
+    "date": "2024-07-17",
     "views": 500,
     "rating": 4.8
-  },
-  {
-    "_id": "2",
-    "title": "The Future of Medicine: Exploring Breakthroughs in Healthcare",
-    "url": "medicine-blog-1",
-    "category": "Health",
-    "subcategory": "Medicine",
-    "author": "Dr. Emily Carter",
-    "intro": "Advancements in medicine have transformed healthcare. In this blog, we delve into the future of medicine, including genomics, precision medicine, and AI-driven diagnostics.",
-    "introimage": "medicine-image.jpg",
-    "content": "Medicine is on the brink of a revolution. Genomics and personalized medicine allow for tailored treatments based on an individual's genetic makeup. AI-driven diagnostics aid in early detection and improve patient outcomes.\n\nFurthermore, telemedicine and remote patient monitoring enable access to quality healthcare, regardless of geographical location. From wearable devices to virtual consultations, technology is bridging the gap between doctors and patients.\n\nHowever, as medicine progresses, ethical considerations, data privacy, and equitable access to healthcare must be addressed. It's crucial to harness these breakthroughs responsibly to ensure improved healthcare outcomes for all.\n\nThe future of medicine holds immense potential for enhancing diagnostics, treatments, and overall patient care. As we embrace these advancements, we move closer to a future where precision medicine and technology converge to revolutionize healthcare.",
-    "review": true,
-    "keywords": ['some2'],
-    "published": true,
-    "readtime": "7 minutes",
-    "date": "2023-06-21",
-    "views": 750,
-    "rating": 4.6
-  },
-  {
-    "_id": "3",
-    "title": "Exploring the Wonders of Space: Unveiling the Cosmos",
-    "url": "space-blog-1",
-    "category": "Science",
-    "subcategory": "Space",
-    "author": "Dr. Michael Adams",
-    "intro": "The cosmos has always fascinated humanity. In this blog, we embark on a journey to explore the wonders of space, including celestial bodies, space exploration, and the search for extraterrestrial life.",
-    "introimage": "space-image.jpg",
-    "content": "Space, with its vast expanse and celestial bodies, holds countless mysteries waiting to be unravelled. Space exploration has allowed us to witness breathtaking phenomena and expand our understanding of the universe.\n\nFrom studying distant galaxies to sending missions to other planets, space exploration pushes the boundaries of human knowledge and ignites our curiosity. Additionally, the search for extraterrestrial life captivates the imagination and raises questions about our place in the cosmos.\n\nAs we continue to delve deeper into space, we must also address challenges such as space debris and sustainable space exploration. Preserving the pristine nature of space is crucial for future generations.\n\nThe wonders of space inspire awe and stimulate scientific advancements. By exploring the cosmos, we gain valuable insights into our own existence and the vastness of the universe.",
-    "review": true,
-    "keywords": ['some3'],
-    "published": true,
-    "readtime": "8 minutes",
-    "date": "2023-06-21",
-    "views": 1000,
-    "rating": 4.9
   },
 
 ]
