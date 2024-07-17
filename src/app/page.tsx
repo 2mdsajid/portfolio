@@ -14,7 +14,14 @@ import SetUser from './components/reused/SetUser'
 import Balancer from 'react-wrap-balancer'
 import Link from 'next/link'
 import AosAnimation from './components/reused/AosAnimation'
-import Rocket from './components/Rocket'
+
+import dynamic from 'next/dynamic';
+
+const Rocket = dynamic(() => import('./components/Rocket'), {
+    ssr: false,
+  });
+  
+// import Rocket from './components/Rocket'
 
 
 const page = async () => {

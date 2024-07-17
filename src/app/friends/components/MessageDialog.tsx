@@ -7,7 +7,7 @@ import Link from 'next/link'
 import React, { FormEvent, useState } from 'react'
 import { BiX } from 'react-icons/bi'
 
-const MessageDialog = ({ children,string }: { children: React.ReactNode,string:string }) => {
+const MessageDialog = ({ children,string }: { children?: React.ReactNode,string:string }) => {
     const [showDialog, setShowDialog] = useState(false)
 
     const [alertseverity, setalertSeverity] = useState<AlertColor>('success');
