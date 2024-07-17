@@ -37,10 +37,10 @@ const SideBarC = () => {
                     className='lg:hidden'>
                     <div className='w-[75vw] sm:w-[65vw] md:w-[50vw] flex flex-col space-y-5 px-5 pt-20 text-xl bg-primarybg dark:bg-dark-primarybg h-full'>
                         <div className='flex flex-col space-y-2'>
-                            <Link href='/friends' className='flex items-center text-color1 dark:text-dark-color1'>
+                            {/* <Link href='/friends' className='flex items-center text-color1 dark:text-dark-color1'>
                                 <FiUsers className='mr-2' />
                                 Friends
-                            </Link>
+                            </Link> */}
                             <Link href='/blogs' className='flex items-center text-color1 dark:text-dark-color1'>
                                 <FiBook className='mr-2' />
                                 Blogs

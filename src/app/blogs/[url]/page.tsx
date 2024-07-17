@@ -1,7 +1,7 @@
 import { TypeParamProps } from '@/lib/utils/Types'
 import React from 'react'
 // import SingleBlog from './components/SingleBlog';
-import { blogs } from '@/lib/utils/Constants';
+import { blogs, constructMetadata } from '@/lib/utils/Constants';
 import SingleBlog from './components/SingleBlog';
 import KeyLayouut from '@/app/components/reused/KeyLayouut';
 import { Metadata, ResolvingMetadata } from 'next';
@@ -25,16 +25,14 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const url = params.url
   const blog = blogs.find(blog => blog.url === url);
- 
-  return {
-    title: `sajid | ${blog?.url}`,
-    openGraph: {
-      title: `sajid | ${blog?.url}`,
-      description: blog?.intro,
 
-    },
-  }
+  return constructMetadata({
+    title: `Sajid | blog | ${blog?.title}`,
+    description: blog?.intro,
+    image: blog?.introimage
+  });
 }
+
 
 
 const page = async (props: TypeParamProps) => {

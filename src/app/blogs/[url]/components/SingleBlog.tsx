@@ -1,25 +1,14 @@
+import FooterForm from '@/app/components/footer/FooterForm';
 import { ParsedHtml } from '@/lib/utils/Functions'
 import { TypeSingleBlog } from '@/lib/utils/Types'
 import { Metadata, ResolvingMetadata } from 'next';
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw';
+import AnonymousMessage from './AnonymousMessage';
 
 type thispageprops = {
     blog: TypeSingleBlog;
-}
-
-export async function generateMetadata(
-    blog: TypeSingleBlog,
-    parent: ResolvingMetadata
-): Promise<Metadata> {
-    return {
-        title: blog.title,
-        description: blog.intro,
-        openGraph: {
-            images: [blog.introimage],
-        },
-    }
 }
 
 const SingleBlog = ({ blog }: thispageprops) => {
@@ -42,6 +31,9 @@ const SingleBlog = ({ blog }: thispageprops) => {
                     {/* {ParsedHtml(blog.content)} */}
                     <ReactMarkdown rehypePlugins={[rehypeRaw]}>{blog.content}</ReactMarkdown>
                 </div>
+            </div>
+            <div className="border-t border-gray-300 dark:border-gray-700 py-6">
+                <AnonymousMessage />
             </div>
         </div>
     )

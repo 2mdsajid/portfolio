@@ -18,7 +18,7 @@ const Header = () => {
 
         {/* hidden in small devices */}
         <div className='space-x-4 hidden sm:block text-xl font-semibold lg:text-2xl'>
-          <Link href='/friends' className='navLink text-color1 dark:text-dark-color1 '>Friends</Link>
+          {/* <Link href='/friends' className='navLink text-color1 dark:text-dark-color1 '>Friends</Link> */}
           <Link href='/blogs' className='navLink text-color1 dark:text-dark-color1 '>Blogs</Link>
           <Link href='/services' className='navLink text-color1 dark:text-dark-color1 '>Offerings</Link>
           <Link href='/contact' className='navLink text-color1 dark:text-dark-color1 '>Contact</Link>
