@@ -1,9 +1,6 @@
-import FooterForm from '@/app/components/footer/FooterForm';
-import { ParsedHtml } from '@/lib/utils/Functions'
-import { TypeSingleBlog } from '@/lib/utils/Types'
-import { Metadata, ResolvingMetadata } from 'next';
-import React from 'react'
-import ReactMarkdown from 'react-markdown'
+import { TypeSingleBlog } from '@/lib/utils/Types';
+import ReactMarkdown from 'react-markdown';
+import Balancer from 'react-wrap-balancer';
 import rehypeRaw from 'rehype-raw';
 import AnonymousMessage from './AnonymousMessage';
 
@@ -15,9 +12,11 @@ const SingleBlog = ({ blog }: thispageprops) => {
 
     return (
         <div className="py-10 w-full h-full max-w-3xl">
-            <h1 className="text-4xl font-bold mb-4">{blog.title}</h1>
-            <div className="flex items-center gap-5">
-                <div className="flex space-x-2 my-5">
+            <h1 className="text-4xl font-bold">
+                <Balancer>{blog.title}</Balancer>
+            </h1>
+            <div className="flex md:items-center py-4 flex-col md:flex-row md:gap-4  md:justify-start ">
+                <div className="flex space-x-2">
                     <p className="mb-1 font-semibold">Author:</p>
                     <p className="text-gray-700 dark:text-gray-300 font-medium">Obviously it&apos;s me haha !</p>
                 </div>

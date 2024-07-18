@@ -2,13 +2,16 @@ import { TypeBlogCard } from '@/lib/utils/Types'
 import React from 'react'
 // import ReadButton from './ReadButton'
 import Link from 'next/link'
+import Balancer from 'react-wrap-balancer'
 
 const BlogCard = ({ id, url, title, intro, introimage }: TypeBlogCard) => {
     return (
         <div key={id} className=" p-3 flex flex-col justify-between rounded-lg shadow-md border dark:border-gray-500">
             <div className='w-full h-full flex flex-col justify-between'>
                 <div className='space-y-5'>
-                    <h2 className="text-xl font-bold mb-2">{title}</h2>
+                    <h2 className="text-xl font-bold mb-2">
+                        <Balancer>{title}</Balancer>
+                    </h2>
                     <img className='' src={introimage} alt={title} />
                     <p className="text-gray-600 dark:text-gray-300 mb-4">{intro}</p>
                 </div>

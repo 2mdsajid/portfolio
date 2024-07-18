@@ -548,13 +548,13 @@ export const blogs: TypeSingleBlog[] = [
   //     Before hosting your website on Netlify, make sure you have the index.html downloaded.
   //   </p>
   //   <br />
-  
+
   //   <h2>Step 2: Sign up on Netlify</h2>
   //   <p>
   //     Go to the Netlify website (https://www.netlify.com/) and sign up for an account. It's free to get started, and you can upgrade to a paid plan if needed.
   //   </p>
   //   <br />
-  
+
   //   <h2>Step 3: Deploy your React project on Netlify</h2>
   //   <p>
   //     Once you're logged in to Netlify, click on the "New site from Git" button to connect your project repository. Follow the instructions to authorize Netlify's access to your repository and choose the branch you want to deploy.
@@ -563,7 +563,7 @@ export const blogs: TypeSingleBlog[] = [
   //     Configure the build settings as needed (e.g., set the build command to "npm run build" for a Create React App project). Netlify will automatically trigger a new deployment whenever you push changes to your repository.
   //   </p>
   //   <br />
-  
+
   //   <h2>Step 4: Set up a custom domain</h2>
   //   <p>
   //     In Netlify, navigate to your site's settings and click on the "Domain Management" section. Click the "Add custom domain" button and follow the steps to configure your custom domain.
@@ -572,7 +572,7 @@ export const blogs: TypeSingleBlog[] = [
   //     You'll need to set up DNS records with your domain provider to point your custom domain to Netlify. Netlify provides detailed instructions specific to your DNS provider, so follow those instructions carefully.
   //   </p>
   //   <br />
-  
+
   //   <h2>Step 5: Verify and wait for DNS propagation</h2>
   //   <p>
   //     After setting up the DNS records, Netlify will verify the domain configuration. Once the verification is successful, you'll need to wait for DNS propagation, which can take some time (usually a few hours or up to 48 hours).
@@ -581,13 +581,13 @@ export const blogs: TypeSingleBlog[] = [
   //     During this waiting period, your website will still be accessible via the Netlify subdomain (e.g., https://your-site-name.netlify.app/).
   //   </p>
   //   <br />
-  
+
   //   <h2>Step 6: Enjoy your hosted website with a custom domain</h2>
   //   <p>
   //     Once DNS propagation is complete, your website will be accessible using your custom domain (e.g., https://www.your-domain.com/). You've successfully hosted your React website on Netlify with a custom domain!
   //   </p>
   //   <br />
-  
+
   //   <h2>Conclusion</h2>
   //   <p>
   //     Hosting a website on Netlify and setting up a custom domain is a straightforward process. By following these steps, you can deploy and share your React projects with the world using your own domain name. Happy hosting!
@@ -621,44 +621,41 @@ This is a short journey of how I enjoyed my 5th semester, often called the "hone
 
 It was my second day at Stupa and I met Sangam dai. He asked me about one of my friends and I, a little afraid to speak, replied promptly. Soon I also met Tej dai, Sangya didi.
 
-I was always enthusiastic about meeting and knowing new people. But the main red flag in me is that I'm very introverted and shy to start a conversation. So, in the early days, many seniors would come to Stupa, and they would often ask me about myself, and I would promptly reply. This way, I came to know Adhish dai, Prakash dai, and Ashbin dai. I was trying to adjust myself slowly to the new environment.
+As I was trying to adjust myself slowly to the new environment, which was quite difficult for me because of my introverted nature, I met many seniors who used to come to Stupa for their lunch, breakfast. I came to know Adhish dai, Prakash dai, and Ashbin dai and many others
 
-Things got spicy when they arrived from Kathmandu after attempting the NMC license examination, Kushal Bhatta dai and Rahul Goit dai. I remember the first interaction with them. They were sitting for lunch, and I came from my examination and sat in front of them. They realized I was from Manipal as I was in my college uniform. Goit dai said, "Oh hello, don't you know who we are? Can't you greet your seniors?" I got a little afraid. I had a bad image of Goit dai from things I had heard about him. I said, "Sorry, dai.". Later on, dai asked me about my name and other things.
+Things got spicy when I met Kushal Bhatta dai and Rahul Goit dai. I remember the first interaction with them. They were sitting for lunch, and I came from my examination and sat in front of them. They realized I was from Manipal as I was in my college uniform. Rahul dai said, "Oh hello, don't you know who we are? Can't you greet your seniors?" I got a little afraid. I said, "Sorry, dai.". Later on, dai asked me about my name and other things.
 
-One day, I went to Rahul dai's room on the top floor of Stupa. I had to take a lot of courage to do that. I often used to go to the terrace but never went to their room. That day, I thought a lot and finally dared to step inside. Guess what? They welcomed me so well. I felt so loved by their attitude and behavior toward me. Then I saw the big screen and a PS4. Being a game lover, it was a big moment for me to see a PlayStation in front of me. They used to play FIFA on it. I played Uncharted 3. 
+One day, I went to Rahul dai's room on the top floor of Stupa. I had to take a lot of courage to do that. I often used to go to the terrace but never went to their room. Guess what? They welcomed me so well. I felt so loved by their attitude and behavior toward me. They have got a playstation in which they used to play FIFA. I played Uncharted 3, which was the first time I played a game in console with a controller. Next day again I went there and I met Dr. Niroz dai, PG anaesthesia. After talking for a while, they realized I was an introvert. They advised me to start playing football, stop playing video games too much.
 
-The next day, I went to their room again. I sat and had some talks, and then a guy came. The guy was Niraj dai, PG anesthesia. After talking for a while, they realized I was an introvert. They told me to start playing football, stop playing video games too much, and not stay inside my room all the time.
-
-Days passed, and then came the Manipal Premier League (MPL), a football tournament held every year. This year, I also thought of playing. I gave my name and got into Bhatta dai's team. It was Team Anaesthesia aka Team Mahakaal, owned by Dr. Santosh Dhakal, a very generous and kind-hearted person. I gave my jersey name as 'c0mrad1' and jersey number '404'. 
+Then MPL started, a football tournament held every year. This year, I also gave my name and got into Bhatta dai's team. It was Team Anaesthesia aka Team Mahakaal, owned by Dr. Santosh Dhakal, a very generous and kind-hearted person. I gave my jersey name as 'c0mrad1' and jersey number '404'. My name and number were unique and drew a lot of attention during the MPL season. 
 
 <div class="responsive-image-container">
     <img class="responsive-image" src="https://res.cloudinary.com/dww0rxb4q/image/upload/v1721216291/yvxmscadhpy0701frpn9.jpg" alt="Team Mahakaal" />
-    <p class="responsive-image-caption"><em>Team Mahakaal & My unique jersey number and name</em></p>
+    <p class="responsive-image-caption"><em>Team Mahakaal & Me & Runner up medal</em></p>
 </div>
 
-My name and number were unique and drew a lot of attention during the MPL season. Things got spiced up when we won our first game. We had a great party. I never drink, so they brought Coca-Cola for me. This was my first party after coming to Stupa. Guess what happened next? We had a party every other day at Stupa. Whether winning or losing the game, we used to have a party. Sometimes for team meetings, we were partying. It became a daily routine: coming from college at 4, watching a football game, and then partying. 
 
-I used to sit and listen to their talks patiently. They used to give me advice. "Comrade, do this, you should talk to other people, try to be social, don't be too introverted, you should enjoy your life." The way I used to enjoy my life was by playing and spending my time on my computer. Soon, I was about to change my definition of enjoying life. From those parties, I got to know a lot of people, especially PGs and interns from Manipal. They all knew me by the name 'Comrade'. We even discussed at one point the origin of the name 'c0mrad1' and the '404' jersey number. I was slowly getting into the real medical field.
+Things got spiced up when we won our first game. We had a great party. I never drink, so they brought Coca-Cola for me. This was my first party after coming to Stupa. Guess what happened next? We had a party every day at Stupa. Whether winning or losing the game, we used to have a party. Sometimes for team meetings, we were partying. It became a daily routine. I used to sit and listen to their talks patiently. They used to give me advice. "Comrade, do this, you should talk to other people, try to be social, don't be too introverted, you should enjoy your life." From those parties, I got to know a lot of people, especially PGs and interns from Manipal. They all knew me by the name 'Comrade'. 
 
 <div class="responsive-image-container">
     <img class="responsive-image" src="https://res.cloudinary.com/dww0rxb4q/image/upload/v1721216562/ls1erq6cgkqxxwvjouma.jpg" alt="Halaal Cocktail" />
     <p class="responsive-image-caption"><em>Special halaal cocktail for me</em></p>
 </div>
 
-Soon, the MPL ended. They didn’t let me play in any of the matches which hurt my ego. With that inside me, I started learning football the next day after the MPL ended. Bhatta dai then suggested I play enough to make my body fit and not injure myself as I have rods in my back. Following that, I also started going to the gym and having a high-protein diet like meat every alternate day and two eggs every day. I loved that new way of life, partly due to the new excitement I got from meeting my seniors.
+Soon, the MPL ended. I started learning football. Bhatta dai then suggested I play enough to make my body fit and not injure myself as I have rods in my back. Following that, I also started going to the gym and having a high-protein diet like meat every alternate day and two eggs every day. I loved that new way of life.
 
-Soon I got the opportunity to visit OT. It was all a coincidence that I met Dr. Santosh sir on the way after our classes ended. He gave me his scrubs and took me in OT with him. It was a really an amazing experience to visit OT with him. I was lucky as nobody else from my batch visited OT before me. Hehe.
+Soon I got the opportunity to visit OT. It was all a coincidence that I met Dr. Santosh sir on the way after our classes ended. He gave me his scrubs and took me in OT with him. It was a really an amazing experience to visit OT with him. I was lucky as nobody else from my batch visited OT before me. Hehe. After that I visited OT so many times, even when i had my postings in other departments. Sometimes during night surgeries also.
 
-Soon, Bhatta dai and Goit dai left Stupa after completing their internship. For a few days, I literally missed them, the parties on the top floor of Stupa. After that, Sangam dai came back from his exam, and I started going to his room. Guess what? The void got filled. Sangam dai is the person who has a very big connection in Manipal. Almost everyone knew him, I felt that. With Sangam dai, I literally met so many people, PGs, Interns not only from Manipal but from outside also. He was also like a motivator who always used to tell me, "Comrade, you have to meet new people, make new friends, make connections. In life, at some point, you'll need them." Amid all these, our parties never stopped in Stupa. We literally had a party every day, every other day, sometimes in Bastola, sometimes in Almond café.
+Soon, Bhatta dai and Goit dai left Stupa after completing their internship. For a few days, I literally missed them, the parties on the top floor of Stupa. After that, Sangam dai came back from his exam, and I started going to his room. Guess what? The void got filled. Sangam dai is the person who has a very big connection in Manipal. He was also like a motivator who always used to tell me, "Comrade, you have to meet new people, make new friends, make connections. In life, at some point, you'll need them." Amid all these, our parties never stopped in Stupa. We literally had a party every day, every other day, sometimes in Bastola, sometimes in Almond café.
 
-More adventure awaited me before I met Dr. Manish dai. He lives in the room next to me. I used to go to his room and have some talks. He was the kind of person who really doesn't give a shit about others; he likes to enjoy his own world. He has very good relations with others and is a very cheerful person, but at times he likes to enjoy being alone. I felt like we matched our vibes. Together, we would go to Kahu Dada at 2 am, sometimes at 12, sometimes in rain. I didn't know how to drive, and he taught me. After that, I was the one driving and taking him up the hill. I remember he said, "Let's go to Lakeside," and I was like, "OK." But then he said, "You won't learn much driving on plain roads. Let's go to Kahu Dada. Think big so you learn big." That night, around 1 am, I took him up to Kahu Dada on his Bullet bike. That was literally my first time driving a Bullet bike, and I took it uphill. 
+More adventure awaited me before I met Dr. Manish dai. He lives in the room next to me. I used to go to his room and have some talks. He is a very cheerful person. Together, we would go to Kahu Dada at 2 am, sometimes at 12, sometimes in rain. He taught me driving. After that, I was the one driving and taking him up the hill. I remember he said, "Let's go to Lakeside," and I was like, "OK." But then he said, "You won't learn much driving on plain roads. Let's go to Kahu Dada. Think big so you learn big." That night, around 1 am, I took him up to Kahu Dada on his Bullet bike. That was literally my first time driving a bike, Bullet,  uphill.
 
 <div class="responsive-image-container">
     <img class="responsive-image" src="https://res.cloudinary.com/dww0rxb4q/image/upload/v1721216562/cigvhb5wfjfkyke4o2hu.jpg" alt="Mid-night boating & Hike on Bullet" />
-    <p class="responsive-image-caption"><em>Mid-night boating & Hike on Bullet</em></p>
+    <p class="responsive-image-caption"><em>Mid-night boating & Hike to Kahu dada on Bullet</em></p>
 </div>
 
-After that, together we visited Lakesides, had so many parties, and yes clubs. He first took me to the club at around 1 am when we were returning from a party. That was the first time in my life I entered a club. That was a very different experience. I danced a little in the club. We enjoyed a lot that night. After that, it became a regular routine to go to the club. Every now and then, I would go to the club, sometimes with Manish dai, sometimes with Sangam dai, sometimes alone.
+After that, together we visited Lakesides, had so many parties, and yes clubs. He took me to the club for the first time. I danced a little in the club and had a lots of fun. After that, it became a regular routine to go to the club. Every now and then, I would go to the club, sometimes with Manish dai, sometimes with Sangam dai, sometimes alone.
 
 <div class="responsive-image-container">
     <img class="responsive-image" src="https://res.cloudinary.com/dww0rxb4q/image/upload/v1721216562/xf1jqoqvws0acjc7nqqt.jpg" alt="Clubbing" />
@@ -667,18 +664,16 @@ After that, together we visited Lakesides, had so many parties, and yes clubs. H
 
 Amid all these, I got the opportunity to visit IOM to participate in National Pharmacology Quiz. There i met some amazing people like Aayushma, my old friend, Neetika, Ashik,  and made some good memories. Few days later, I got my 2nd year result, and guess what ? Again party with my friends, with seniors.
 
-
-My partying craze wasn't just limited to these. I even went to picnics with other groups during their community visits, bunking my own posting classes.
+My partying craze wasn't just limited in Stupa. I even went to picnics with other groups during their community visits, bunking my own posting classes.
 
 <div class="responsive-image-container">
     <img class="responsive-image" src="https://res.cloudinary.com/dww0rxb4q/image/upload/v1721216562/ol3w3almmr69tlxjhhyz.jpg" alt="In a picnic after bunking my posting classes" />
     <p class="responsive-image-caption"><em>In a picnic after bunking my posting classes</em></p>
 </div>
 
+Amid all these parties, clubs, and enjoyment, My end semester arrived. I hadn't studied anything, like literally anything, and I was like, "Oh shit, what have I done to myself? I was once a topper of my class. Now I don't even know what has been taught in the class. It's the biggest academic downfall of my life." I got just pass marks in my EOP exams because I couldn't answer a single question in the viva. My attendance was so low—60% in pedia, 65% in gyne, and 79-80% in med and surgery. I always used to play 'BrickMania' in my classroom, at last bench. I was so worried about failing the semester exam. I expressed this to Manish dai, and he said, "The way you were dancing in the club, now start studying the same way. You'll pass the exams." I started studying a week prior. And guess what? I completed almost all the topics and appeared in the exam. I did very well and am expecting to pass in all the subjects. I have promised to give a party if I pass all the subjects.
 
-Amid all these parties, clubs, and enjoyment, I almost forgot that I had a syllabus to complete before my semester exam. I realized this a week before the end semester exam, and I was like, "Oh shit, what have I done to myself? I was once a topper of my class. Now I don't even know what has been taught in the class. It's the biggest academic downfall of my life." I hadn't touched a book throughout the semester. I got just pass marks in my EOP exams because I couldn't answer a single question in the viva. You know? My attendance was so low—60% in pediatrics, 65% in gynecology, and 79-80% in medicine and surgery. I always used to play 'BrickMania' in my classroom, at last bench. I was so worried about failing the semester exam. I expressed this to Manish dai, and he said, "The way you were dancing in the club, now start studying the same way. You'll pass the exams." I started studying a week prior. And guess what? I completed almost all the topics and appeared in the exam. I did very well and am expecting to pass in all the subjects. I have promised to give a party if I pass all the subjects.
-
-Lastly, we got a 5-day vacation. With a lot of things to do, I spent all of it sleeping day and night. On the last day of vacation, I went kayaking with some friends. It was a very unreal experience swimming in fewa lake in a life jacket.
+Lastly, we got a 5-day vacation. With a lot of things to do, I spent all of it sleeping day and night. On the last day of vacation, I went kayaking with some friends. It was a very unreal experience swimming in fewa lake.
 
 <div class="responsive-image-container">
     <img class="responsive-image" src="https://res.cloudinary.com/dww0rxb4q/image/upload/v1721216562/mqo05nernmqvxolp9nhi.jpg" alt="Ended the semester with Kayaking" />
@@ -688,7 +683,7 @@ Lastly, we got a 5-day vacation. With a lot of things to do, I spent all of it s
 
 In short, This semester, filled with friendships, parties, clubs, and personal growth, taught me to balance fun with responsibilities and the significance of forming meaningful connections, truly lived up to its "honeymoon" reputation.
 
-
+Someday in the future, looking back, I will remember this semester as **"GOOD OLD DAYS"** !!
     `,
     "review": true,
     "keywords": ['some'],

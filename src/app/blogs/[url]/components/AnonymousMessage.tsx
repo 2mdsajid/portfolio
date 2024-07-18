@@ -3,6 +3,7 @@
 import { BACKEND } from '@/lib/utils/Constants';
 import { Alert, AlertColor } from '@mui/material';
 import React, { FormEvent, useState } from 'react'
+import Balancer from 'react-wrap-balancer';
 
 
 const AnonymousMessage = () => {
@@ -49,7 +50,7 @@ const AnonymousMessage = () => {
     return (
         <form onSubmit={submitForm} className='flex flex-col justify-center w-full'>
             {showalert && <div className="my-1"><Alert severity={alertseverity} onClose={() => { setshowAlert(false) }}>{alertmessage}</Alert></div>}
-            <h1 className='text-xl font-semibold capitalize mb-4'>send me your comments anonymously ! </h1>
+            <h1 className='text-xl font-semibold capitalize mb-4'><Balancer>send me your comments anonymously !</Balancer> </h1>
             <div className='flex space-x-2 '>
                 <div className='relative'>
                     <input
