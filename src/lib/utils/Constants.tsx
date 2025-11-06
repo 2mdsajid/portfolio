@@ -336,6 +336,15 @@ export const events = [
     src: 'website',
     title: 'Made This Website',
     desc: 'So finally, after 3 years, I fulfilled my dream of having my personal website. And luckily I made this.'
+  },
+  {
+    yr: 2025,
+    mon: 'October',
+    day: 18,
+    num: 0,
+    src: 'surgery_scar',
+    title: 'Brain Surgery',
+    desc: 'Was diagnosed with a benign tumor a year back. Finally got it removed, and things are quite ok now.'
   }
 ]
 
